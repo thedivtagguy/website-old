@@ -1,32 +1,17 @@
 {{ define "main" }}
 <!---Project Hero, Customize as Needed--->
+{{$bgColor := index (.Page.Params.colors) 0 }}
 
-<div class="bg-gray-200 flex justify-center items-center" style="height: 70vh;">
-    <div class="m-auto">
-        <h1 class="font-sans font-black">This is a text</h1>
+<div class="overflow-hidden" style="background-color:#{{ $bgColor }};">
+
+
+    <!---Project Content--->
+    <div class="">
+      
+{{ .Content }}
     </div>
+
+
 </div>
-
-<!---Project Content--->
-<div class="lg:w-8/12 mx-auto px-8">
-
-    <h1 id="title">{{ .Title }}</h1>
-    <div>
-        <article id="content">
-            {{ .Content }}
-        </article>
-    </div>
-</div>
-
-<article class="prose lg:prose-indigo">
-    <h1>Garlic bread with cheese: What the science tells us</h1>
-    <p>
-        For years parents have espoused the health benefits of eating garlic bread with cheese to their children, with the food earning such an iconic status in our culture that kids will often dress up as warm, cheesy loaf for Halloween.
-    </p>
-    <p>
-        But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases springing up around the country.
-    </p>
-    <!-- ... -->
-</article>
 
 {{ end }}

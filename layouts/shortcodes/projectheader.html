@@ -1,0 +1,17 @@
+<!--Set Fonts-->
+{{$headerfont := index (.Page.Params.fonts) 0 }}
+
+<div class="flex justify-center items-center" style="height: 90vh;">
+    <div class="m-auto lg:w-2/4">
+
+        <aside class="flex justify-center lg:mb-12 mb-8">
+            <!---Set Project Logo Colour, Customize as Needed--->
+          {{ partialCached "logo.html" . "logo.html"}}
+
+        </aside>
+        <div class="flex justify-center">
+            <h1 class="font-{{ $headerfont }} uppercase font-black lg:text-8xl text-4xl text-center break-words">{{ .Page.Params.Title }}</h1>
+        </div>
+        <h2 class="text-center pt-8 text-xl"> {{ .Page.Params.Summary }} </h2>
+    </div>
+</div>
