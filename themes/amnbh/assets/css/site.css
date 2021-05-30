@@ -1,0 +1,65 @@
+.starter {
+    color: blue;
+}
+
+@layer base {
+    p {
+        @apply text-xl;
+    }
+}
+
+@font-face {
+    font-family: 'Causten';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/Causten-Regular.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Causten';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(/fonts/Causten-SemiBold.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Causten';
+    font-style: italic;
+    font-weight: 500;
+    font-display: swap;
+    src: url(/fonts/Causten-SemiBoldOblique.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Causten';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/Causten-Bold.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Causten';
+    font-style: italic;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/Causten-BoldOblique.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Causten';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(/fonts/Causten-ExtraBold.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Causten';
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: url(/fonts/Causten-ExtraBoldOblique.woff2) format('woff2');
+}

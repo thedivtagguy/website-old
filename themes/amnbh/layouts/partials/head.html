@@ -1,0 +1,27 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ block "title" . }} {{- .Title }} - {{ .Site.Title -}} {{ end }}</title>
+    {{- if .Description }}
+    <meta name="description" content="{{ .Description }}" /> {{ end -}} {{- if .Keywords }}
+    <meta name="keywords" content="{{ delimit .Keywords " , " }}" /> {{ end -}} {{- if .Params.Author }}
+    <meta name="author" content="{{ .Params.Author}}" /> {{ end -}} {{ hugo.Generator }}
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+    {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") -}} {{- if .Site.IsServer }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}"> {{ else }} {{- $styles := $styles| minify | fingerprint | resources.PostProcess -}}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}"> {{ end -}}
+</head>
+
+<script>
+    document.getElementById('switchTheme').addEventListener('click', function() {
+        let htmlClasses = document.querySelector('html').classList;
+        if (localStorage.theme == 'dark') {
+            htmlClasses.remove('dark');
+            localStorage.removeItem('theme')
+        } else {
+            htmlClasses.add('dark');
+            localStorage.theme = 'dark';
+        }
+    });
+</script>
