@@ -12,6 +12,8 @@
         <div class="flex justify-center">
             <h1 class="font-{{ $headerfont }} uppercase font-black lg:text-8xl text-4xl text-center break-words">{{ .Page.Params.Title }}</h1>
         </div>
-        <h2 class="text-center pt-8 text-xl"> {{ .Page.Params.Summary }} </h2>
+        <div class="lg:w-2/3 m-auto">
+            <h2 class="text-center pt-8 text-xl"> {{ .Page.Params.Summary }} </h2>
+        </div>
     </div>
 </div>

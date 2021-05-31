@@ -22,6 +22,8 @@ module.exports = {
             },
             fontFamily: {
                 'causten': ['Causten'],
+                'arsenica': ['Arsenica'],
+                'rougant': ['Rougant'],
             }
         }
 

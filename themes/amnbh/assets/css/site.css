@@ -50,3 +50,36 @@
     src: url(/fonts/Causten-ExtraBoldOblique.woff2) format('woff2');
 }
 
+@font-face {
+   font-family: "Arsenica";
+   font-style: normal;
+   font-weight: 500;
+   font-display: swap;
+   src: url(/fonts/Arsenica/Arsenica-Text-Bold-trial.ttf) format('truetype'); 
+}
+
+@font-face {
+    font-family: "Rougant";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(/fonts/rougant/RougantBold_PERSONAL_USE_ONLY.otf) format('opentype'); 
+ }
+ 
+ @font-face {
+    font-family: "Rougant";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(/fonts/rougant/RougantRough_PERSONAL_USE_ONLY.otf) format('opentype'); 
+ }
+ 
+ @font-face {
+    font-family: "Rougant";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/rougant/Rougant_PERSONAL_USE_ONLY.otf) format('opentype'); 
+ }
+ 
+ 
