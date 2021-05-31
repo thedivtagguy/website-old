@@ -4,7 +4,7 @@
     <div class="lg:col-span-4">
         <div class="h-90 cursor-pointer">
             <a href="{{ .Permalink }}" class="w-full block h-full">
-                <img alt="post photo" src="{{ .Resources }}" class="max-h-80 w-full object-cover" />
+                <img alt="post photo" src="{{ .Params.feature }}" class="max-h-80 w-full object-cover" />
                 <div class="bg-white dark:bg-gray-800 w-full">
                     <p class="text-gray-800 py-2 lg:text-5xl uppercase text-4xl font-extrabold mb-2">
                         {{ .Title }}
