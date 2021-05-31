@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+<div class="overflow-hidden" style="background-color: white;">
+
+   <!---Blog Content--->
+    <div class="lg:w-7/12 mx-auto px-8 max-w-7xl">
+        <h1 class="lg:text-8xl font-cocogoose">{{ .Title }} 6</h1>
+    </div>
+   <article class="lg:w-6/12 mx-auto px-8 max-w-7xl markdown">
+
+      {{ .Content }}
+
+   </article>
+</div>
+{{ end }}

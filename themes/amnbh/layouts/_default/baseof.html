@@ -5,7 +5,7 @@
 <body>
     {{ if not ( in (print .URL) "project") }} {{- partial "header.html" . -}} {{ end }}
     <div>
-        {{- block "main" . }} {{- end }} {{- partial "footer.html" . -}}
+        {{- block "main" . }} {{- end }}  {{ if not ( in (print .URL) "project") }} {{- partial "footer.html" . -}} {{ end }}
 
     </div>
 </body>

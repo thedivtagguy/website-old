@@ -1,4 +1,8 @@
-baseURL = "http://example.org/"
+baseURL = "https://thedivtagguy.netlify.app/"
 languageCode = "en-us"
 title = "Aman Bhargava"
 theme = "amnbh"
+
+[build]
+writeStats = true
+
