@@ -82,4 +82,19 @@
     src: url(/fonts/rougant/Rougant_PERSONAL_USE_ONLY.otf) format('opentype'); 
  }
  
+ @font-face {
+    font-family: "Cocogoose";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/cocogoose/Cocogoose_Pro-trial.ttf) format('truetype'); 
+ }
+ 
+ @font-face {
+    font-family: "Blacker";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/blacker/blacker.display-extrabold.ttf) format('truetype'); 
+ }
  

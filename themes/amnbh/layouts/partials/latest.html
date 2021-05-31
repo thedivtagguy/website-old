@@ -1,19 +1,23 @@
+{{ $section := site.GetPage "projects" }}
+{{ range first 1 $section.RegularPages }}
 <div class="mt-4 grid grid-cols-1 lg:grid-cols-5 gap-4">
     <div class="lg:col-span-4">
         <div class="h-90 cursor-pointer">
-            <a href="#" class="w-full block h-full">
-                <img alt="post photo" src="https://picsum.photos/600/300" class="max-h-80 w-full object-cover" />
+            <a href="{{ .Permalink }}" class="w-full block h-full">
+                <img alt="post photo" src="{{ .Resources }}" class="max-h-80 w-full object-cover" />
                 <div class="bg-white dark:bg-gray-800 w-full">
-                    <p class="text-gray-800 py-2 lg:text-5xl text-3xl font-extrabold mb-2">
-                        Supercharged !
+                    <p class="text-gray-800 py-2 lg:text-5xl uppercase text-4xl font-extrabold mb-2">
+                        {{ .Title }}
                     </p>
-                    <p class="text-gray-600 dark:text-gray-300 lg:text-xl">
-                        The new supercar is here, 543 cv and 140 000$. This is best racing GT about 7 years on...
+                    <p class="text-gray-700 dark:text-gray-300 capitalize lg:w-5/6 font-bold lg:text-xl">
+                        {{ .Summary }}
                     </p>
                 </div>
             </a>
         </div>
     </div>
+{{ end }}
+
     <div class="border-gray-800 border-t-2 lg:border-none lg:block hidden">
         <p class="text-red-500  lg:text-2xl text-3xl font-extrabold mb-2">
             Browse by...
@@ -45,6 +49,3 @@
     </div>
 </div>
 
-{{ range where .Site.Pages "Section" "projects" }}
-<li><a href="{{ .Permalink }}">{{ .Title }}</a><br /><span class="date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span></li>
-{{ end }}

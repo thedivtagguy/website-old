@@ -24,6 +24,8 @@ module.exports = {
                 'causten': ['Causten'],
                 'arsenica': ['Arsenica'],
                 'rougant': ['Rougant'],
+                'cocogoose': ['Cocogoose'],
+                'blacker': ['Blacker'],
             }
         }
 
