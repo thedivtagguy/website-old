@@ -7,38 +7,31 @@
             🚧 &nbsp; PROJECTS THAT I'VE ACTUALLY FINISHED
         </div>
         <div class="lg:flex justify-end hidden">
-            <a href="#">
+            <a href="/projects">
                 <p class="text-base text-gray-400 font-semibold font-mono items-center lg:pt-1">See All >></p>
             </a>
         </div>
     </div>
 
-    <div id="projectslist" class="lg:flex justify-between gap-4 py-4">
-        <div class="h-90  cursor-pointer">
-            <a href="#" class="-full">
-                <img alt="post photo" src="https://picsum.photos/600/300" class="max-h-80 w-full object-cover" />
-                <div class="bg-white dark:bg-gray-800 w-full">
-                    <p class="text-gray-800 lg:text-2xl text-xl font-extrabold mb-2">
-                        Supercharged !
-                    </p>
+    <div id="projectslist" class="lg:flex justify-between gap-8 py-4">
+            {{ $section := site.GetPage "projects" }}
 
-                </div>
-            </a>
-        </div>
-        <div class="h-90  cursor-pointer">
-            <a href="#" class="-full">
-                <img alt="post photo" src="https://picsum.photos/600/300" class="max-h-80 w-full object-cover" />
-                <div class="bg-white dark:bg-gray-800 w-full">
-                    <p class="text-gray-800 lg:text-2xl text-xl font-extrabold mb-2">
-                        Supercharged !
-                    </p>
+            {{ range first 2 $section.RegularPages }}
 
-                </div>
-            </a>
-        </div>
-    </div>
+            <div class="h-90  cursor-pointer">
+                <a href="{{ .Permalink }}" class="-full">
+                    <img alt="post photo" src="/{{ .Params.feature }}" class="max-h-80 w-full object-cover" />
+                    <div class="bg-white dark:bg-gray-800 w-full">
+                        <p class="text-gray-800 lg:text-2xl text-xl font-extrabold mb-2">
+                            {{ .Title }}
+                        </p>
+    
+                    </div>
+                </a>
+            </div>
+            {{ end }}
     <div class="flex justify-end lg:hidden py-2">
-        <a href="#">
+        <a href="/projects">
             <p class="text-base text-gray-400 font-semibold font-mono items-center lg:pt-1">See All >></p>
         </a>
     </div>

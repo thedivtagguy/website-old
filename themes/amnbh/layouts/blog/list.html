@@ -1,5 +1,29 @@
-{{ define "main" }} {{ range .Pages }}
-<article class="px-6 mx-auto mb-16 prose text-gray-700 justify-self-center sm:px-4 md:px-0 lg:prose-lg">
-    <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-</article>
-{{ end }} {{ end }}
+{{ define "main" }} 
+<div class="lg:w-8/12 mx-auto px-8 max-w-7xl">
+<div class="flex justify-center items-center pb-4 lg:space-x-20 space-x-4">
+    <h2 class="lg:text-7xl text-left text-5xl font-blacker dark:text-white sm:text-4xl">
+       Blog et. al
+   </h2>
+   <img src="/typewriter.png" class="w-24">
+</div>
+<div class="flex lg:justify-end justify-center items-center border-b-2 pb-4  space-x-20">
+    <h2 class="lg:text-sm lg:text-right text-xxs font-blacker -mt-20 -ml-28 lg:-mt-8 lg:ml-0 text-gray-700 dark:text-white sm:text-4xl">
+        because we needed <br> one more of those
+    </h2>
+</div>
+<div class="grid grid-flow-row lg:grid-cols-2 grid-cols-1 py-12 gap-20">
+   {{ range .Pages }}
+   <a href="{{ .Permalink }}" class="w-full block h-full">
+      <img alt="post photo" src="/{{ .Params.feature }}" class="max-h-80 w-full object-cover" />
+      <div class="bg-white dark:bg-gray-800 w-full">
+         <p class="text-gray-900 py-2 lg:text-2xl text-center uppercase text-xl font-extrabold">
+            {{ .Title }}
+         </p>
+         <p class="text-gray-700 dark:text-gray-300 uppercase text-center font-bold text-xs lg:text-sm">
+            {{ .Summary }} 
+         </p>
+      </div>
+   </a>
+   {{ end }}
+</div>
+{{ end }}

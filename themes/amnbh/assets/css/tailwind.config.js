@@ -2,6 +2,9 @@ module.exports = {
     theme: {
      
         extend: {
+            fontSize: {
+                'xxs': '.50rem',
+            },
             colors: {
                 'orange-400': '#F85E00',
                 'orange-300': '#E86E23',
