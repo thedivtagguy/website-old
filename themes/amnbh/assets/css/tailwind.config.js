@@ -1,8 +1,6 @@
 module.exports = {
     theme: {
-        nightwind: {
-            transitionDuration: "500ms", // default '300ms'
-        },
+     
         extend: {
             colors: {
                 'orange-400': '#F85E00',
@@ -36,5 +34,4 @@ module.exports = {
     ],
     darkMode: "class",
     // ...
-    plugins: [require("nightwind")]
 }
