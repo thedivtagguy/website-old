@@ -1,14 +1,16 @@
 {{ define "main" }}
 <!---Project Hero, Customize as Needed--->
 {{$bgColor := index (.Page.Params.colors) 0 }}
+{{$sidenotecolor2 := index (.Page.Params.colors) 2 }}
 
 <div class="overflow-hidden" style="background-color:#{{ $bgColor }};">
 
 
     <!---Project Content--->
     <div class="">
-      
-{{ .Content }}
+    <p style="color:#{{ $sidenotecolor2 }};">
+        {{ .Content }}
+    </p>  
     </div>
 
 
@@ -43,4 +45,12 @@
             <br><span class="p-2 bg-gray-200 hover:bg-gray-900 cursor-pointer text-xs hover:text-white font-semibold rounded-sm">Designed and Made with Hugo, Svelte & Tailwind by Aman Bhargava</span>
         </p>
     </div>
-</section>{{ end }}
+</section>
+
+<style>
+    p {
+        color: #{{ $sidenotecolor2 }};
+    }
+</style>
+
+{{ end }}
