@@ -1,3 +1,5 @@
 /node_modules
 /exampleSite/public
 /exampleSite/hugo_stats.json
+# Local Netlify folder
+.netlify
