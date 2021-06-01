@@ -83,14 +83,6 @@
  }
  
  @font-face {
-    font-family: "Cocogoose";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(/fonts/cocogoose/Cocogoose_Pro-trial.ttf) format('truetype'); 
- }
- 
- @font-face {
     font-family: "Blacker";
     font-style: normal;
     font-weight: 400;
@@ -98,6 +90,57 @@
     src: url(/fonts/blacker/blacker.display-extrabold.ttf) format('truetype'); 
  }
  
+
+/* Cocogoose Font */
+
+@font-face {
+  font-family: "Cocogoose";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/cocogoose/CocogoosePro-Regular.otf) format('opentype'); 
+}
+@font-face {
+  font-family: "Cocogoose";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/cocogoose/CocogoosePro-SemiBold.otf) format('opentype'); 
+}
+
+@font-face {
+  font-family: "Cocogoose";
+  font-style: oblique;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts/cocogoose/CocogoosePro-SemiBoldItalic.otf) format('opentype'); 
+}
+
+@font-face {
+  font-family: "Cocogoose";
+  font-style: oblique;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/cocogoose/CocogoosePro-Italic.otf) format('opentype'); 
+}
+ 
+@font-face {
+  font-family: "Cocogoose";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/cocogoose/CocogoosePro-Bold.otf) format('opentype'); 
+}
+
+@font-face {
+  font-family: "Cocogoose";
+  font-style: oblique;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/cocogoose/CocogoosePro-BoldItalic.otf) format('opentype'); 
+}
+
+
 
  /* Additional vertical padding used by kbd tag. */
 .py-05 {

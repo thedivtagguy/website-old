@@ -16,88 +16,166 @@ colors:
 - ffffff # Logo Color and Sidenote Labels
 - A6ACC9 # 
 fonts:
-- causten
+- cocogoose
 - rougant
 ---
 
 <!---Project Header-->
 
 {{< manifesto/header >}}
-
+ 
  <!---Content-->
- <div class="lg:w-6/12 mx-auto px-8 text-justify	">
-    <p class="lg:text-xl text-base pb-4 ">
-       I decided to analyze the chats from the Srishti '23 Whatsapp group between July 22, 2019, and December 07, 2020. What does almost one and a half years worth of conversation, spanning over 16, 400 messages, have to tell us? Hover your mouse over each graph for the numbers. Additional brownie points if you recognize the category headings ; )
-       <br><br>
-       This is an anonymized dataset. The first step I take is to make sure everyone's names  are hashed (<strong>Aman</strong> becomes <strong>303A92Z</strong>) {{< sidenote "left" "left-note" "so I don't know who sent what. " >}}
-       I could know if I <em>really, really, really, <strong>really</strong> </em>wanted to. But I don't. 
-       {{< /sidenote >}}You may now proceed.	
-    </p>
+ <div class="lg:w-2/3 py-20 flex flex-col justify-items-center items-center mx-auto max-w-7xl px-8 text-center">
+  <p class="font-cocogoose font-bold uppercase lg:text-6xl text-3xl py-12 lg:py-12">What do <span class="text-white">4.5 Lakh Tweets</span> by three English
+   news channels in India have to tell us?</p>
+  
+<!-- Logos -->
+<section class="bg-white rounded-3xl">
+   <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 lg:px-8">
+       <div class="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-3">
+           <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+            <svg class="h-8 " viewBox="0 0 250 52" version="1.1" xmlns="http://www.w3.org/2000/svg">
+               <g id="#ffffffff">
+               </g>
+               <g id="#000000ff">
+               <path fill="#000000" opacity="1.00" d=" M 3.01 3.45 C 8.68 3.46 14.34 3.35 20.01 3.48 C 26.72 3.87 32.67 8.41 35.87 14.18 C 39.12 20.30 41.96 26.63 45.25 32.73 C 46.33 34.88 48.47 36.38 50.91 36.44 C 50.82 25.43 50.87 14.42 50.88 3.41 C 55.85 3.45 60.82 3.43 65.78 3.44 C 65.76 8.24 65.79 13.03 65.72 17.83 C 62.27 19.15 59.38 22.21 59.30 26.06 C 58.82 30.26 61.92 33.98 65.73 35.32 C 65.80 40.14 65.74 44.96 65.79 49.78 C 60.85 49.82 55.91 49.78 50.98 49.82 C 45.26 50.11 39.61 47.43 35.92 43.12 C 31.90 38.18 29.81 32.03 26.72 26.52 C 24.63 22.69 23.15 16.91 17.87 16.66 C 17.88 27.69 17.82 38.72 17.91 49.75 C 12.95 49.83 7.98 49.81 3.02 49.77 C 3.06 34.33 3.07 18.89 3.01 3.45 Z" />
+               <path fill="#000000" opacity="1.00" d=" M 70.12 3.47 C 112.15 3.44 154.18 3.35 196.21 3.51 C 202.47 14.91 208.89 26.21 215.11 37.63 C 221.32 26.32 227.03 14.73 233.20 3.40 C 238.47 3.50 243.74 3.33 249.02 3.52 C 248.14 4.81 247.25 6.08 246.51 7.46 C 239.09 21.59 231.59 35.69 224.12 49.80 C 218.10 49.80 212.08 49.79 206.06 49.80 C 199.55 37.98 192.88 26.24 186.35 14.43 C 179.72 14.36 173.09 14.42 166.46 14.40 C 166.45 26.20 166.51 38.00 166.43 49.79 C 161.67 49.80 156.90 49.81 152.14 49.78 C 152.14 37.98 152.20 26.17 152.11 14.36 C 144.80 14.44 137.49 14.38 130.19 14.40 C 131.52 19.47 131.40 24.74 131.23 29.93 C 131.01 35.22 129.60 40.82 125.67 44.60 C 121.90 48.49 116.24 49.83 110.98 49.81 C 97.38 49.77 83.78 49.85 70.18 49.76 C 70.22 44.94 70.16 40.12 70.24 35.31 C 73.45 34.06 76.27 31.37 76.57 27.79 C 77.27 23.41 74.24 19.33 70.23 17.86 C 70.16 13.06 70.27 8.26 70.12 3.47 M 84.61 14.49 C 84.73 22.55 84.65 30.62 84.66 38.68 C 92.80 38.79 100.94 38.72 109.09 38.73 C 112.29 38.87 116.06 37.11 116.50 33.60 C 116.76 29.10 116.69 24.57 116.54 20.06 C 116.23 16.40 112.42 14.37 109.06 14.44 C 100.91 14.40 92.76 14.30 84.61 14.49 Z" />
+               </g>
+               <g id="#ee0000ff">
+               <path fill="#ee0000" opacity="1.00" d=" M 59.30 26.06 C 59.38 22.21 62.27 19.15 65.72 17.83 C 67.22 17.67 68.73 17.68 70.23 17.86 C 74.24 19.33 77.27 23.41 76.57 27.79 C 76.27 31.37 73.45 34.06 70.24 35.31 C 68.74 35.46 67.24 35.47 65.73 35.32 C 61.92 33.98 58.82 30.26 59.30 26.06 Z" />
+               </g>
+               </svg>
+               
+           </div>
+           <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+            <img src="/manifesto/Republic_TV.png" class="h-12">
+         </div>
+           <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+            <img src="/manifesto/cnn.png" class="h-12">
+           </div>
+          
+       </div>
+   </div>
+</section>
+<button class="bg-blue-800 px-4 lg:mt-16 text-white font-cocogoose font-semibold uppercase border-4 w-1/2 mx-auto text-center border-blue-900 py-4  hidden lg:block" onclick="scrollSmoothTo('intro')">
+   I'm listening...
+          </button>
+
  </div>
+</div>
+<div id="intro" class="lg:py-12" ></div>
  {{< mobile_alert >}}
 
- <!-- By Unit -->
- <div class="grid h-100 lg:py-12 lg:grid-cols-2 grid-cols-1 mb-2 mx-auto justify-center  max-w-screen-2xl">
-    <div class="px-8 flex justify-center items-center flex-col">
-       <h2 class="text-2xl flex justify-start items-start lg:px-40 lg:text-5xl lg:pt-20 font-rougant font-medium">Sign of the Times</h2>
-       <p class="text-base pb-4 flex justify-start items-start lg:px-40 lg:pt-8 pt-4 text-justify">
-          I broke up the messages into blocks of cycles and studio, starting from Cycle 1 (July 22 to Sept 06, 2019) of FSP to Studio 2 (Oct 20 to Nov 14, 2020). Some of these dates are very close approximations, but they help in giving a broad idea of our activity in key timelines.
-       </p>
-    </div>
-    <div class="flex justify-start items-center lg:pr-24 lg:-mt-8">
-       <iframe src="https://chart-studio.plotly.com/~thedivtagguy/6.embed?showlink=false" height="500" width="700" overflow-x = "scroll" position = ""></iframe>
-    </div>
- </div>
+ 
 
- <!-- User Breakdown -->
- <div class="grid h-100 lg:py-12 lg:grid-cols-2 grid-cols-1 mb-4 mx-auto justify-center max-w-screen-2xl">
-    <div class="px-8 flex justify-center items-center flex-col">
-       <h2 class="text-2xl flex justify-start items-start lg:px-40 lg:text-5xl lg:pt-20 font-rougant font-medium ">Keep Talking</h2>
-       <p class="text-base pb-4 flex justify-start items-start lg:px-40 lg:pt-8 pt-4 text-justify ">
-          In a group of 257 people, it took only 5 to send a total of over 2700 messages in this period. Take it easy, guys. We also had our share of 11 lurkers, who've talked just once.I've attached a full graph for total messages by all members too, see if you can find out who you are (names are hidden, of course).        
-       </p>
-       <a href="https://thedivtagguy.github.io/srishti23/numberoftexts.html" target="_blank">
-          <p class="bg-orange-400 px-8 text-white font-extrabold border-4 border-orange-200 py-4 lg:mt-4 hidden lg:block">See Entire Distribution</p>
-       </a>
-    </div>
-    <div class="px-8 flex justify-center items-center flex-col">
-       <div class="py-4">
-          <div class="progress-bg w-80">
-             <div class="progress-bar"></div>
-          </div>
-       </div>
-       <h1 class="text-xl font-extrabold lg:pt-4 py-4">16.4% of the texts were sent by 5 people</h1>
-    </div>
-    <a href="https://thedivtagguy.github.io/srishti23/numberoftexts.html" target="_blank">
-        <p class="bg-orange-400 px-8 text-white font-extrabold border-4 border-orange-200 lg:py-4 py-2 my-4 lg:hidden lg:mt-4 mx-12">See Entire Distribution</p>
-     </a>
- </div>
+ <div class="lg:w-6/12 mx-auto max-w-2xl px-8 pt-8 lg:pt-0">
+   <p class="font font-cocogoose font-bold uppercase text-center lg:text-2xl text-base lg:py-4">We're big fans of <br class="lg:hidden"> informed decisions,</p>
+   <p class="font font-cocogoose font-bold uppercase text-white text-center lg:text-5xl text-4xl pb-8">And now, we'd like you to make one.</p>
+   <p class="font-cocogoose font-normal lg:text-xl text-sm lg:py-8 leading-7 text-justify">In each slide, we will present you a glimpse of our findings. We want you to <span class="bg-gray-300 text-black py-1 px-2 rounded-lg">see the numbers carefully</span>, see what they mean and what consequences they represent.&nbsp;
+      After you've done that, <span class="bg-gray-300 text-black py-1 px-2 rounded-lg">select the button for the news channels</span> that performed acceptably for you from the list of options. At the end of this little trip, you'll have a better idea of which news channel you should follow.
+      </p>
+      <button class="bg-blue-800 px-4 lg:mt-16 text-white font-cocogoose font-semibold uppercase border-4 w-1/2 mx-auto text-center border-blue-900 py-4  hidden lg:block" onclick="scrollSmoothTo('tweetcount')">
+Let's Started
+       </button>
+  </div>
+
+
+ <!-- Counts -->
+ <div id="tweetcount" class="grid lg:py-36 py-16 lg:grid-cols-2 grid-cols-1 mb-4 mx-auto lg:w-9/12 justify-center max-w-screen-2xl">
+   <div class="px-8 flex justify-center items-center flex-col">
+      <p class="font-cocogoose font-bold uppercase text-left lg:text-5xl lg:py-2 text-3xl"> #1. Decide what amount of news works for you</p>
+      <p class="text-base pb-4 flex justify-start items-start lg:pt-8 pt-4 text-justify ">
+         Remember that although it may seem otherwise, there is more to the world than the headlines that you read. Like any other thing that we consume, too much of it can be harmful. <br> Quantity does not equal quality.
+      </p>
+      <!-- News Option -->
+      <div class="grid grid-cols-3 gap-2 md:grid-cols-3 lg:grid-cols-3 py-4">
+         <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">        
+            <button id="C1B" onclick="addNDTV(); disable('C1','C1B'); type="button" class="py-2 px-4  font-bold font-cocogoose bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-xs shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+            NDTV
+            </button>
+         </div>
+         <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+            <button id="C1C" onclick="addREP(); disable('C1','C1C'); type="button" class="py-2 px-4 font-bold font-cocogoose bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-xs shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+            REPUBLIC
+            </button>       
+         </div>
+         <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+            <button id="C1A" onclick="addCNN(); disable('C1','C1A'); type="button" class="py-2 px-4 font-bold font-cocogoose bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-xs shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+            CNN
+            </button>
+         </div>
+      </div>
+      <!-- End News Option -->
+   </div>
+   <div class="px-8 flex justify-center items-center flex-col">
+      <div class="px-40" id="my_dataviz"></div>
+      <div class="px-40" id="my_dataviz"></div>
+</div>
+</div>
 
  <!-- Time of Day -->
- <div class="grid h-100 lg:py-12 lg:grid-cols-2 grid-cols-1 mb-2 mx-auto justify-center max-w-screen-2xl">
-    <div class="px-8 flex justify-center items-center flex-col">
-       <h2 class="text-2xl flex justify-start items-start lg:px-40 lg:text-5xl lg:pt-20 font-rougant font-medium">Time After Time</h2>
-       <p class="text-base pb-4 flex justify-start items-start lg:px-40 lg:pt-8 pt-4 text-justify">
-          What times are we most active? Aside from the few incredible people who like speaking at 4 am, our activity shows the usual spikes around 1 pm - 12 pm (lunch breaks) and when classes get over, between 3 pm - 4 pm. We're most active in the evenings though, between 6-7 pm. Not surprising. 0 messages sent between the ungodly hours of 1 AM and 6 AM. <br><br>Why?       
-       </p>
-    </div>
-    <div class="flex justify-start items-center lg:pr-24 lg:-mt-8">
-       <iframe src="https://chart-studio.plotly.com/~thedivtagguy/9.embed?showlink=false" height="500" width="700" overflow-x = "scroll" position = ""></iframe>
-    </div>
- </div>
+ <div id="tweetcount" class="grid lg:py-36 py-16 lg:grid-cols-2 grid-cols-1 mb-4 mx-auto lg:w-9/12 justify-center max-w-screen-2xl">
+   <div class="px-8 flex justify-center items-center flex-col">
+      <p class="font-cocogoose font-bold uppercase text-left lg:text-5xl lg:py-2 text-3xl"> #2. Remember that social media depends on your interaction</p>
+      <p class="text-base pb-4 flex justify-start items-start lg:pt-8 pt-4 text-justify ">
+         As news becomes more participatory, it is more important than ever to be careful of what you’re engaging with and to which fire you’re adding the fuel. If a channel receives more 
+      engagement with a particular topic, they are bound to push it to you more.     </p>
+      <!-- News Option -->
+      <div class="grid grid-cols-3 gap-2 md:grid-cols-3 lg:grid-cols-3 py-4">
+         <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">        
+            <button id="C1B" onclick="addNDTV(); disable('C1','C1B'); type="button" class="py-2 px-4  font-bold font-cocogoose bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-xs shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+            NDTV
+            </button>
+         </div>
+         <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+            <button id="C1C" onclick="addREP(); disable('C1','C1C'); type="button" class="py-2 px-4 font-bold font-cocogoose bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-xs shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+            REPUBLIC
+            </button>       
+         </div>
+         <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+            <button id="C1A" onclick="addCNN(); disable('C1','C1A'); type="button" class="py-2 px-4 font-bold font-cocogoose bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-xs shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+            CNN
+            </button>
+         </div>
+      </div>
+      <!-- End News Option -->
+   </div>
+   <div class="px-8 flex justify-center items-center flex-col">
+     
+</div>
+</div>
 
  <!-- Weekdays -->
- <div class="grid h-100 lg:py-12 lg:grid-cols-2 grid-cols-1 mb-2 mx-auto justify-center max-w-screen-2xl">
-    <div class="px-8 flex justify-center items-center flex-col">
-       <h2 class="text-2xl flex justify-start items-start lg:px-40 lg:text-5xl lg:pt-20 font-rougant font-medium">Eight Days a Week</h2>
-       <p class="text-base pb-4 flex justify-start items-start lg:px-40 lg:pt-8 pt-4 text-justify">
-          The days were we most active, split by the unit we were in at the time.Least amount of activity on Wednesdays regardless of which unit we were in. Coupled with the information above, you have the best chance of getting responses for your surveys if you share the link on Sundays between 6-7 pm. But please don't.    
-       </p>
-    </div>
-    <div class="flex justify-start items-center lg:pr-24 lg:-mt-8">
-       <iframe src="https://chart-studio.plotly.com/~thedivtagguy/11.embed?showlink=false" height="500" width="700" overflow-x = "scroll" position = ""></iframe>
-    </div>
- </div>
+ <div id="tweetcount" class="grid lg:py-36 py-16 lg:grid-cols-2 grid-cols-1 mb-4 mx-auto lg:w-9/12 justify-center max-w-screen-2xl">
+   <div class="px-8 flex justify-center items-center flex-col">
+      <p class="font-cocogoose font-bold uppercase text-left lg:text-5xl lg:py-2 text-3xl"> #3. What Kind of Language
+         Do They Use?</p>
+      <p class="text-base pb-4 flex justify-start items-start lg:pt-8 pt-4 text-justify ">
+         This fourth pillar of democracy exists to keep a check on those in authority. The kind of language that reports use plays an important role in shaping your perception. Certain words make for better news, and certain words manufacture more engagement. We're comparing </p>
+      <!-- News Option -->
+      <div class="grid grid-cols-3 gap-2 md:grid-cols-3 lg:grid-cols-3 py-4">
+         <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">        
+            <button id="C1B" onclick="addNDTV(); disable('C1','C1B'); type="button" class="py-2 px-4  font-bold font-cocogoose bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-xs shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+            NDTV
+            </button>
+         </div>
+         <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+            <button id="C1C" onclick="addREP(); disable('C1','C1C'); type="button" class="py-2 px-4 font-bold font-cocogoose bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-xs shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+            REPUBLIC
+            </button>       
+         </div>
+         <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+            <button id="C1A" onclick="addCNN(); disable('C1','C1A'); type="button" class="py-2 px-4 font-bold font-cocogoose bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-xs shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+            CNN
+            </button>
+         </div>
+      </div>
+      <!-- End News Option -->
+   </div>
+   <div class="px-8 flex justify-center items-center flex-col">
+     
+</div>
+</div>
 
  <!-- Sentiment Block -->
  <div class="h-100 mb-2 mx-auto justify-center max-w-7xl">
@@ -315,74 +393,90 @@ fonts:
             Don't forget to bring your ID card. 
          </h2>    </div>
  </div>
+
+ <script>
+   function scrollSmoothTo(elementId) {
+      var element = document.getElementById(elementId);
+      element.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth'
+      });
+    }
+ </script>
 <style>
-      .progress-bg {
-          height: 100px;
-        text-align: center;
-        background-color: #F85E00;
-      }
-      
-      .progress-bar {
-          height: 100px;
-          /* fallback */ 
-        background-color: #282828; }
-          
-      
-      @keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-      }
-      
-      /* Firefox */
-      @-moz-keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-      }
-      
-      /* Safari and Chrome */
-      @-webkit-keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-      }
-      
-      /* Opera */
-      @-o-keyframes fadein {
-          from { opacity: 0; }
-          to   { opacity: 1; }
-      }​
-      
-      .progress-bg h3.goal {
-          float: right;
-          display: inline;
-          padding: 0 25px 0 0;
-        text-align: center;
-      }
-      
-      body .progress-bg div {
-          -webkit-animation: progress-bar 2s ease forwards;
-          -moz-animation: progress-bar 2s ease forwards;
-          -o-animation: progress-bar 2s ease forwards;
-          animation: progress-bar 2s ease forwards;
-      }
-      
-      @-webkit-keyframes progress-bar {
-          from { width: 0%; }
-          to { width: 16.4%; }
-      }
-      
-      @-moz-keyframes progress-bar {
-          from { width: 0%; }
-          to { width: 16.4%; }
-      }
-      
-      @-o-keyframes progress-bar {
-          from { width: 0%; }
-          to { width: 16.4%; }
-      }
-      
-      @keyframes progress-bar {
-          from { width: 0%; }
-          to { width: 16.4%; }
-      }
-      
+    path, line {
+      stroke: #A6ACC9;
+    }
 </style>
+ <script>
+
+
+   // set the dimensions and margins of the graph
+   var margin = {top: 10, right: 30, bottom: 90, left: 100},
+       width = 550 - margin.left - margin.right,
+       height = 450 - margin.top - margin.bottom;
+   
+   // append the svg object to the body of the page
+   var svg = d3.select("#my_dataviz")
+     .append("svg")
+       .attr("width", width + margin.left + margin.right)
+       .attr("height", height + margin.top + margin.bottom)
+     .append("g")
+       .attr("transform",
+             "translate(" + margin.left + "," + margin.top + ")");
+   
+   // Parse the Data
+   d3.csv("https://raw.githubusercontent.com/thedivtagguy/files/main/tweets.csv", function(data) {
+   
+   // X axis
+   var x = d3.scaleBand()
+     .range([ 0, width ])
+     .domain(data.map(function(d) { return d.Country; }))
+     .padding(0.2);
+   svg.append("g")
+     .attr("transform", "translate(0," + height + ")")
+     .call(d3.axisBottom(x))
+     .selectAll("text")
+       .attr("transform", "translate(-10,0)rotate(-45)")
+       .attr("padding", "5px")
+       .attr("font-size","15px")
+       .attr("fill", "#A6ACC9")
+       .attr("font-family", "cocogoose")
+       .style("text-anchor", "end");
+   
+   // Add Y axis
+   var y = d3.scaleLinear()
+   .domain([0, 220000])
+   .range([ height, 0]);
+   svg.append("g")
+   .call(d3.axisLeft(y))
+   .selectAll("text")
+      .attr("font-size","10px")
+      .attr("fill", "#A6ACC9")
+      .attr("font-family", "cocogoose")
+      .style("text-anchor", "end");
+         
+   
+   // Bars
+   svg.selectAll("mybar")
+     .data(data)
+     .enter()
+     .append("rect")
+       .attr("x", function(d) { return x(d.Country); })
+       .attr("width", x.bandwidth())
+       .attr("fill", "#A6ACC9")
+       // no bar at the beginning thus:
+       .attr("height", function(d) { return height - y(0); }) // always equal to 0
+       .attr("y", function(d) { return y(0); })
+   
+   // Animation
+   svg.selectAll("rect")
+     .transition()
+     .duration(800)
+     .attr("y", function(d) { return y(d.Value); })
+     .attr("height", function(d) { return height - y(d.Value); })
+     .delay(function(d,i){console.log(i) ; return(i*100)})
+   
+   })
+   
+   </script>

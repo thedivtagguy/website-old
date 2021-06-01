@@ -22,7 +22,8 @@
 }
 
 .sidenote-label:hover{
-color: #fff;
+    background-color: #{{ $sidenotecolor2 }} ;
+    color: #000
 }
 .sidenote:hover .sidenote-content {
     border: .2rem dashed;
@@ -30,11 +31,10 @@ color: #fff;
     border-color: #{{ $sidenotecolor2 }};
 }
 .sidenote-label {
-    border-bottom: .2rem dashed #{{ $sidenotecolor2 }};
+    border-bottom: .2rem dashed;
+    border-color: #{{ $sidenotecolor2 }}
 }
-.sidenote-label:hover {
-    border: none;
-}
+
 .sidenote-checkbox {
     display: none;
 }
