@@ -12,7 +12,7 @@ tools:
 - Python 
 - Hugo 
 colors: 
-- 0B0F59 # Background Color
+- 262626 # Background Color
 - A6ACC9 # Logo Color and Sidenote Labels
 - ffffff # 
 fonts:
@@ -86,7 +86,7 @@ Let's Get Started
 
 
  <!-- Counts -->
- <div id="tweetcount" class="grid lg:py-36 mg:grid-cols-2 py-16 lg:grid-cols-2 grid-cols-1 mb-4 mx-auto lg:w-9/12 justify-center max-w-screen-2xl">
+ <div id="tweetcount" class="grid lg:py-36 mg:grid-cols-2 py-16 lg:grid-cols-2 grid-cols-1 mb-4 mx-auto lg:w-9/12 justify-center max-w-6xl">
    <div class="px-8 flex justify-center items-center flex-col">
       <p class="font-cocogoose font-bold uppercase text-left lg:text-5xl lg:py-2 text-3xl"> #1. Decide what amount of news works for you</p>
       <p class="text-base pb-4 flex justify-start items-start lg:pt-8 pt-4 text-justify ">
@@ -113,17 +113,22 @@ Let's Get Started
       <!-- End News Option -->
    </div>
    <div class="px-8 flex justify-center items-center flex-col">
-      <div id="my_dataviz"></div>
+      <div id="chart1" class="mx-24"></div>
+</div>
+<div class="flex items-center justify-items-center">
+   <button class="bg-gray-700 px-2 -mt-1 text-white font-cocogoose font-semibold uppercase border-2 w-24 mx-auto text-center border-gray-900 py-1  hidden lg:block" onclick="scrollSmoothTo('hashtag')">
+      Next
+             </button>
 </div>
 </div>
 
- <!-- Time of Day -->
- <div id="tweetcount" class="grid lg:py-36 py-16 lg:grid-cols-2 grid-cols-1 mb-4 mx-auto lg:w-9/12 justify-center max-w-screen-2xl">
+ <!-- Counts -->
+ <div id="hashtag" class="grid lg:py-36 mg:grid-cols-2 py-16 lg:grid-cols-2 grid-cols-1 mb-4 mx-auto lg:w-9/12 justify-center max-w-6xl">
    <div class="px-8 flex justify-center items-center flex-col">
-      <p class="font-cocogoose font-bold uppercase text-left lg:text-5xl lg:py-2 text-3xl"> #2. Remember that social media depends on your interaction</p>
+      <p class="font-cocogoose font-bold uppercase text-left lg:text-5xl lg:py-2 text-3xl">  #2. Remember that social media depends on your interaction</p>
       <p class="text-base pb-4 flex justify-start items-start lg:pt-8 pt-4 text-justify ">
-         As news becomes more participatory, it is more important than ever to be careful of what you’re engaging with and to which fire you’re adding the fuel. If a channel receives more 
-      engagement with a particular topic, they are bound to push it to you more.     </p>
+        How many tweets did each channel put out during this period? Decide how much of your feed should be news. Does more news make you feel like you'd be more well informed, or would you rather see only the most important headlines? <br> Psst: Quantity may not equal quality.
+      </p>
       <!-- News Option -->
       <div class="grid grid-cols-3 gap-2 md:grid-cols-3 lg:grid-cols-3 py-4">
          <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">        
@@ -145,17 +150,29 @@ Let's Get Started
       <!-- End News Option -->
    </div>
    <div class="px-8 flex justify-center items-center flex-col">
+      <div class="flex justify-items-center items-center space-x-6 py-4 flex-row">
+         <button class="py-2 px-2 font-semibold text-xs font-cocogoose rounded-sm bg-yellow-600 text-white hover:bg-indigo-700" onclick="update(republic)">Republic</button>
+         <button class="py-2 px-2 font-semibold text-xs font-cocogoose rounded-sm bg-yellow-600 text-white hover:bg-indigo-700" onclick="update(ndtv)">NDTV</button>
+         <button class="py-2 px-2 font-semibold text-xs font-cocogoose rounded-sm bg-yellow-600 text-white hover:bg-indigo-700" onclick="update(cnn)">CNN</button>
+      </div>
+      <div id="hashtags" class="mx-24"></div>
      
+</div>
+<div class="flex items-center justify-items-center">
+   <button class="bg-gray-700 px-2 mt-12 text-white font-cocogoose font-semibold uppercase border-2 w-24 mx-auto text-center border-gray-900 py-1  hidden lg:block" onclick="scrollSmoothTo('language')">
+      Next
+             </button>
 </div>
 </div>
 
- <!-- Weekdays -->
- <div id="tweetcount" class="grid lg:py-36 py-16 lg:grid-cols-2 grid-cols-1 mb-4 mx-auto lg:w-9/12 justify-center max-w-screen-2xl">
+
+ <!-- Language  -->
+ <div id="language" class="grid lg:py-36 mg:grid-cols-2 py-16 lg:grid-cols-2 grid-cols-1 mb-4 mx-auto lg:w-9/12 justify-center max-w-6xl">
    <div class="px-8 flex justify-center items-center flex-col">
-      <p class="font-cocogoose font-bold uppercase text-left lg:text-5xl lg:py-2 text-3xl"> #3. What Kind of Language
-         Do They Use?</p>
+      <p class="font-cocogoose font-bold uppercase text-left lg:text-5xl lg:py-2 text-3xl">  #3. What kind of language did they use?</p>
       <p class="text-base pb-4 flex justify-start items-start lg:pt-8 pt-4 text-justify ">
-         This fourth pillar of democracy exists to keep a check on those in authority. The kind of language that reports use plays an important role in shaping your perception. Certain words make for better news, and certain words manufacture more engagement. We're comparing </p>
+         This fourth pillar of democracy exists to keep a check on those in authority. The kind of language that reports use plays an important role in shaping your perception. Certain words make for better news, and certain words manufacture more engagement. We compared the words used to describe to major leaders, one in the majority and one in the opposition.</p>
+      </p>
       <!-- News Option -->
       <div class="grid grid-cols-3 gap-2 md:grid-cols-3 lg:grid-cols-3 py-4">
          <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">        
@@ -177,26 +194,31 @@ Let's Get Started
       <!-- End News Option -->
    </div>
    <div class="px-8 flex justify-center items-center flex-col">
+    
+      <div id="language" class="mx-24"></div>
      
+</div>
+<div class="flex items-center justify-items-center">
+   <button class="bg-gray-700 px-2 mt-12 text-white font-cocogoose font-semibold uppercase border-2 w-24 mx-auto text-center border-gray-900 py-1  hidden lg:block" onclick="scrollSmoothTo('topics')">
+      Next
+             </button>
 </div>
 </div>
 
- <!-- Sentiment Block -->
- <div class="h-100 mb-2 mx-auto justify-center max-w-7xl">
+ <!-- Topics Block -->
+ <div id="topics" class="h-100 mb-2 mx-auto justify-center py-12 max-w-7xl">
  <div class="px-12">
-    <h2 class="text-2xl mx-auto lg:px-40 lg:text-5xl lg:pt-20 font-rougant font-medium text-center">I got a feeling</h2>
-    <p class="text-base pb-2 lg:px-52 lg:pt-8 pt-4 text-center">
-       What has our mood been like over the past year and a half? For this, I calculated the sentiment of each word during a particular day and the net sentiment of that day was calculated as: 
-    </p>
-    <br>
-    <p class="bg-gray-400 text-white lg:mx-64 font-mono py-2 text-sm px-4 text-center">Net Sentiment = Positive Sentiment - Negative Sentiment</p>
-    <br>
-    <p class="text-base pb-4 lg:px-52 text-justify">   
-       We feel angry a lot, but what did we feel the angriest about? Online classes and BJP goons bursting into the college definitely left a mark.While we weren't exactly happy, the highest positive sentiment was encountered when we talked about whether or not to give college time and see how they handled the online classes, after an iffy revisit.   
-    </p>
-    <div class="flex justify-start items-center">
-       <iframe src="https://chart-studio.plotly.com/~thedivtagguy/3.embed?showlink=false" height="500" width="1500" overflow-x = "scroll" position = ""></iframe>
-    </div>
+   <p class="font-cocogoose font-bold uppercase text-center lg:text-8xl lg:py-2 text-3xl"> How much did <br> they talk about...</p>
+   <p class="font-cocogoose font-bold uppercase text-center lg:text-base lg:py-2 text-xs"> Percentage of mentions in tweets of:</p>
+
+ 
+   <div class="grid lg:grid-cols-2 grid-cols-1 md:grid-cols-2 justify-items-center items-center lg:py-12 lg:pt-20">
+      <div>
+         <p class="font-cocogoose font-bold uppercase text-center lg:text-5xl lg:py-2 text-3xl">Education</p>
+      </div>
+      <div>another hi</div>
+   </div>
+  
  </div>
 
  <!-- Trigrams -->
@@ -398,171 +420,19 @@ Let's Get Started
          </h2>    </div>
  </div>
 
- <script>
-   function scrollSmoothTo(elementId) {
-      var element = document.getElementById(elementId);
-      element.scrollIntoView({
-        block: 'start',
-        behavior: 'smooth'
-      });
-    }
- </script>
+
 <style>
     path, line {
       stroke: #A6ACC9;
     }
+
+    text {
+       fill: #A6ACC9;
+    }
+
+    #hashtags > svg > g > g.myXaxis > text {
+      fill: blue;
+
+    }
+
 </style>
-<script>
-
-
-   // set the dimensions and margins of the graph
-   var margin = {top: 50, right: 60, bottom: 140, left: 120},
-       width = 460 - margin.left - margin.right,
-       height = 450 - margin.top - margin.bottom;
-   
-   // append the svg object to the body of the page
-   var svg = d3.select("#my_dataviz")
-     .append("svg")
-       .attr("width", width + margin.left + margin.right)
-       .attr("height", height + margin.top + margin.bottom)
-     .append("g")
-       .attr("transform",
-             "translate(" + margin.left + "," + margin.top + ")");
-   
-   // Parse the Data
-   d3.csv("https://raw.githubusercontent.com/thedivtagguy/files/main/tweets.csv", function(data) {
-   
-   // X axis
-   var x = d3.scaleBand()
-     .range([ 0, width ])
-     .domain(data.map(function(d) { return d.Country; }))
-     .padding(0.2);
-   svg.append("g")
-     .attr("transform", "translate(0," + height + ")")
-     .call(d3.axisBottom(x))
-     .selectAll("text")
-       .attr("fill", "#A6ACC9")
-       .attr("font-style", "cocogoose")
-       .attr("font-size", "15px")
-       .attr("transform", "translate(-10,0)rotate(-45)")
-       .style("text-anchor", "end");
-   
-   // Add Y axis
-   var y = d3.scaleLinear()
-     .domain([0, 220000])
-     .range([ height, 0]);
-   svg.append("g")
-     .call(d3.axisLeft(y))
-     .selectAll("text")
-       .attr("fill", "#A6ACC9")
-       .attr("font-style", "cocogoose")
-       .attr("font-size", "15px");
-
-     // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
-  // Its opacity is set to 0: we don't see it by default.
-  var tooltip = d3.select("#my_dataviz")
-  .append("div")
-  .style("opacity", 0)
-  .attr("class", "tooltip")
-  .style("background-color", "#A6ACC9")
-  .style("border", "solid")
-  .style("border-width", "1px")
-  .style("border-radius", "5px")
-  .style("padding", "10px")
-  .style("margin", "auto")
-  .style("width", "50%")
-  .style("font-family", "cocogoose")
-  .style("font-size", "13px")
-  .style("text-align", "center")
-
-    // A function that change this tooltip when the user hover a point.
-  // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
-  var mouseover = function(d) {
-   tooltip
-     .style("opacity", 1)
- }
-
- var mousemove = function(d) {
-   tooltip
-     .html("Number of Tweets: " + d.Value)
-     .style("left", (d3.mouse(this)[0]) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
-     .style("top", (d3.mouse(this)[1]) + "px")
- }
-
- // A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
- var mouseleave = function(d) {
-   tooltip
-     .style("opacity", 0)
- }
-
- svg.append("text")
- .attr("class", "x label")
- .attr("text-anchor", "end")
- .attr("x", width)
- .attr("y", height + 120)
- .text("Number of Tweets Between December 2019 and November 2020")
- .style("font-family", "cocogoose")
- .style("fill", "#A6ACC9")
- .style("font-size", "10px")
- .style("text-align", "center")
- .call(wrap, 350); // wrap the text in <= 30 pixels
-
-
-   // Bars
-   svg.selectAll("mybar")
-     .data(data)
-     .enter()
-     .append("rect")
-       .attr("x", function(d) { return x(d.Country); })
-       .attr("width", x.bandwidth())
-       .attr("fill", "#A6ACC9")
-       // no bar at the beginning thus:
-       .attr("height", function(d) { return height - y(0); }) // always equal to 0
-       .attr("y", function(d) { return y(0); })
-       .on("mouseover", mouseover )
-    .on("mousemove", mousemove )
-    .on("mouseleave", mouseleave )
-   
-   // Animation
-   svg.selectAll("rect")
-     .transition()
-     .duration(800)
-     .attr("y", function(d) { return y(d.Value); })
-     .attr("height", function(d) { return height - y(d.Value); })
-     .delay(function(d,i){console.log(i) ; return(i*100)})
-   
-   })
-   
-   function wrap(text, width) {
-      text.each(function () {
-          var text = d3.select(this),
-              words = text.text().split(/\s+/).reverse(),
-              word,
-              line = [],
-              lineNumber = 0,
-              lineHeight = 1.1, // ems
-              x = text.attr("x"),
-              y = text.attr("y"),
-              dy = 0, //parseFloat(text.attr("dy")),
-              tspan = text.text(null)
-                          .append("tspan")
-                          .attr("x", x)
-                          .attr("y", y)
-                          .attr("dy", dy + "em");
-          while (word = words.pop()) {
-              line.push(word);
-              tspan.text(line.join(" "));
-              if (tspan.node().getComputedTextLength() > width) {
-                  line.pop();
-                  tspan.text(line.join(" "));
-                  line = [word];
-                  tspan = text.append("tspan")
-                              .attr("x", x)
-                              .attr("y", y)
-                              .attr("dy", ++lineNumber * lineHeight + dy + "em")
-                              .text(word);
-              }
-          }
-      });
-  }
-   </script>

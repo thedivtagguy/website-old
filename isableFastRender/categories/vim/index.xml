@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VIM on Aman Bhargava</title>
+    <link>http://localhost:1313/categories/vim/</link>
+    <description>Recent content in VIM on Aman Bhargava</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Apr 2012 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Critical News Consumer&#39;s Starter Manifesto</title>
+      <link>http://localhost:1313/projects/manifesto/</link>
+      <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/manifesto/</guid>
+      <description>A data analysis of 20,000+ messages in the Srishti &amp;lsquo;23 Whatsapp group, visualized.</description>
+    </item>
+    
+    <item>
+      <title>Srishti &#39;23, Unwrapped</title>
+      <link>http://localhost:1313/projects/whatsapp/</link>
+      <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/projects/whatsapp/</guid>
+      <description>A data analysis of 20,000+ messages in the Srishti &amp;lsquo;23 Whatsapp group, visualized.</description>
+    </item>
+    
+  </channel>
+</rss>
