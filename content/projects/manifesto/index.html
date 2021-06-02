@@ -13,8 +13,8 @@ tools:
 - Hugo 
 colors: 
 - 0B0F59 # Background Color
-- ffffff # Logo Color and Sidenote Labels
-- A6ACC9 # 
+- A6ACC9 # Logo Color and Sidenote Labels
+- ffffff # 
 fonts:
 - cocogoose
 - rougant
@@ -72,20 +72,25 @@ fonts:
    <p class="font font-cocogoose font-bold uppercase text-center lg:text-2xl text-base lg:py-4">We're big fans of <br class="lg:hidden"> informed decisions,</p>
    <p class="font font-cocogoose font-bold uppercase text-white text-center lg:text-5xl text-4xl pb-8">And now, we'd like you to make one.</p>
    <p class="font-cocogoose font-normal lg:text-xl text-sm lg:py-8 leading-7 text-justify">In each slide, we will present you a glimpse of our findings. We want you to <span class="bg-gray-300 text-black py-1 px-2 rounded-lg">see the numbers carefully</span>, see what they mean and what consequences they represent.&nbsp;
-      After you've done that, <span class="bg-gray-300 text-black py-1 px-2 rounded-lg">select the button for the news channels</span> that performed acceptably for you from the list of options. At the end of this little trip, you'll have a better idea of which news channel you should follow.
+      After you've done that, {{< sidenote "left" "left-note" "select the button for the channel" >}}
+         <span class="text-xs leading-2 text-center">For example, click this button to give a point to CNN:</span>
+         <button type="button" class="py-2 px-4 w-1/2 font-bold font-cocogoose bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white transition ease-in duration-200 text-center text-xs shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg ">
+            CNN
+            </button>         {{< /sidenote >}}	that performed acceptably for you from the list of options. At the end of this little trip, you'll have a better idea of which news channel you should follow.
       </p>
+  	
       <button class="bg-blue-800 px-4 lg:mt-16 text-white font-cocogoose font-semibold uppercase border-4 w-1/2 mx-auto text-center border-blue-900 py-4  hidden lg:block" onclick="scrollSmoothTo('tweetcount')">
-Let's Started
+Let's Get Started
        </button>
   </div>
 
 
  <!-- Counts -->
- <div id="tweetcount" class="grid lg:py-36 py-16 lg:grid-cols-2 grid-cols-1 mb-4 mx-auto lg:w-9/12 justify-center max-w-screen-2xl">
+ <div id="tweetcount" class="grid lg:py-36 mg:grid-cols-2 py-16 lg:grid-cols-2 grid-cols-1 mb-4 mx-auto lg:w-9/12 justify-center max-w-screen-2xl">
    <div class="px-8 flex justify-center items-center flex-col">
       <p class="font-cocogoose font-bold uppercase text-left lg:text-5xl lg:py-2 text-3xl"> #1. Decide what amount of news works for you</p>
       <p class="text-base pb-4 flex justify-start items-start lg:pt-8 pt-4 text-justify ">
-         Remember that although it may seem otherwise, there is more to the world than the headlines that you read. Like any other thing that we consume, too much of it can be harmful. <br> Quantity does not equal quality.
+        How many tweets did each channel put out during this period? Decide how much of your feed should be news. Does more news make you feel like you'd be more well informed, or would you rather see only the most important headlines? <br> Psst: Quantity may not equal quality.
       </p>
       <!-- News Option -->
       <div class="grid grid-cols-3 gap-2 md:grid-cols-3 lg:grid-cols-3 py-4">
@@ -108,8 +113,7 @@ Let's Started
       <!-- End News Option -->
    </div>
    <div class="px-8 flex justify-center items-center flex-col">
-      <div class="px-40" id="my_dataviz"></div>
-      <div class="px-40" id="my_dataviz"></div>
+      <div id="my_dataviz"></div>
 </div>
 </div>
 
@@ -408,12 +412,12 @@ Let's Started
       stroke: #A6ACC9;
     }
 </style>
- <script>
+<script>
 
 
    // set the dimensions and margins of the graph
-   var margin = {top: 10, right: 30, bottom: 90, left: 100},
-       width = 550 - margin.left - margin.right,
+   var margin = {top: 50, right: 60, bottom: 140, left: 120},
+       width = 460 - margin.left - margin.right,
        height = 450 - margin.top - margin.bottom;
    
    // append the svg object to the body of the page
@@ -437,26 +441,73 @@ Let's Started
      .attr("transform", "translate(0," + height + ")")
      .call(d3.axisBottom(x))
      .selectAll("text")
-       .attr("transform", "translate(-10,0)rotate(-45)")
-       .attr("padding", "5px")
-       .attr("font-size","15px")
        .attr("fill", "#A6ACC9")
-       .attr("font-family", "cocogoose")
+       .attr("font-style", "cocogoose")
+       .attr("font-size", "15px")
+       .attr("transform", "translate(-10,0)rotate(-45)")
        .style("text-anchor", "end");
    
    // Add Y axis
    var y = d3.scaleLinear()
-   .domain([0, 220000])
-   .range([ height, 0]);
+     .domain([0, 220000])
+     .range([ height, 0]);
    svg.append("g")
-   .call(d3.axisLeft(y))
-   .selectAll("text")
-      .attr("font-size","10px")
-      .attr("fill", "#A6ACC9")
-      .attr("font-family", "cocogoose")
-      .style("text-anchor", "end");
-         
-   
+     .call(d3.axisLeft(y))
+     .selectAll("text")
+       .attr("fill", "#A6ACC9")
+       .attr("font-style", "cocogoose")
+       .attr("font-size", "15px");
+
+     // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
+  // Its opacity is set to 0: we don't see it by default.
+  var tooltip = d3.select("#my_dataviz")
+  .append("div")
+  .style("opacity", 0)
+  .attr("class", "tooltip")
+  .style("background-color", "#A6ACC9")
+  .style("border", "solid")
+  .style("border-width", "1px")
+  .style("border-radius", "5px")
+  .style("padding", "10px")
+  .style("margin", "auto")
+  .style("width", "50%")
+  .style("font-family", "cocogoose")
+  .style("font-size", "13px")
+  .style("text-align", "center")
+
+    // A function that change this tooltip when the user hover a point.
+  // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
+  var mouseover = function(d) {
+   tooltip
+     .style("opacity", 1)
+ }
+
+ var mousemove = function(d) {
+   tooltip
+     .html("Number of Tweets: " + d.Value)
+     .style("left", (d3.mouse(this)[0]) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
+     .style("top", (d3.mouse(this)[1]) + "px")
+ }
+
+ // A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
+ var mouseleave = function(d) {
+   tooltip
+     .style("opacity", 0)
+ }
+
+ svg.append("text")
+ .attr("class", "x label")
+ .attr("text-anchor", "end")
+ .attr("x", width)
+ .attr("y", height + 120)
+ .text("Number of Tweets Between December 2019 and November 2020")
+ .style("font-family", "cocogoose")
+ .style("fill", "#A6ACC9")
+ .style("font-size", "10px")
+ .style("text-align", "center")
+ .call(wrap, 350); // wrap the text in <= 30 pixels
+
+
    // Bars
    svg.selectAll("mybar")
      .data(data)
@@ -468,6 +519,9 @@ Let's Started
        // no bar at the beginning thus:
        .attr("height", function(d) { return height - y(0); }) // always equal to 0
        .attr("y", function(d) { return y(0); })
+       .on("mouseover", mouseover )
+    .on("mousemove", mousemove )
+    .on("mouseleave", mouseleave )
    
    // Animation
    svg.selectAll("rect")
@@ -479,4 +533,36 @@ Let's Started
    
    })
    
+   function wrap(text, width) {
+      text.each(function () {
+          var text = d3.select(this),
+              words = text.text().split(/\s+/).reverse(),
+              word,
+              line = [],
+              lineNumber = 0,
+              lineHeight = 1.1, // ems
+              x = text.attr("x"),
+              y = text.attr("y"),
+              dy = 0, //parseFloat(text.attr("dy")),
+              tspan = text.text(null)
+                          .append("tspan")
+                          .attr("x", x)
+                          .attr("y", y)
+                          .attr("dy", dy + "em");
+          while (word = words.pop()) {
+              line.push(word);
+              tspan.text(line.join(" "));
+              if (tspan.node().getComputedTextLength() > width) {
+                  line.pop();
+                  tspan.text(line.join(" "));
+                  line = [word];
+                  tspan = text.append("tspan")
+                              .attr("x", x)
+                              .attr("y", y)
+                              .attr("dy", ++lineNumber * lineHeight + dy + "em")
+                              .text(word);
+              }
+          }
+      });
+  }
    </script>

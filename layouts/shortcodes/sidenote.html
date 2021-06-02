@@ -7,7 +7,7 @@
     </span>
 
 
-    {{$sidenotecolor := index (.Page.Params.colors) 1 }}
+    {{$sidenotecolor := index (.Page.Params.colors) 0 }}
     {{$sidenotecolor2 := index (.Page.Params.colors) 1 }}
 
 
@@ -17,13 +17,17 @@
 
 /* Sidenotes CSS */ 
 
+.sidenote {
+color: #{{ $sidenotecolor2 }};
+}
+
 .sidenote:hover {
-    background-color: #{{ $sidenotecolor2 }};
+    background-color: #{{ $sidenotecolor }};
 }
 
 .sidenote-label:hover{
-    background-color: #{{ $sidenotecolor2 }} ;
-    color: #000
+    background-color: #{{ $sidenotecolor }} ;
+    color: #{{ $sidenotecolor2 }};
 }
 .sidenote:hover .sidenote-content {
     border: .2rem dashed;
@@ -32,7 +36,7 @@
 }
 .sidenote-label {
     border-bottom: .2rem dashed;
-    border-color: #{{ $sidenotecolor2 }}
+    border-color: #{{ $sidenotecolor2 }};
 }
 
 .sidenote-checkbox {
