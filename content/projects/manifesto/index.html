@@ -206,7 +206,7 @@ Let's Get Started
 </div>
 
 <!-- Language  -->
-<div id="sent" class="grid lg:py-40 mg:grid-cols-3 py-16 lg:grid-cols-3 grid-cols-1 mb-4 mx-auto lg:w-10/12 justify-center max-w-6xl">
+<div id="sent" class="grid lg:py-40 mg:grid-cols-3 py-16 lg:grid-cols-3 grid-cols-1 mb-4 mx-auto  lg:w-10/12 justify-start space-x-8 max-w-6xl">
    <div class="flex justify-center items-center">
       <div id="sentiment2"> </div>
 
@@ -223,45 +223,29 @@ Let's Get Started
 
      <div id="controls" class="py-8">
       <div class="flex items-center">
-         <button id="republic"  onclick="sendData('republic')" type="button" class="w-full border text-base font-medium text-black bg-white hover:bg-gray-100 rounded-l-md px-4 py-2">Republic</button>
+         <button id="republic" onclick="document.getElementById('rep').click()" type="button" class="w-full border text-base font-medium text-black bg-white hover:bg-gray-100 rounded-l-md px-4 py-2">Republic</button>
 
-         <button id="ndtv" onclick="sendData('ndtv')" type="button" class="w-full border text-base font-medium text-black bg-white hover:bg-gray-100 px-4 py-2">
+         <button id="ndtv" onclick="document.getElementById('nd').click()" type="button" class="w-full border text-base font-medium text-black bg-white hover:bg-gray-100 px-4 py-2">
              NDTV
          </button>
-         <button  id="cnnnews18" onclick="sendData('cnnnews18')" type="button" class="w-full border-t border-b border-r text-base font-medium rounded-r-md text-black bg-white hover:bg-gray-100 px-4 py-2">
+         <button  id="cnnnews18" onclick="document.getElementById('cn').click()" type="button" class="w-full border-t border-b border-r text-base font-medium rounded-r-md text-black bg-white hover:bg-gray-100 px-4 py-2">
              CNN
          </button>
       </div>
      </div>
-     <button id="btn1" onclick="sendData('republic')">ClickMe</button>
-
-     <script>
-      var id; // global variable
-      holding = "holder";
-      var counter = 1;
-      function sendData(valueId){
-        id = valueId;
-        
-       
-      if(counter <= 1){
-        document.getElementById(holding).setAttribute("id", id);
-        counter++;
-        holding = id;
-        } else {
-         document.getElementById(holding).setAttribute("id", id);
-         holding = id;
-        }
-console.log(holding);
-console.log(id);
-      }
-
-   </script>
-   <div id="holder"></div>
+     <div id="controls2" class="py-8">
+      <div class="flex items-center">
+         <input type="radio" class="republic" style="visibility:hidden;" id="rep">
+         <input type="radio" class="ndtv"  style="visibility:hidden;" id="nd">
+         <input type="radio" class="cnnnews18"  style="visibility:hidden;" id="cn">
+      </div>
+     </div>
+     
    </div>
    <div class="px-8 flex justify-center items-center flex-col">
   
 
-      <div id="sentiment1"> </div>
+      <div id="sentiment1" class="pl-12"> </div>
          
          </div>
 
