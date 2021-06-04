@@ -159,7 +159,7 @@ Let's Get Started
      
 </div>
 <div class="flex items-center justify-items-center">
-   <button class="bg-gray-700 px-2 mt-12 text-white font-cocogoose font-semibold uppercase border-2 w-24 mx-auto text-center border-gray-900 py-1  hidden lg:block" onclick="scrollSmoothTo('language')">
+   <button class="bg-gray-700 px-2 mt-12 text-white font-cocogoose font-semibold uppercase border-2 w-24 mx-auto text-center border-gray-900 py-1  hidden lg:block" onclick="scrollSmoothTo('languages')">
       Next
              </button>
 </div>
@@ -167,7 +167,7 @@ Let's Get Started
 
 
  <!-- Language  -->
- <div id="language" class="grid lg:py-36 mg:grid-cols-2 py-16 lg:grid-cols-2 grid-cols-1 mb-4 mx-auto lg:w-9/12 justify-center max-w-6xl">
+ <div id="languages" class="grid lg:py-36 mg:grid-cols-1 py-16 lg:grid-cols-1 grid-cols-1 mb-4 mx-auto lg:w-4/12 justify-center max-w-6xl">
    <div class="px-8 flex justify-center items-center flex-col">
       <p class="font-cocogoose font-bold uppercase text-left lg:text-5xl lg:py-2 text-3xl">  #3. What kind of language did they use?</p>
       <p class="text-base pb-4 flex justify-start items-start lg:pt-8 pt-4 text-justify ">
@@ -195,230 +195,85 @@ Let's Get Started
    </div>
    <div class="px-8 flex justify-center items-center flex-col">
     
-      <div id="language" class="mx-24"></div>
+
      
+         
+         </div>
+
+</div>
+<div class="flex items-center justify-items-center">
+
+</div>
+
+<!-- Language  -->
+<div id="sent" class="grid lg:py-40 mg:grid-cols-3 py-16 lg:grid-cols-3 grid-cols-1 mb-4 mx-auto lg:w-10/12 justify-center max-w-6xl">
+   <div class="flex justify-center items-center">
+      <div id="sentiment2"> </div>
+
+   </div>
+   <div class="px-8 flex justify-center items-center flex-col">
+      <p class="font-cocogoose font-bold uppercase lg:text-5xl lg:py-2 text-3xl text-center"> Words Following...</p>
+      <p class="text-base pb-4 flex justify-start items-start lg:pt-8 pt-4 text-justify ">
+         This fourth pillar of democracy exists to keep a check on those in authority. The kind of language that reports use plays an important role in shaping your perception. Certain words make for better news, and certain words manufacture more engagement. We compared the words used to describe to major leaders, one in the majority and one in the opposition.</p>
+      </p>
+
+      
+
+
+
+     <div id="controls" class="py-8">
+      <div class="flex items-center">
+         <button id="republic"  onclick="sendData('republic')" type="button" class="w-full border text-base font-medium text-black bg-white hover:bg-gray-100 rounded-l-md px-4 py-2">Republic</button>
+
+         <button id="ndtv" onclick="sendData('ndtv')" type="button" class="w-full border text-base font-medium text-black bg-white hover:bg-gray-100 px-4 py-2">
+             NDTV
+         </button>
+         <button  id="cnnnews18" onclick="sendData('cnnnews18')" type="button" class="w-full border-t border-b border-r text-base font-medium rounded-r-md text-black bg-white hover:bg-gray-100 px-4 py-2">
+             CNN
+         </button>
+      </div>
+     </div>
+     <button id="btn1" onclick="sendData('republic')">ClickMe</button>
+
+     <script>
+      var id; // global variable
+      holding = "holder";
+      var counter = 1;
+      function sendData(valueId){
+        id = valueId;
+        
+       
+      if(counter <= 1){
+        document.getElementById(holding).setAttribute("id", id);
+        counter++;
+        holding = id;
+        } else {
+         document.getElementById(holding).setAttribute("id", id);
+         holding = id;
+        }
+console.log(holding);
+console.log(id);
+      }
+
+   </script>
+   <div id="holder"></div>
+   </div>
+   <div class="px-8 flex justify-center items-center flex-col">
+  
+
+      <div id="sentiment1"> </div>
+         
+         </div>
+
 </div>
 <div class="flex items-center justify-items-center">
    <button class="bg-gray-700 px-2 mt-12 text-white font-cocogoose font-semibold uppercase border-2 w-24 mx-auto text-center border-gray-900 py-1  hidden lg:block" onclick="scrollSmoothTo('topics')">
       Next
              </button>
 </div>
-</div>
 
- <!-- Topics Block -->
- <div id="topics" class="h-100 mb-2 mx-auto justify-center py-12 max-w-7xl">
- <div class="px-12">
-   <p class="font-cocogoose font-bold uppercase text-center lg:text-8xl lg:py-2 text-3xl"> How much did <br> they talk about...</p>
-   <p class="font-cocogoose font-bold uppercase text-center lg:text-base lg:py-2 text-xs"> Percentage of mentions in tweets of:</p>
 
- 
-   <div class="grid lg:grid-cols-2 grid-cols-1 md:grid-cols-2 justify-items-center items-center lg:py-12 lg:pt-20">
-      <div>
-         <p class="font-cocogoose font-bold uppercase text-center lg:text-5xl lg:py-2 text-3xl">Education</p>
-      </div>
-      <div>another hi</div>
-   </div>
-  
- </div>
 
- <!-- Trigrams -->
- <div class="grid h-100 lg:py-12 lg:grid-cols-2 grid-cols-1 mb-2 mx-auto justify-center max-w-screen-2xl">
-    <div class="px-8 flex justify-center items-center flex-col">
-       <h2 class="text-2xl flex justify-start items-start lg:px-40 lg:text-5xl lg:pt-20 font-rougant font-medium">Did you see the words</h2>
-       <p class="text-base pb-4 flex justify-start items-start lg:px-40 lg:pt-8 pt-4 text-justify">
-          What did we say over and over and over and over and over and over? We find this using a trigram analysis. A trigram here would be each text broken into three consecutive words, which are then counted. <br> <br>
-          Varij probably wanted to know.       
-       </p>
-       <a href="https://drive.google.com/file/d/1E4Y2H1kXV0TqaadEzpC027kOolFWlqrZ/view?usp=sharing"  target="_blank">
-          <p class="bg-orange-400 px-8 text-white font-extrabold border-4 border-orange-200 py-2 lg:mt-4 hidden">See All Trigrams</p>
-       </a>
-    </div>
-    <div class="flex justify-center items-center lg:pr-24 px-20">
-       <table class="table-fixed p-4 bg-white shadow lg:mt-12">
-          <thead>
-             <tr>
-                <th class="border-b-2 w-2/3 p-4 dark:border-dark-5 bg-gray-800 whitespace-nowrap font-normal text-gray-200">
-                   Phrase
-                </th>
-                <th class="border-b-2 w-1/3 p-4 dark:border-dark-5 bg-gray-800 whitespace-nowrap capitalize font-normal text-gray-200">
-                   Number of Times used
-                </th>
-             </tr>
-          </thead>
-          <tbody>
-             <tr class="text-gray-700">
-                <td class="border-b-2 p-4 dark:border-dark-5">
-                   Does anyone have...
-                </td>
-                <td class="border-b-2 p-4 dark:border-dark-5 text-center">
-                   159 times
-                </td>
-             </tr>
-             <tr class="text-gray-700">
-                <td class="border-b-2 p-4 dark:border-dark-5">
-                   Do we have...
-                </td>
-                <td class="border-b-2 p-4 dark:border-dark-5 text-center">
-                   73 times
-                </td>
-             </tr>
-             <tr class="text-gray-700">
-                <td class="border-b-2 p-4 dark:border-dark-5">
-                   At the airport...
-                </td>
-                <td class="border-b-2 p-4 dark:border-dark-5 text-center">
-                   62 times
-                </td>
-             </tr>
-             <tr class="text-gray-700">
-                <td class="border-b-2 p-4 dark:border-dark-5">
-                   Does anyone know...
-                </td>
-                <td class="border-b-2 p-4 dark:border-dark-5 text-center">
-                   47 times
-                </td>
-             </tr>
-             <tr class="text-gray-700">
-                <td class="border-b-2 p-4 dark:border-dark-5">
-                   Let me know...
-                </td>
-                <td class="border-b-2 p-4 dark:border-dark-5 text-center">
-                   41 times
-                </td>
-             </tr>
-             <tr class="text-white bg-orange-400">
-                <td class="border-b-2 p-4 dark:border-dark-5">
-                   Varij wants to know...
-                </td>
-                <td class="border-b-2 p-4 dark:border-dark-5 text-center">
-                   15 times
-                </td>
-             </tr>
-          </tbody>
-       </table>
-      
-    </div>
-    <a href="https://drive.google.com/file/d/1E4Y2H1kXV0TqaadEzpC027kOolFWlqrZ/view?usp=sharing"  target="_blank">
-        <p class="bg-orange-400 px-8 text-white font-extrabold border-4 border-orange-200 py-2 mx-12 text-center my-8 lg:mt-4 lg:hidden">See All Trigrams</p>
-     </a>
- </div>
-
- <!-- Top Mentions -->
- <div class="grid h-100 lg:py-4 lg:grid-cols-2 grid-cols-1 mb-2 mx-auto justify-center max-w-screen-2xl">
-    <div class="px-8 flex justify-center items-center flex-col">
-       <h2 class="text-2xl flex justify-start items-start lg:px-40 lg:text-5xl lg:pt-20 font-rougant font-medium">Lonely at the Top</h2>
-       <p class="text-base pb-4 flex justify-start items-start lg:px-40 lg:pt-8 pt-4 text-justify">
-          The people we mentioned the most. <br> <br> Pavit, send link. 
-       </p>
-    </div>
-    <div class="flex justify-start items-center lg:pr-24 lg:-mt-8">
-       <iframe src="https://chart-studio.plotly.com/~thedivtagguy/13.embed?showlink=false" height="500" width="700" overflow-x = "scroll" position = ""></iframe>
-    </div>
- </div>
-
- <!-- Surveys and Whatsapp -->
- <div class="grid h-100 lg:py-4 lg:grid-cols-2 grid-cols-1 mb-2 mx-auto justify-center max-w-screen-2xl">
-    <div class="px-8 flex justify-center items-center flex-col">
-       <h2 class="text-2xl flex justify-start items-start lg:px-40 lg:text-5xl lg:pt-20 font-rougant font-medium">Who Let the Dogs Out</h2>
-       <p class="text-base pb-4 flex justify-start items-start lg:px-40 lg:pt-8 pt-4 text-justify">
-          How many surveys did we answer? What are the ways people asked you to fill their surveys? Oh, and how many other Whatsapp groups got created (and probably died)?
-       </p>
-    </div>
-    <div class="flex justify-center items-center lg:-mt-8 py-4">
-       <div class="flex flex-col lg:flex-row justify-center lg:space-x-10">
-          <div>
-             <h2 class="lg:text-8xl text-6xl font-causent font-bold text-orange-400 text-center">40</h2>
-             <h2 class="lg:text-2xl text-xl lg:pt-4 italic font-causent font-bold text-center">New Whatsapp <br> Groups Created</h2>
-          </div>
-          <div>
-             <h2 class="lg:text-8xl text-6xl font-causent font-bold text-orange-400 text-center">155</h2>
-             <h2 class="lg:text-2xl text-xl lg:pt-4 italic font-causent font-bold text-center">Surveys <br>Posted, Jeez</h2>
-          </div>
-       </div>
-    </div>
- </div>
-
- <!-- Questions -->
- <div class="grid h-100 lg:py-4 lg:grid-cols-2 grid-cols-1 mb-2 mx-auto justify-center max-w-screen-2xl">
-    <div class="px-8 flex justify-center items-center flex-col">
-       <h2 class="text-2xl  lg:px-40 lg:text-5xl lg:pt-20 font-rougant text-left font-medium">What about us?</h2>
-       <p class="text-base pb-4 flex justify-start items-start lg:px-40 lg:pt-8 pt-4 text-justify">
-          Sometimes it feels like the only thing we do is ask questions. This class, those credits, this email, that attendance. <br>  How many questions did we ask, and of what kind? The highest were implied questions. These are questions like "Sure?", "Kal Kya Scene Hai?", "Ravi's class?", which don't use questioning words directly. <br> A little more interesting was the second highest question type, "Anyone?". A significant portion of the questions are looking to connect with people outside your immediate group.        
-       </p>
-    </div>
-    <div class="flex flex-col justify-start items-center lg:pr-24 lg:-mt-8">
-       <iframe src="https://chart-studio.plotly.com/~thedivtagguy/18.embed?showlink=false" height="500" width="700" overflow-x = "scroll" position = ""></iframe>
-       <div class="pb-8">
-          <h2 class="text-6xl font-causent font-bold text-orange-400 text-center">2170</h2>
-          <h2 class="text-2xl italic font-causent font-bold text-center">Questions asked</h2>
-       </div>
-    </div>
- </div>
-
- <!-- Most Active -->
- <div class="grid h-100 lg:py-4 lg:grid-cols-2 grid-cols-1 mb-2 mx-auto justify-center max-w-screen-2xl">
-    <div class="px-8 flex justify-center items-center flex-col">
-       <h2 class="text-2xl flex justify-start items-start lg:px-40 lg:text-5xl lg:pt-20 font-rougant font-medium">The racket they made</h2>
-       <p class="text-base pb-4 flex justify-start items-start lg:px-40 lg:pt-8 pt-4 text-justify">
-          What were we talking about when the largest number of people had something to say? <br> 96 people joined the conversation on the day we had the Zoom call with our new deans, the highest number of unique texters on a single day.       
-       </p>
-    </div>
-    <div class="flex justify-start items-center lg:pr-24 lg:-mt-8">
-       <iframe src="https://chart-studio.plotly.com/~thedivtagguy/16.embed?showlink=false" height="500" width="1200" overflow-x = "scroll" position = ""></iframe>
-    </div>
- </div>
-
- <!-- Sentiment Block -->
- <div class="h-100 mb-2 mx-auto justify-center max-w-7xl">
-    <div class="px-12">
-       <h2 class="text-4xl mx-auto lg:px-40 lg:text-5xl lg:pt-20 py-4 font-rougant font-medium text-center">Random Numbers</h2>
-       <div class="flex flex-wrap flex-col lg:flex-row justify-center lg:py-12 lg:space-x-60 lg:space-y-4 space-y-4">
-          <div>
-             <h2 class="lg:text-8xl text-6xl font-causent font-bold text-orange-400 text-center">40</h2>
-             <h2 class="lg:text-2xl text-xl lg:pt-4 italic font-causent font-bold text-center">Images Sent</h2>
-          </div>
-          <div>
-             <h2 class="lg:text-8xl text-6xl font-causent font-bold text-orange-400 text-center">155</h2>
-             <h2 class="lg:text-2xl text-xl lg:pt-4 italic font-causent font-bold text-center">Messages Deleted. Whoops.</h2>
-          </div>
-          <div>
-             <h2 class="lg:text-8xl text-6xl font-causent font-bold text-orange-400 text-center">155</h2>
-             <h2 class="lg:text-2xl text-xl lg:pt-4 italic font-causent font-bold text-center">Times We Said +1 <br>in Agreement</h2>
-          </div>
-       </div>
-       <div>
-          <h2 class="lg:text-8xl pt-4 text-6xl flex-grow font-causent break-all italic font-bold text-orange-400 text-center">Hahahahahahahahah</h2>
-          <h2 class="lg:text-2xl text-xl lg:pt-4 italic font-causent font-bold text-center">The longest haha was 17 characters long.</h2>
-       </div>
-       <div class="flex flex-wrap pt-4 flex-col lg:flex-row justify-center lg:py-12 lg:space-x-60 space-y-4 ">
-          <div>
-             <h2 class="lg:text-8xl text-6xl font-causent font-bold text-orange-400 text-center">155</h2>
-             <h2 class="lg:text-2xl text-xl lg:pt-4 italic font-causent font-bold text-center">lols</h2>
-          </div>
-          <div>
-             <h2 class="lg:text-8xl text-6xl font-causent font-bold text-orange-400 text-center">155</h2>
-             <h2 class="lg:text-2xl text-xl lg:pt-4 italic font-causent font-bold text-center">we said f*ck</h2>
-          </div>
-          <div>
-             <h2 class="lg:text-8xl text-6xl font-causent font-bold text-orange-400 text-center">155</h2>
-             <h2 class="lg:text-2xl text-xl lg:pt-4 italic font-causent font-bold text-center">we said f*ck</h2>
-          </div>
-       </div>
-    </div>
- </div>
-
-  <!-- Goodbye -->
-  <div class="grid h-100 lg:py-4 lg:grid-cols-2 grid-cols-1 mb-2 mx-auto justify-center max-w-screen-2xl">
-    <div class="px-8 flex justify-center items-center flex-col">
-     <img src="/IDcard-1024x690.png">
-     <p class="lg:text-base text-sm text-center pt-4 text-gray-500 italic">Illustration by Sahana Sundar</p>
-    </div>
-    <div class="flex flex-col py-12 justify-center items-center lg:pr-24 lg:-mt-8">
-        <h2 class="lg:text-4xl text-2xl font-rougant font-medium text-gray-00 text-center">See you on <br class="sm:hidden"> the other side :)</h2>
-        <h2 class="text-center pt-8 lg:text-xl  text-base font-causten font-bold uppercase">
-            Don't forget to bring your ID card. 
-         </h2>    </div>
- </div>
 
 
 <style>
