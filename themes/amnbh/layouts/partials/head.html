@@ -20,7 +20,7 @@
         />
         <script src="https://d3js.org/d3.v4.js"></script>
         <script src="/js/smoothscroll.js" defer></script>
-        {{ with .Params.meta }} 
+        {{ with .Params.metaimage }} 
         <meta itemprop="image" content="{{ . | absURL }}" />
         <meta property="og:image" content="{{ . | absURL }}" /> 
         <meta name="twitter:image" content="{{ . | absURL }}" />
