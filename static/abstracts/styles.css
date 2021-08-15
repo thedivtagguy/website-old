@@ -39,6 +39,8 @@ html {
 .sticky {
     position:fixed;
     top:0;
+    opacity:100%;
+    transition: all 0.5s ease-in-out;
 }
 
 .dropbtn {
