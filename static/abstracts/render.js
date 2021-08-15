@@ -10,6 +10,11 @@ function slugify(text) {
 }
 
 const obj=JSON.parse(txt);
+// from obj return an array of JSON keys values
+var keys = [];
+Object.keys(obj).forEach(key => { 
+    keys.push(obj[key].course);
+})
 
 for (let i=0; i < obj.length; i++) {
     let text=obj[i].course;
@@ -37,6 +42,8 @@ for (let i=0; i < obj.length; i++) {
     options.innerHTML=text;
     // create variable link that adds strings "#" and text_id
     options.setAttribute("href", "#"+ text_id);
+    options.setAttribute("onclick", "changeURL()");
+        options.setAttribute("class", "hover:bg-gray-200 hover:text-purple-700");
 
     document.getElementById("items").appendChild(options);    
     document.getElementsByClassName("wrapper")[0].appendChild(prompt);
@@ -58,22 +65,34 @@ for (let i=0; i < obj.length; i++) {
     document.getElementsByClassName("wrapper")[0].appendChild(output);
 }
 
+window.onscroll = function() {myFunction()};
 
-window.onscroll=function() {
-    myFunction()
-}
-
-;
-
-var navbar=document.getElementById("nav");
-var sticky=navbar.offsetTop;
+var header = document.getElementById("nav");
+var sticky = header.offsetTop;
 
 function myFunction() {
-    if (window.pageYOffset >=sticky) {
-        navbar.classList.add("sticky-header")
-    }
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
 
-    else {
-        navbar.classList.remove("sticky-header");
-    }
+
+var labels = [];
+Object.keys(obj).forEach(key => {
+    text = obj[key].course;
+    labels.push(text);
+})
+
+function changeURL() {
+    // function that gets the current url and gets the word after the hash
+    dBtn = document.getElementById('dropdownbutton'),
+        defaultText = ''
+
+    window.addEventListener('hashchange', function(e) {
+        const key = labels.find(k => location.hash === '#' + slugify(k));
+        dBtn.textContent = key ? key : defaultText;
+    });
+
 }

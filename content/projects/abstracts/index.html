@@ -87,11 +87,16 @@ fonts:
 </div>
 
 
-<header id="nav" class="z-40 items-center justify-center hidden w-full mx-auto bg-gray-100 shadow-lg h-14 dark:bg-gray-700 ">
+<header id="nav" class="z-40 flex items-center justify-center w-full mx-auto bg-gray-100 shadow-lg h-14 dark:bg-gray-700">
  
   <div class="dropdown hover:block">
-    <button class="w-full px-4 py-1 mx-auto my-2 text-gray-700 bg-gray-200 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500">Select a Course ⬇</button>
-    <div id="items" class="hidden h-56 overflow-auto dropdown-content hover:block">
+    <div class="flex flex-col">
+    <button  id="dropdownbutton" class="w-56 px-4 py-1 mx-auto my-2 font-medium text-gray-700 bg-gray-200 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500">Select a Course ⬇</button>
+  <div class="text-gray-400">
+    
+  </div>  
+  </div>
+    <div id="items" class="hidden w-56 h-56 mx-auto overflow-auto dropdown-content hover:block">
      
     </div>
   </div>
