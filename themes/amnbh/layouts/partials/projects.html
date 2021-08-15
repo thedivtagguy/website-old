@@ -16,7 +16,7 @@
     <div id="projectslist" class="justify-between gap-8 py-4 lg:flex">
             {{ $section := site.GetPage "projects" }}
 
-            {{ range first 2 $section.RegularPages }}
+            {{ range after 1 $section.RegularPages }}
 
             <div class="cursor-pointer h-90">
                 <a href="{{ .Permalink }}" class="-full">
