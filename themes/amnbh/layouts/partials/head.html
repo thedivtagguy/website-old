@@ -31,5 +31,9 @@
         <meta name="twitter:image" content="{{ .Site.Params.ogimage | absURL }}" />
         <meta name="twitter:image:src" content="{{ .Site.Params.ogimage | absURL }}" /> 
       {{ end }}
+      <meta name="description" content="{{ .Params.summary }}" />
+<meta itemprop="description" content="{{ .Params.summary }}" />
+<meta property="og:description" content="{{ .Params.summary }}" />
+<meta name="twitter:description" content="{{ .Params.summary }}" />
 </head>
 
