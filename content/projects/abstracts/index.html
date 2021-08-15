@@ -75,6 +75,8 @@ fonts:
     </h3>
   </div>
 
+
+ 
   <div class="max-w-6xl px-8 py-6 mx-auto lg:w-1/5">
   <h4 class="text-xl font-semibold text-center text-gray-400 uppercase font-arsenica">
     Course Index
@@ -85,35 +87,19 @@ fonts:
 </div>
 
 
-<header id="nav" class="z-40 items-center justify-center hidden w-full h-16 mx-auto bg-gray-100 shadow-lg dark:bg-gray-700 ">
+<header id="nav" class="z-40 items-center justify-center hidden w-full mx-auto bg-gray-100 shadow-lg h-14 dark:bg-gray-700 ">
  
-<select id="navItems" class="block w-1/5 px-3 py-2 mx-auto text-gray-700 bg-gray-200 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500" name="animals">
-  <option value="">
-      Select an option
-  </option>
-  <option value="dog">
-      Dog
-  </option>
-  <option value="cat">
-      Cat
-  </option>
-  <option value="hamster">
-      Hamster
-  </option>
-  <option value="parrot">
-      Parrot
-  </option>
-  <option value="spider">
-      Spider
-  </option>
-  <option value="goldfish">
-      Goldfish
-  </option>
-</select>
+  <div class="dropdown hover:block">
+    <button class="w-full px-4 py-1 mx-auto my-2 text-gray-700 bg-gray-200 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary-500 focus:border-primary-500">Select a Course ⬇</button>
+    <div id="items" class="hidden h-56 overflow-auto dropdown-content hover:block">
+     
+    </div>
+  </div>
+  
 
   </header>
 
-<div id="index" class="items-center hidden gap-5 py-12 mx-auto md:grid lg:grid lg:grid-cols-5 lg:w-4/5 justify-items-center"></div>
+<div id="index" class="grid items-center grid-cols-3 gap-3 px-8 py-12 mx-auto lg:gap-5 md:gap-5 lg:grid-cols-5 lg:w-4/5 justify-items-center"></div>
 
 <div class="w-1/5 max-w-6xl px-8 py-4 mx-auto mb-8 text-justify border-b-2 border-gray-300"></div>
 
