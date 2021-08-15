@@ -1,15 +1,15 @@
 {{ $section := site.GetPage "projects" }}
 {{ range first 1 $section.RegularPages }}
-<div class="mt-4 grid grid-cols-1 lg:grid-cols-5 gap-4">
+<div class="grid grid-cols-1 gap-4 mt-4 lg:grid-cols-5">
     <div class="lg:col-span-4">
-        <div class="h-90 cursor-pointer">
-            <a href="{{ .Permalink }}" class="w-full block h-full">
-                <img alt="post photo" src="{{ .Params.feature }}?nf_resize=fit&h=320" class="max-h-80 w-full object-cover" />
-                <div class="bg-white dark:bg-gray-800 w-full">
-                    <p class="text-gray-900 py-2 lg:text-4xl font-cocogoose uppercase text-3xl font-extrabold mb-2">
+        <div class="cursor-pointer h-90">
+            <a href="{{ .Permalink }}" class="block w-full h-full">
+                <img alt="post photo" src="{{ .Params.feature }}?nf_resize=fit&h=320" class="object-cover w-full max-h-80" />
+                <div class="w-full bg-white dark:bg-gray-800">
+                    <p class="py-2 text-3xl font-extrabold text-gray-900 uppercase lg:text-4xl font-cocogoose">
                         {{ .Title }}
                     </p>
-                    <p class="text-gray-700 dark:text-gray-300 capitalize lg:w-5/6 font-bold lg:text-xl">
+                    <p class="font-bold text-gray-700 capitalize dark:text-gray-300 lg:w-5/6 lg:text-xl">
                         {{ .Summary }}
                     </p>
                 </div>
@@ -18,27 +18,27 @@
     </div>
 {{ end }}
 
-    <div class="border-gray-800 border-t-2 lg:border-none lg:block hidden">
-        <p class="text-black font-cocogoose uppercase text-center  lg:text-2xl text-3xl font-extrabold mb-2">
+    <div class="hidden border-t-2 border-gray-800 lg:border-none lg:block">
+        <p class="mb-2 text-3xl font-extrabold text-center text-black uppercase font-cocogoose lg:text-2xl">
             Browse by
         </p>
         <a href="/projects">
             <div class="py-2">
-                <button type="button" class="py-4 px-4 flex justify-left items-center  bg-orange-400 hover:bg-blue-700 text-white w-full transition ease-in duration-200 text-center text-base font-bold  focus:outline-none ">
+                <button type="button" class="flex items-center w-full px-4 py-4 text-base font-bold text-center text-white transition duration-200 ease-in bg-orange-400 justify-left hover:bg-blue-700 focus:outline-none ">
                 🚧 PROJECTS
 </button>
             </div>
         </a>
         <a href="/blog">
             <div class="py-2">
-                <button type="button" class="py-4 px-4 flex justify-left items-center  bg-yellow-400 hover:bg-black  text-white w-full transition ease-in duration-200 text-center text-base font-bold  focus:outline-none">
+                <button type="button" class="flex items-center w-full px-4 py-4 text-base font-bold text-center text-white transition duration-200 ease-in bg-yellow-400 justify-left hover:bg-black focus:outline-none">
                 ⌨️ BLOG 
 </button>
             </div>
         </a>
         <a href="#">
             <div class="py-2">
-                <button type="button" class="py-4 px-4 flex justify-left items-center  bg-blue-400 hover:bg-red-600  text-white w-full transition ease-in duration-200 text-center text-base font-bold  focus:outline-none   ">
+                <button type="button" class="flex items-center w-full px-4 py-4 text-base font-bold text-center text-white transition duration-200 ease-in bg-blue-400 justify-left hover:bg-red-600 focus:outline-none ">
                 🎨 ART 
 </button>
             </div>

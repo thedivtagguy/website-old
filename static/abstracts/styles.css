@@ -1,0 +1,29 @@
+.box {
+    color: #000;
+    border-radius: 5px;
+    padding-top:2rem;
+}
+
+
+.wrapper {
+    display: grid;
+    padding-top:3rem;
+    grid-gap: 5px;
+    grid-template-columns: repeat(1, minmax(100px, 1fr) minmax(200px, 2fr));
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+.anchorLink {
+    scroll-margin-top: 2em;
+
+}
+
+.sticky-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+}

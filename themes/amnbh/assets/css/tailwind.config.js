@@ -31,7 +31,11 @@ module.exports = {
         }
 
     },
-    variants: {},
+    variants: {
+        extend: {
+            backgroundColor: ['even'],
+          }
+    },
     plugins: [
         require('@tailwindcss/typography'),
     ],

@@ -1,0 +1,29 @@
+<!--Set Fonts-->
+{{$headerfont := index (.Page.Params.fonts) 0 }}
+{{$heading := .Page.Params.Title }}
+{{$summary := .Page.Params.summary }}
+<head>
+      <script src="/abstracts/render.js" defer></script>
+      <link rel="stylesheet" href="/abstracts/styles.css">
+
+</head>
+
+  <!-- Main Hero Content -->
+  <div class="flex items-center justify-center max-w-6xl my-20 max-h-96" style="height: 80vh;">
+    <div class="mx-auto lg:w-2/4">
+       <div class="flex items-center justify-center py-8">
+        {{ partialCached "logo.html" . "logo.html"}}
+       </div>
+       <div class="flex justify-center mx-8">
+          <h1 class="text-4xl font-medium text-center uppercase break-normal font-rougant lg:text-7xl"> 
+{{ $heading }}          </h1>
+       </div>
+       <div class="px-8 m-auto lg:w-2/3">
+          <h2 class="pt-8 text-base font-bold text-center uppercase font-causten">
+             {{ $summary}}
+          </h2>
+       </div>
+    </div>
+ </div>
+   
+</div>
