@@ -21,6 +21,10 @@
     <meta name="twitter:image:src" content="{{ .Site.Params.ogimage | absURL }}" />
     {{ end }}
     <meta name="description" content="{{ .Params.summary }}" />
+    <meta property="og:title" content="{{ .Params.title }}" />
+    <meta property="og:description" content="{{ .Params.summary }}" />
+    <meta property="og:type" content="article" />
+
     <meta itemprop="description" content="{{ .Params.summary }}" />
     <meta property="og:description" content="{{ .Params.summary }}" />
     <meta name="twitter:description" content="{{ .Params.summary }}" />
