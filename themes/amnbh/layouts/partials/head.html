@@ -18,11 +18,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <script src="https://d3js.org/d3.v4.js"></script>
         <script src="/js/smoothscroll.js" defer></script>
+        {{ $url := .Params.metaimage }}
         {{ with .Params.metaimage }}
-        <meta itemprop="image" content=""{{ . | absURL }}"" />
-        <meta property="og:image" content=""{{ . | absURL }}"" />
-        <meta name="twitter:image" content=""{{ . | absURL }}"" />
-        <meta name="twitter:image:src" content=""{{ . | absURL }}"" />
+        <meta itemprop="image" content="https://thedivtagguy.com/{{ $url }}" />
+        <meta property="og:image" content="https://thedivtagguy.com//{{ $url }}" />
+        <meta name="twitter:image" content="https://thedivtagguy.com//{{ $url }}" />
+        <meta name="twitter:image:src" content="https://thedivtagguy.com//{{ $url }}" />
         {{ else }}
         <meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
         <meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
