@@ -6,3 +6,6 @@ theme = "amnbh"
 [build]
 writeStats = true
 
+
+[minify.tdewolff.html]
+keepQuotes = true
