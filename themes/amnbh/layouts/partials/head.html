@@ -19,19 +19,18 @@
         <script src="https://d3js.org/d3.v4.js"></script>
         <script src="/js/smoothscroll.js" defer></script>
         {{ $url := .Params.metaimage }}
-        {{ with .Params.metaimage }}
-        <meta itemprop="image" content="https://thedivtagguy.com/{{ $url }}" />
-        <meta property="og:image" content="https://thedivtagguy.com/{{ $url }}" />
-        <meta name="twitter:image" content="https://thedivtagguy.com/{{ $url }}" />
-        <meta name="twitter:image:src" content="https://thedivtagguy.com/{{ $url }}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="{{ if ne .URL "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}"/>
+        <meta property="og:description" content="{{ if .Params.summary }}{{ .Params.summary }}{{ else }}{{ .Site.Params.description }}{{ end }}"/>
+        <meta property="og:site_name" content="{{ .Site.Title }}"/>
+        <meta property="og:url" content="{{ .Permalink }}"/>
+        <meta property="og:locale" content="en">
+          {{ if .Params.metaimage }}
+        <meta property="og:image" content="http://thedivtagguy.com{{ .Params.metaimage | relURL }}"/>
+        <meta property="og:image:secure_url" content="{{ .Params.metaimage | absURL }}"/>
         {{ else }}
-        <meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
-        <meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
-        <meta name="twitter:image" content="{{ .Site.Params.ogimage | absURL }}" />
-        <meta name="twitter:image:src" content="{{ .Site.Params.ogimage | absURL }}" />
+        <meta property="og:image" content="http://example.com{{ .Site.Params.og_image | relURL }}"/>
+        <meta property="og:image:secure_url" content="{{ .Site.Params.og_image | absURL }}"/>
         {{ end }}
-        <meta name="description" content="{{ .Params.summary }}" />
-        <meta itemprop="description" content="{{ .Params.summary }}" />
-        <meta property="og:description" content="{{ .Params.summary }}" />
-        <meta name="twitter:description" content="{{ .Params.summary }}" />
+        <meta property="og:type" content="website"/>
     </head>
