@@ -21,9 +21,9 @@
         {{ $url := .Params.metaimage }}
         {{ with .Params.metaimage }}
         <meta itemprop="image" content="https://thedivtagguy.com/{{ $url }}" />
-        <meta property="og:image" content="https://thedivtagguy.com//{{ $url }}" />
-        <meta name="twitter:image" content="https://thedivtagguy.com//{{ $url }}" />
-        <meta name="twitter:image:src" content="https://thedivtagguy.com//{{ $url }}" />
+        <meta property="og:image" content="https://thedivtagguy.com/{{ $url }}" />
+        <meta name="twitter:image" content="https://thedivtagguy.com/{{ $url }}" />
+        <meta name="twitter:image:src" content="https://thedivtagguy.com/{{ $url }}" />
         {{ else }}
         <meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
         <meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
