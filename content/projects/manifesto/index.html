@@ -4,8 +4,8 @@ Title: "A Critical News Consumer's Starter Manifesto"
 summary: 4.5 Lakh tweets by three major Indian news channels, analysed.
 slug: manifesto
 categories:
- - Development 
- - VIM 
+- Development 
+- VIM 
 date: "2012-04-06" 
 tools: 
 - R 
@@ -19,81 +19,69 @@ fonts:
 - cocogoose
 - rougant
 ---
-
 <!---Project Header-->
-
 {{< manifesto/header >}}
- 
- <!---Content-->
- <div class="flex flex-col items-center px-8 py-20 mx-auto text-center lg:w-2/3 justify-items-center max-w-7xl">
-  <p class="py-12 text-3xl font-bold uppercase font-cocogoose lg:text-6xl lg:py-12">What do <span class="text-white">4.5 Lakh Tweets</span> by three English
-   news channels in India have to tell us?</p>
-  
-<!-- Logos -->
-<section class="bg-white rounded-3xl">
-   <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 lg:px-8">
-       <div class="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-3">
-           <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-            <svg class="h-8 " viewBox="0 0 250 52" version="1.1" xmlns="http://www.w3.org/2000/svg">
-               <g id="#ffffffff">
-               </g>
-               <g id="#000000ff">
-               <path fill="#000000" opacity="1.00" d=" M 3.01 3.45 C 8.68 3.46 14.34 3.35 20.01 3.48 C 26.72 3.87 32.67 8.41 35.87 14.18 C 39.12 20.30 41.96 26.63 45.25 32.73 C 46.33 34.88 48.47 36.38 50.91 36.44 C 50.82 25.43 50.87 14.42 50.88 3.41 C 55.85 3.45 60.82 3.43 65.78 3.44 C 65.76 8.24 65.79 13.03 65.72 17.83 C 62.27 19.15 59.38 22.21 59.30 26.06 C 58.82 30.26 61.92 33.98 65.73 35.32 C 65.80 40.14 65.74 44.96 65.79 49.78 C 60.85 49.82 55.91 49.78 50.98 49.82 C 45.26 50.11 39.61 47.43 35.92 43.12 C 31.90 38.18 29.81 32.03 26.72 26.52 C 24.63 22.69 23.15 16.91 17.87 16.66 C 17.88 27.69 17.82 38.72 17.91 49.75 C 12.95 49.83 7.98 49.81 3.02 49.77 C 3.06 34.33 3.07 18.89 3.01 3.45 Z" />
-               <path fill="#000000" opacity="1.00" d=" M 70.12 3.47 C 112.15 3.44 154.18 3.35 196.21 3.51 C 202.47 14.91 208.89 26.21 215.11 37.63 C 221.32 26.32 227.03 14.73 233.20 3.40 C 238.47 3.50 243.74 3.33 249.02 3.52 C 248.14 4.81 247.25 6.08 246.51 7.46 C 239.09 21.59 231.59 35.69 224.12 49.80 C 218.10 49.80 212.08 49.79 206.06 49.80 C 199.55 37.98 192.88 26.24 186.35 14.43 C 179.72 14.36 173.09 14.42 166.46 14.40 C 166.45 26.20 166.51 38.00 166.43 49.79 C 161.67 49.80 156.90 49.81 152.14 49.78 C 152.14 37.98 152.20 26.17 152.11 14.36 C 144.80 14.44 137.49 14.38 130.19 14.40 C 131.52 19.47 131.40 24.74 131.23 29.93 C 131.01 35.22 129.60 40.82 125.67 44.60 C 121.90 48.49 116.24 49.83 110.98 49.81 C 97.38 49.77 83.78 49.85 70.18 49.76 C 70.22 44.94 70.16 40.12 70.24 35.31 C 73.45 34.06 76.27 31.37 76.57 27.79 C 77.27 23.41 74.24 19.33 70.23 17.86 C 70.16 13.06 70.27 8.26 70.12 3.47 M 84.61 14.49 C 84.73 22.55 84.65 30.62 84.66 38.68 C 92.80 38.79 100.94 38.72 109.09 38.73 C 112.29 38.87 116.06 37.11 116.50 33.60 C 116.76 29.10 116.69 24.57 116.54 20.06 C 116.23 16.40 112.42 14.37 109.06 14.44 C 100.91 14.40 92.76 14.30 84.61 14.49 Z" />
-               </g>
-               <g id="#ee0000ff">
-               <path fill="#ee0000" opacity="1.00" d=" M 59.30 26.06 C 59.38 22.21 62.27 19.15 65.72 17.83 C 67.22 17.67 68.73 17.68 70.23 17.86 C 74.24 19.33 77.27 23.41 76.57 27.79 C 76.27 31.37 73.45 34.06 70.24 35.31 C 68.74 35.46 67.24 35.47 65.73 35.32 C 61.92 33.98 58.82 30.26 59.30 26.06 Z" />
-               </g>
+<!---Content-->
+<div class="flex flex-col items-center px-8 py-20 mx-auto text-center lg:w-2/3 justify-items-center max-w-7xl">
+   <p class="py-12 text-3xl font-bold uppercase font-cocogoose lg:text-4xl lg:py-12">What can we learn from <span class="text-white">4.5 Lakh Tweets</span> by three English
+      news channels in India?
+   </p>
+   <!-- Logos -->
+   <section class="bg-white rounded-3xl">
+      <div class="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 lg:px-8">
+         <div class="grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-3">
+            <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+               <svg class="h-8 " viewBox="0 0 250 52" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <g id="#ffffffff">
+                  </g>
+                  <g id="#000000ff">
+                     <path fill="#000000" opacity="1.00" d=" M 3.01 3.45 C 8.68 3.46 14.34 3.35 20.01 3.48 C 26.72 3.87 32.67 8.41 35.87 14.18 C 39.12 20.30 41.96 26.63 45.25 32.73 C 46.33 34.88 48.47 36.38 50.91 36.44 C 50.82 25.43 50.87 14.42 50.88 3.41 C 55.85 3.45 60.82 3.43 65.78 3.44 C 65.76 8.24 65.79 13.03 65.72 17.83 C 62.27 19.15 59.38 22.21 59.30 26.06 C 58.82 30.26 61.92 33.98 65.73 35.32 C 65.80 40.14 65.74 44.96 65.79 49.78 C 60.85 49.82 55.91 49.78 50.98 49.82 C 45.26 50.11 39.61 47.43 35.92 43.12 C 31.90 38.18 29.81 32.03 26.72 26.52 C 24.63 22.69 23.15 16.91 17.87 16.66 C 17.88 27.69 17.82 38.72 17.91 49.75 C 12.95 49.83 7.98 49.81 3.02 49.77 C 3.06 34.33 3.07 18.89 3.01 3.45 Z" />
+                     <path fill="#000000" opacity="1.00" d=" M 70.12 3.47 C 112.15 3.44 154.18 3.35 196.21 3.51 C 202.47 14.91 208.89 26.21 215.11 37.63 C 221.32 26.32 227.03 14.73 233.20 3.40 C 238.47 3.50 243.74 3.33 249.02 3.52 C 248.14 4.81 247.25 6.08 246.51 7.46 C 239.09 21.59 231.59 35.69 224.12 49.80 C 218.10 49.80 212.08 49.79 206.06 49.80 C 199.55 37.98 192.88 26.24 186.35 14.43 C 179.72 14.36 173.09 14.42 166.46 14.40 C 166.45 26.20 166.51 38.00 166.43 49.79 C 161.67 49.80 156.90 49.81 152.14 49.78 C 152.14 37.98 152.20 26.17 152.11 14.36 C 144.80 14.44 137.49 14.38 130.19 14.40 C 131.52 19.47 131.40 24.74 131.23 29.93 C 131.01 35.22 129.60 40.82 125.67 44.60 C 121.90 48.49 116.24 49.83 110.98 49.81 C 97.38 49.77 83.78 49.85 70.18 49.76 C 70.22 44.94 70.16 40.12 70.24 35.31 C 73.45 34.06 76.27 31.37 76.57 27.79 C 77.27 23.41 74.24 19.33 70.23 17.86 C 70.16 13.06 70.27 8.26 70.12 3.47 M 84.61 14.49 C 84.73 22.55 84.65 30.62 84.66 38.68 C 92.80 38.79 100.94 38.72 109.09 38.73 C 112.29 38.87 116.06 37.11 116.50 33.60 C 116.76 29.10 116.69 24.57 116.54 20.06 C 116.23 16.40 112.42 14.37 109.06 14.44 C 100.91 14.40 92.76 14.30 84.61 14.49 Z" />
+                  </g>
+                  <g id="#ee0000ff">
+                     <path fill="#ee0000" opacity="1.00" d=" M 59.30 26.06 C 59.38 22.21 62.27 19.15 65.72 17.83 C 67.22 17.67 68.73 17.68 70.23 17.86 C 74.24 19.33 77.27 23.41 76.57 27.79 C 76.27 31.37 73.45 34.06 70.24 35.31 C 68.74 35.46 67.24 35.47 65.73 35.32 C 61.92 33.98 58.82 30.26 59.30 26.06 Z" />
+                  </g>
                </svg>
-               
-           </div>
-           <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-            <img src="/manifesto/Republic_TV.png" class="h-12">
+            </div>
+            <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+               <img src="/manifesto/Republic_TV.png" class="h-12">
+            </div>
+            <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+               <img src="/manifesto/cnn.png" class="h-12">
+            </div>
          </div>
-           <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-            <img src="/manifesto/cnn.png" class="h-12">
-           </div>
-          
-       </div>
-   </div>
-</section>
-<button class="hidden w-1/2 px-4 py-4 mx-auto font-semibold text-center text-white uppercase bg-blue-800 border-4 border-blue-900 lg:mt-16 font-cocogoose lg:block" onclick="scrollSmoothTo('intro')">
+      </div>
+   </section>
+   <button class="hidden w-1/2 px-4 py-4 mx-auto font-semibold text-center text-white uppercase bg-blue-800 border-4 border-blue-900 lg:mt-16 font-cocogoose lg:block" onclick="scrollSmoothTo('intro')">
    I'm listening...
-          </button>
-
- </div>
+   </button>
+</div>
 </div>
 <div id="intro" class="lg:py-12" ></div>
- {{< mobile_alert >}}
-
- 
-
- <div class="max-w-2xl px-8 pt-8 mx-auto lg:w-6/12 lg:pt-0">
+{{< mobile_alert >}}
+<div class="max-w-2xl px-8 pt-8 mx-auto lg:w-6/12 lg:pt-0">
    <p class="text-base font-bold text-center uppercase font font-cocogoose lg:text-2xl lg:py-4">We're big fans of <br class="lg:hidden"> informed decisions,</p>
    <p class="pb-8 text-4xl font-bold text-center text-white uppercase font font-cocogoose lg:text-5xl">And now, we'd like you to make one.</p>
    <p class="text-sm font-normal leading-7 text-justify font-cocogoose lg:text-xl lg:py-8">In each slide, we will present you a glimpse of our findings. We want you to <span class="px-2 py-1 text-black bg-gray-300 rounded-lg">see the numbers carefully</span>, see what they mean and what consequences they represent.&nbsp;
       After you've done that, {{< sidenote "left" "left-note" "select the button for the channel" >}}
-         <span class="text-xs text-center leading-2">For example, click this button to give a point to CNN:</span>
-         <button type="button" class="w-1/2 px-4 py-2 text-xs font-bold text-center text-white transition duration-200 ease-in bg-indigo-600 rounded-lg shadow-md font-cocogoose hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ">
-            CNN
-            </button>         {{< /sidenote >}}	that performed acceptably for you from the list of options. At the end of this little trip, you'll have a better idea of which news channel you should follow.
-      </p>
-  	
-      <button class="hidden w-1/2 px-4 py-4 mx-auto font-semibold text-center text-white uppercase bg-blue-800 border-4 border-blue-900 lg:mt-16 font-cocogoose lg:block" onclick="scrollSmoothTo('tweetcount')">
-Let's Get Started
-       </button>
-  </div>
-
-
- <!-- Counts -->
- <div id="tweetcount" class="grid justify-center max-w-6xl grid-cols-1 py-16 mx-auto mb-4 lg:py-36 mg:grid-cols-2 lg:grid-cols-2 lg:w-9/12">
+      <span class="text-xs text-center leading-2">For example, click this button to give a point to CNN:</span>
+      <button type="button" class="w-1/2 px-4 py-2 text-xs font-bold text-center text-white transition duration-200 ease-in bg-indigo-600 rounded-lg shadow-md font-cocogoose hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ">
+      CNN
+      </button>         {{< /sidenote >}}	that performed acceptably for you from the list of options. At the end of this little trip, you'll have a better idea of which news channel you should follow.
+   </p>
+   <button class="hidden w-1/2 px-4 py-4 mx-auto font-semibold text-center text-white uppercase bg-blue-800 border-4 border-blue-900 lg:mt-16 font-cocogoose lg:block" onclick="scrollSmoothTo('tweetcount')">
+   Let's Get Started
+   </button>
+</div>
+<!-- Counts -->
+<div id="tweetcount" class="grid justify-center max-w-6xl grid-cols-1 mx-auto mb-4 lg:py-20 mg:grid-cols-2 lg:grid-cols-2 lg:w-9/12">
    <div class="flex flex-col items-center justify-center px-8">
       <p class="text-3xl font-bold text-left uppercase font-cocogoose lg:text-5xl lg:py-2"> #1. Decide what amount of news works for you</p>
       <p class="flex items-start justify-start pt-4 pb-4 text-base text-justify lg:pt-8 ">
-        How many tweets did each channel put out during this period? Decide how much of your feed should be news. Does more news make you feel like you'd be more well informed, or would you rather see only the most important headlines? <br> Psst: Quantity may not equal quality.
+         How many tweets did each channel put out during this period? Decide how much of your feed should be news. Does more news make you feel like you'd be more well informed, or would you rather see only the most important headlines? <br> Psst: Quantity may not equal quality.
       </p>
       <!-- News Option -->
-      <div class="grid grid-cols-3 gap-2 py-4 md:grid-cols-3 lg:grid-cols-3">
+      <div class="grid max-w-lg grid-cols-3 gap-2 px-5 py-4 mx-auto my-6 border-gray-600 border-dashed border-3 md:grid-cols-3 lg:grid-cols-3">
          <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">        
             <button id="C1B" onclick="addNDTV(); disable('C1','C1B');" type="button" class="w-full px-4 py-2 text-xs font-bold text-center text-white transition duration-200 ease-in bg-indigo-600 rounded-lg shadow-md font-cocogoose hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ">
             NDTV
@@ -114,23 +102,22 @@ Let's Get Started
    </div>
    <div class="flex flex-col items-center justify-center px-8">
       <div id="chart1" class="mx-24"></div>
-</div>
-<div class="flex items-center justify-items-center">
-   <button class="hidden w-24 px-2 py-1 mx-auto -mt-1 font-semibold text-center text-white uppercase bg-gray-700 border-2 border-gray-900 font-cocogoose lg:block" onclick="scrollSmoothTo('hashtag')">
+   </div>
+   <div class="flex items-center justify-items-center">
+      <button class="hidden w-24 px-2 py-1 mx-auto -mt-1 font-semibold text-center text-white uppercase bg-gray-700 border-2 border-gray-900 font-cocogoose lg:block" onclick="scrollSmoothTo('hashtag')">
       Next
-             </button>
+      </button>
+   </div>
 </div>
-</div>
-
- <!-- Counts -->
- <div id="hashtag" class="grid justify-center max-w-6xl grid-cols-1 py-16 mx-auto mb-4 lg:py-36 mg:grid-cols-2 lg:grid-cols-2 lg:w-9/12">
+<!-- Counts -->
+<div id="hashtag" class="grid justify-center max-w-6xl grid-cols-1 mx-auto mb-4 lg:py-20 mg:grid-cols-2 lg:grid-cols-2 lg:w-9/12">
    <div class="flex flex-col items-center justify-center px-8">
       <p class="text-3xl font-bold text-left uppercase font-cocogoose lg:text-5xl lg:py-2">  #2. Remember that social media depends on your interaction</p>
       <p class="flex items-start justify-start pt-4 pb-4 text-base text-justify lg:pt-8 ">
-        How many tweets did each channel put out during this period? Decide how much of your feed should be news. Does more news make you feel like you'd be more well informed, or would you rather see only the most important headlines? <br> Psst: Quantity may not equal quality.
+         How many tweets did each channel put out during this period? Decide how much of your feed should be news. Does more news make you feel like you'd be more well informed, or would you rather see only the most important headlines? <br> Psst: Quantity may not equal quality.
       </p>
       <!-- News Option -->
-      <div class="grid grid-cols-3 gap-2 py-4 md:grid-cols-3 lg:grid-cols-3">
+      <div class="grid max-w-lg grid-cols-3 gap-2 px-5 py-4 mx-auto border-gray-600 border-dashed border-3 md:grid-cols-3 lg:grid-cols-3">
          <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">        
             <button id="C1B" onclick="addNDTV(); disable('C1','C1B');" type="button" class="w-full px-4 py-2 text-xs font-bold text-center text-white transition duration-200 ease-in bg-indigo-600 rounded-lg shadow-md font-cocogoose hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ">
             NDTV
@@ -150,38 +137,59 @@ Let's Get Started
       <!-- End News Option -->
    </div>
    <div class="flex flex-col items-center justify-center px-8">
-      <div class="flex flex-row items-center py-4 space-x-6 justify-items-center">
+      <div class="flex flex-row items-center space-x-6 justify-items-center">
          <button class="px-2 py-2 text-xs font-semibold text-white bg-yellow-600 rounded-sm font-cocogoose hover:bg-indigo-700" onclick="update(republic)">Republic</button>
          <button class="px-2 py-2 text-xs font-semibold text-white bg-yellow-600 rounded-sm font-cocogoose hover:bg-indigo-700" onclick="update(ndtv)">NDTV</button>
          <button class="px-2 py-2 text-xs font-semibold text-white bg-yellow-600 rounded-sm font-cocogoose hover:bg-indigo-700" onclick="update(cnn)">CNN</button>
       </div>
       <div id="hashtags" class="mx-24"></div>
-     
-</div>
-<div class="flex items-center justify-items-center">
-   <button class="hidden w-24 px-2 py-1 mx-auto mt-12 font-semibold text-center text-white uppercase bg-gray-700 border-2 border-gray-900 font-cocogoose lg:block" onclick="scrollSmoothTo('languages')">
+   </div>
+   <div class="flex items-center justify-items-center">
+      <button class="hidden w-24 px-2 py-1 mx-auto font-semibold text-center text-white uppercase bg-gray-700 border-2 border-gray-900 font-cocogoose lg:block" onclick="scrollSmoothTo('languages')">
       Next
-             </button>
+      </button>
+   </div>
 </div>
+<div id="languages" class="flex items-center justify-items-center">
+   <p class="max-w-xl mx-auto text-3xl font-bold text-center uppercase font-cocogoose lg:text-5xl lg:pt-24">  #3. What kind of language did they use?</p>
+   <div class="relative pt-1">
+   </div>
 </div>
-
-
- <!-- Language  -->
- <div id="languages" class="grid justify-center max-w-6xl grid-cols-1 py-16 mx-auto mb-4 lg:py-36 mg:grid-cols-1 lg:grid-cols-1 lg:w-4/12">
+<!-- Language  -->
+<!-- Language  -->
+<div id="sent" class="grid justify-start max-w-6xl grid-cols-1 mx-auto mb-4 space-x-4 mg:grid-cols-3 lg:grid-cols-3 lg:w-10/12">
+   <div class="flex flex-col items-center justify-center">
+      <p class="text-xl font-bold text-center uppercase font-cocogoose lg:text-2xl lg:py-2"> Rahul...</p>
+      <div id="sentiment2"> </div>
+   </div>
    <div class="flex flex-col items-center justify-center px-8">
-      <p class="text-3xl font-bold text-left uppercase font-cocogoose lg:text-5xl lg:py-2">  #3. What kind of language did they use?</p>
-      <p class="flex items-start justify-start pt-4 pb-4 text-base text-justify lg:pt-8 ">
-         This fourth pillar of democracy exists to keep a check on those in authority. The kind of language that reports use plays an important role in shaping your perception. Certain words make for better news, and certain words manufacture more engagement. We compared the words used to describe to major leaders, one in the majority and one in the opposition.</p>
-      </p>
+      <div id="controls" class="py-8">
+         <div class="flex flex-col items-center justify-center ">
+            <h4 class="pt-8 text-sm font-medium tracking-wide text-center text-white uppercase ">Toggle Channel:</h4>
+            <div class="flex items-center py-4">
+               <button id="republic" onclick="document.getElementById('rep').click()" type="button" class="w-full px-4 py-2 text-base font-medium text-black bg-white border hover:bg-gray-100 rounded-l-md">Republic</button>
+               <button id="ndtv" onclick="document.getElementById('nd').click()" type="button" class="w-full px-4 py-2 text-base font-medium text-black bg-white border hover:bg-gray-100">
+               NDTV
+               </button>
+               <button  id="cnnnews18" onclick="document.getElementById('cn').click()" type="button" class="w-full px-4 py-2 text-base font-medium text-black bg-white border-t border-b border-r rounded-r-md hover:bg-gray-100">
+               CNN
+               </button>
+            </div>
+            <p class="flex items-start justify-start pb-4 text-base text-justify lg:pt-8 ">
+               This fourth pillar of democracy exists to keep a check on those in authority. The kind of language that reports use plays an important role in shaping your perception. Certain words make for better news, and certain words manufacture more engagement. We compared the words used to describe to major leaders, one in the majority and one in the opposition.
+            </p>
+            </p>
+         </div>
+      </div>
       <!-- News Option -->
-      <div class="grid grid-cols-3 gap-2 py-4 md:grid-cols-3 lg:grid-cols-3">
+      <div class="grid w-full grid-cols-3 gap-2 px-4 py-4 mx-auto border-gray-600 border-dashed border-3 md:grid-cols-3 lg:grid-cols-3">
          <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">        
             <button id="C1B" onclick="addNDTV(); disable('C1','C1B');" type="button" class="w-full px-4 py-2 text-xs font-bold text-center text-white transition duration-200 ease-in bg-indigo-600 rounded-lg shadow-md font-cocogoose hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ">
             NDTV
             </button>
          </div>
          <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-            <button id="C1C" onclick="addREP(); disable('C1','C1C');" type="button" class="w-full px-4 py-2 text-xs font-bold text-center text-white transition duration-200 ease-in bg-indigo-600 rounded-lg shadow-md font-cocogoose hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ">
+            <button id="C1C" onclick="addREP(); disable('C1','C1C');" type="button" class="w-full py-2 text-xs font-bold text-center text-white transition duration-200 ease-in bg-indigo-600 rounded-lg shadow-md font-cocogoose hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 ">
             REPUBLIC
             </button>       
          </div>
@@ -191,96 +199,113 @@ Let's Get Started
             </button>
          </div>
       </div>
+      <div class="flex items-center py-8 justify-items-center">
+         <button class="hidden w-24 px-2 py-1 mx-auto font-semibold text-center text-white uppercase bg-gray-700 border-2 border-gray-900 font-cocogoose lg:block" onclick="scrollSmoothTo('final')">
+         Next
+         </button>
+      </div>
       <!-- End News Option -->
-   </div>
-   <div class="flex flex-col items-center justify-center px-8">
-    
-
-     
-         
+      <div id="controls2" class="py-8">
+         <div class="flex items-center">
+            <input type="radio" class="republic" style="visibility:hidden;" id="rep">
+            <input type="radio" class="ndtv"  style="visibility:hidden;" id="nd">
+            <input type="radio" class="cnnnews18"  style="visibility:hidden;" id="cn">
          </div>
-
-</div>
-<div class="flex items-center justify-items-center">
-
-</div>
-
-<!-- Language  -->
-<div id="sent" class="grid justify-start max-w-6xl grid-cols-1 py-16 mx-auto mb-4 space-x-8 lg:py-40 mg:grid-cols-3 lg:grid-cols-3 lg:w-10/12">
-   <div class="flex flex-col items-center justify-center">
-      <p class="text-xl font-bold text-center uppercase font-cocogoose lg:text-2xl lg:py-2"> Rahul...</p>
-
-      <div id="sentiment2"> </div>
-
-   </div>
-   <div class="flex flex-col items-center justify-center px-8">
-      <p class="text-3xl font-bold text-center uppercase font-cocogoose lg:text-5xl lg:py-2"> Words Following...</p>
-      <p class="flex items-start justify-start pt-4 pb-4 text-base text-justify lg:pt-8 ">
-         This fourth pillar of democracy exists to keep a check on those in authority. The kind of language that reports use plays an important role in shaping your perception. Certain words make for better news, and certain words manufacture more engagement. We compared the words used to describe to major leaders, one in the majority and one in the opposition.</p>
-      </p>
-
-      
-
-
-
-     <div id="controls" class="py-8">
-      <div class="flex items-center">
-         <button id="republic" onclick="document.getElementById('rep').click()" type="button" class="w-full px-4 py-2 text-base font-medium text-black bg-white border hover:bg-gray-100 rounded-l-md">Republic</button>
-
-         <button id="ndtv" onclick="document.getElementById('nd').click()" type="button" class="w-full px-4 py-2 text-base font-medium text-black bg-white border hover:bg-gray-100">
-             NDTV
-         </button>
-         <button  id="cnnnews18" onclick="document.getElementById('cn').click()" type="button" class="w-full px-4 py-2 text-base font-medium text-black bg-white border-t border-b border-r rounded-r-md hover:bg-gray-100">
-             CNN
-         </button>
       </div>
-     </div>
-     <div id="controls2" class="py-8">
-      <div class="flex items-center">
-         <input type="radio" class="republic" style="visibility:hidden;" id="rep">
-         <input type="radio" class="ndtv"  style="visibility:hidden;" id="nd">
-         <input type="radio" class="cnnnews18"  style="visibility:hidden;" id="cn">
-      </div>
-     </div>
-     
    </div>
    <div class="flex flex-col items-center justify-center px-8">
       <p class="text-xl font-bold text-center uppercase font-cocogoose lg:text-2xl lg:py-2"> Modi...</p>
-
-
       <div id="sentiment1" class="pl-12"> </div>
-         
+   </div>
+</div>
+
+<!-- Results -->
+<div id="final" class="grid items-center justify-center max-w-6xl grid-cols-1 py-8 mx-auto mb-4 space-x-4 lg:h-screen mg:grid-cols-3 lg:grid-cols-2 lg:w-10/12">
+   <div>
+      <div class="card-body">
+         <p class="text-sm font-normal leading-7 text-justify font-cocogoose lg:text-xl lg:py-8">
+            Now that you've gone through all the categories, lets find out
+         </p>
+         <p class="text-xl font-bold uppercase font-cocogoose lg:text-4xl"> What channel would suit you best?</p>
+
+         <button class="w-1/2 px-4 py-4 mx-auto my-8 font-semibold text-center text-white uppercase bg-blue-800 border-4 border-blue-900 font-cocogoose " onclick="result()">Calculate Results</button>
+         <div class="hidden w-1/3 px-2 py-4 bg-white rounded-lg card-group">
+            <div class="card" style="float: inline-start;">
+               <img id="result-cnn" src="/manifesto/cnn.png" alt="CNN">
+               <svg id="result-ndtv" alt="NDTV" class="h-8 " viewBox="0 0 250 52" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <g id="#ffffffff">
+                  </g>
+                  <g id="#000000ff">
+                     <path fill="#000000" opacity="1.00" d=" M 3.01 3.45 C 8.68 3.46 14.34 3.35 20.01 3.48 C 26.72 3.87 32.67 8.41 35.87 14.18 C 39.12 20.30 41.96 26.63 45.25 32.73 C 46.33 34.88 48.47 36.38 50.91 36.44 C 50.82 25.43 50.87 14.42 50.88 3.41 C 55.85 3.45 60.82 3.43 65.78 3.44 C 65.76 8.24 65.79 13.03 65.72 17.83 C 62.27 19.15 59.38 22.21 59.30 26.06 C 58.82 30.26 61.92 33.98 65.73 35.32 C 65.80 40.14 65.74 44.96 65.79 49.78 C 60.85 49.82 55.91 49.78 50.98 49.82 C 45.26 50.11 39.61 47.43 35.92 43.12 C 31.90 38.18 29.81 32.03 26.72 26.52 C 24.63 22.69 23.15 16.91 17.87 16.66 C 17.88 27.69 17.82 38.72 17.91 49.75 C 12.95 49.83 7.98 49.81 3.02 49.77 C 3.06 34.33 3.07 18.89 3.01 3.45 Z" />
+                     <path fill="#000000" opacity="1.00" d=" M 70.12 3.47 C 112.15 3.44 154.18 3.35 196.21 3.51 C 202.47 14.91 208.89 26.21 215.11 37.63 C 221.32 26.32 227.03 14.73 233.20 3.40 C 238.47 3.50 243.74 3.33 249.02 3.52 C 248.14 4.81 247.25 6.08 246.51 7.46 C 239.09 21.59 231.59 35.69 224.12 49.80 C 218.10 49.80 212.08 49.79 206.06 49.80 C 199.55 37.98 192.88 26.24 186.35 14.43 C 179.72 14.36 173.09 14.42 166.46 14.40 C 166.45 26.20 166.51 38.00 166.43 49.79 C 161.67 49.80 156.90 49.81 152.14 49.78 C 152.14 37.98 152.20 26.17 152.11 14.36 C 144.80 14.44 137.49 14.38 130.19 14.40 C 131.52 19.47 131.40 24.74 131.23 29.93 C 131.01 35.22 129.60 40.82 125.67 44.60 C 121.90 48.49 116.24 49.83 110.98 49.81 C 97.38 49.77 83.78 49.85 70.18 49.76 C 70.22 44.94 70.16 40.12 70.24 35.31 C 73.45 34.06 76.27 31.37 76.57 27.79 C 77.27 23.41 74.24 19.33 70.23 17.86 C 70.16 13.06 70.27 8.26 70.12 3.47 M 84.61 14.49 C 84.73 22.55 84.65 30.62 84.66 38.68 C 92.80 38.79 100.94 38.72 109.09 38.73 C 112.29 38.87 116.06 37.11 116.50 33.60 C 116.76 29.10 116.69 24.57 116.54 20.06 C 116.23 16.40 112.42 14.37 109.06 14.44 C 100.91 14.40 92.76 14.30 84.61 14.49 Z" />
+                  </g>
+                  <g id="#ee0000ff">
+                     <path fill="#ee0000" opacity="1.00" d=" M 59.30 26.06 C 59.38 22.21 62.27 19.15 65.72 17.83 C 67.22 17.67 68.73 17.68 70.23 17.86 C 74.24 19.33 77.27 23.41 76.57 27.79 C 76.27 31.37 73.45 34.06 70.24 35.31 C 68.74 35.46 67.24 35.47 65.73 35.32 C 61.92 33.98 58.82 30.26 59.30 26.06 Z" />
+                  </g>
+               </svg>
+               <img id="result-rep" src="/manifesto/Republic_TV.png" alt="Republic">
+               
+            </div>
+            
          </div>
+      </div>
+   </div>
 
+   <div >
+      <div class="card" id="twitter-republic" style="float: inline-end; display: none;">
+         <div class="card-body">
+            <h5 class="flex items-center py-4 card-title justify-items-center">
+               <a href="https://twitter.com/republic?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @republic</a>
+               <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </h5>
+            <a class="twitter-timeline" data-width="1000" data-height="300" data-theme="light" href="https://twitter.com/republic?ref_src=twsrc%5Etfw">Tweets by republic</a> 
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+         </div>
+      </div>
+      <div class="card" id="twitter-cnn" style="float: inline-end; display: none;">
+         <div class="card-body">
+            <h5 class="flex items-center py-4 card-title justify-items-center">
+               <a href="https://twitter.com/CNNnews18?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @CNNnews18</a>
+               <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </h5>
+            <a class="twitter-timeline" data-width="1000" data-height="300" data-theme="light" href="https://twitter.com/CNNnews18?ref_src=twsrc%5Etfw">Tweets by CNNnews18</a> 
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+         </div>
+      </div>
+      <div class="card" id="twitter-ndtv" style="float: inline-end; display: none;">
+         <div class="card-body">
+            <h5 class="flex items-center py-4 card-title justify-items-center">
+               <a href="https://twitter.com/ndtv?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @NDTV</a>
+               <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </h5>
+            <a class="twitter-timeline" data-width="1000" data-height="300" data-theme="light" href="https://twitter.com/ndtv?ref_src=twsrc%5Etfw">Tweets by NDTV</a> 
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+         </div>
+      </div>
+   </div>
+</div>   
 </div>
-<div class="flex items-center justify-center w-2/5 px-4 py-4 mx-auto my-4 text-red-600 bg-red-200 border-l-4 border-red-600 " role="alert">
-   <p class="font-bold text-black">
-       Project Under Construction!
-   </p>
-   <p class="text-sm text-black">
-This project is still under construction. I'm adding more graphs and scraping tweets live so we can regularly update these insights :)       
-   </p>
-</div>
-
-
-</div>
-
 
 
 
 
 <style>
-    path, line {
-      stroke: #A6ACC9;
-    }
-
-    text {
-       fill: #A6ACC9;
-    }
-
-    #hashtags > svg > g > g.myXaxis > text {
-      fill: blue;
-
-    }
-
+   path, line {
+   stroke: #A6ACC9;
+   }
+   text {
+   fill: #A6ACC9;
+   }
+   #hashtags > svg > g > g.myXaxis > text {
+   fill: blue;
+   }
+   #result-cnn{
+   display: none;
+   }
+   #result-rep{
+   display: none;
+   }
+   #result-ndtv{
+   display: none;
+   }
 </style>
