@@ -79,12 +79,21 @@
   }
 
   .no-benefits {
-    filter: grayscale(100%);
     filter: opacity(0.3);
-    transition: filter 1s;
+    transition: filter 0.5s;
+    background-color:rgba(205, 92, 92, 0.267)
   }
+
+  .no-benefits p {
+      color:rgb(87, 30, 30);
+  }
+
+  
+  .no-benefits h4 {
+    color:rgb(87, 30, 30);
+}
   .non {
-      transition: 1s;
+      transition: 0.5s;
   }
   
   .step1:last-child {

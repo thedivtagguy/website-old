@@ -65,27 +65,27 @@ let latlngs = warblerWaypoints.map(waypoint => [waypoint.location.lat, waypoint.
 var polyline = L.polyline(latlngs, {smoothFactor: 4, color: 'orange', weight: 20, opacity: .5}).addTo(mymap);
 var polyline = L.polyline(latlngs, {color: 'red', dashArray: '12 12',}).addTo(mymap);
 // instantiate the scrollama
-const scroller = scrollama();
+const scroller1 = scrollama();
 // setup the instance, pass callback functions
-scroller
+scroller1
   .setup({
     step: '.step' // required - class name of trigger steps
   })
-  .onStepEnter(handleStepEnter)
-  .onStepExit(handleStepExit);
+  .onStepEnter(handleStepEnter1)
+  .onStepExit(handleStepExit1);
 
-function handleFlyTo(value){
+function handleFlyTo1(value){
     mymap.panTo(warblerWaypoints[value - 1].location, {animate:true, duration: 6})
 }
 
-function handleStepEnter(e){
+function handleStepEnter1(e){
     console.log('enter')
     let value = e.element.attributes['data-step'].value
-    handleFlyTo(value)
+    handleFlyTo1(value)
 
 }
 
-function handleStepExit(e){
+function handleStepExit1(e){
     console.log('exit')
     console.log(e)
 }
