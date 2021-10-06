@@ -12,10 +12,8 @@
    // generic window resize listener event
    function handleResize() {
      // 1. update height of step elements
-     var stepH = Math.floor(window.innerHeight * 0.40);
-     step.style("height", stepH + "px");
      var figureHeight = window.innerHeight / 2;
-     var figureMarginTop = (window.innerHeight - figureHeight) / 50;
+     var figureMarginTop = (window .innerHeight - figureHeight) / 50;
 
      figure
        .style("top", figureMarginTop + "px");
@@ -38,7 +36,7 @@
     } else {
      var nons =  document.querySelectorAll('.non');
      [...nons].forEach(n => n.classList.remove('no-benefits'));
-     head.innerHTML = "Benefits For Standard Employees";
+     head.innerHTML = "Benefits For Standard Workers";
     }
      console.log(response);
      // response = { element, direction, index }
@@ -71,7 +69,7 @@
      scroller
        .setup({
          step: "#scrolly article .step1",
-         offset: 0.65,
+         offset: 0.50,
          debug: false
        })
        .onStepEnter(handleStepEnter);
