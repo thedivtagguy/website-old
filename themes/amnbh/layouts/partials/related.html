@@ -1,9 +1,9 @@
-<div class="max-w-xl px-2 py-1 mx-auto text-xs font-bold text-white uppercase bg-purple-600 border-2 border-orange-900 lg:text-sm">
+<div class="max-w-4xl px-2 py-1 mx-auto text-xs font-bold text-white uppercase bg-purple-600 border-2 border-orange-900 lg:text-sm">
     🚧 &nbsp; Like What you see? Here's more
 </div>
 {{$maincolor := index (.Page.Params.colors) 2 }}
 
-<div class="justify-between max-w-xl gap-8 py-4 mx-auto bg-transparent lg:flex">
+<div class="justify-between max-w-4xl gap-8 py-4 mx-auto bg-transparent lg:flex">
   
     {{ range first 3 (shuffle (where (where .Site.RegularPages "Section" "projects") "Title" "!=" .Title )) }}
 

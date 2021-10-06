@@ -1,0 +1,96 @@
+#scroll {
+    display: flex;
+    min-height: 100vh;
+     }
+
+   
+.step {
+    padding: 3rem 2rem 3rem 2rem;
+    position: relative;
+}
+
+.step img {
+    width: 100%;
+    height: auto;
+}
+
+.scroll__graphic {
+    position: -webkit-sticky !important;
+    position: sticky !important; 
+    top: 0;
+    align-self: flex-start;
+    right: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.scroll__text {
+    position: relative;
+    padding: 0 1rem;
+    max-width: 30rem;
+    width: 33%;
+}
+
+.overlay {
+    background: rgba(255,255
+    ,255, .75);
+}
+
+#map {
+    z-index: -5;
+    height: 800px;
+    position: sticky !important;
+
+}
+
+/* CSS FOR BENEFITS */
+
+#scrolly {
+    position: relative;
+    padding: 1rem;
+    position:sticky;
+  }
+
+  article {
+    position: relative;
+    
+  }
+
+  .step1 {
+    width: 500px;
+    background-color: hsla(0, 0%, 95%, 0.726);
+    border: 2px;
+    border-color: hsla(0, 0%, 80%, 0);
+    border-radius: 8px;
+    margin: 500px auto;
+  }
+
+  #story {
+    position: -webkit-sticky;
+    position: sticky !important;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    z-index: 0;
+  }
+
+  .no-benefits {
+    filter: grayscale(100%);
+    filter: opacity(0.3);
+    transition: filter 1s;
+  }
+  .non {
+      transition: 1s;
+  }
+  
+  .step1:last-child {
+    margin-bottom: 100px;
+  }
+
+  .step1.is-active p {
+    color: #3b3b3b;
+  }
