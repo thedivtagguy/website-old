@@ -5,9 +5,10 @@
    var article = scrolly.select("article");
    var step = article.selectAll(".step1");
    var grid = figure.select("#storyGrid")
+   var head = document.getElementById('benefitshead');
    // initialize the scrollama
    var scroller = scrollama();
-
+   console.log(head.innerHTML)
    // generic window resize listener event
    function handleResize() {
      // 1. update height of step elements
@@ -33,9 +34,11 @@
       if(value >= 2){
          var nons =  document.querySelectorAll('.non');
          [...nons].forEach(n => n.classList.add('no-benefits'));
+         head.innerHTML = "Benefits For Gig Workers";
     } else {
      var nons =  document.querySelectorAll('.non');
      [...nons].forEach(n => n.classList.remove('no-benefits'));
+     head.innerHTML = "Benefits For Standard Employees";
     }
      console.log(response);
      // response = { element, direction, index }
@@ -69,7 +72,7 @@
        .setup({
          step: "#scrolly article .step1",
          offset: 0.65,
-         debug: true
+         debug: false
        })
        .onStepEnter(handleStepEnter);
 

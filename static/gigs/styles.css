@@ -54,17 +54,26 @@
 
   article {
     position: relative;
-    
+  }
+
+  article p {
+    font-size: 1.125rem/* 18px */;
+    line-height: 1.75rem/* 28px */;  
   }
 
   .step1 {
     width: 500px;
-    background-color: hsla(0, 0%, 95%, 0.726);
-    border: 2px;
-    border-color: hsla(0, 0%, 80%, 0);
-    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+    justify-items: center;
+    background-color: hsla(0, 0%, 95%, 0.815);
     margin: 500px auto;
-  }
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: rgba(104, 104, 104, 0.61);
+    box-shadow: 5px 20px 20px rgba(0, 0, 0, 0.2);
+  } 
 
   #story {
     position: -webkit-sticky;
@@ -81,7 +90,8 @@
   .no-benefits {
     filter: opacity(0.3);
     transition: filter 0.5s;
-    background-color:rgba(205, 92, 92, 0.267)
+    background-color:rgba(134, 24, 24, 0.267);
+    border-color: rgba(205, 92, 92, 0.267);
   }
 
   .no-benefits p {
