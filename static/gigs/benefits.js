@@ -108,7 +108,9 @@
       // response = { element, direction, index }
       console.log("enter", response);
       // add to color to current step
+     
       response.element.classList.add("is-active");
+      
     }
 
     function handleStepExit3(response) {
@@ -120,17 +122,19 @@
 
     function handleStepProgress3(response) {
       console.log(response.progress);
-      var money = Math.round(response.progress*100);
+      var money = response.progress;
       calculateEarnings(money);
     }
 
     function calculateEarnings(money) {
       // If money is greater than 20 and less than 50, output hello
-      if (money >= 0 && money < 10) {
+      console.log(money); 
+      if(money >= 1 && money <= 0) {
+        counter.innerHTML = "No Earnings Yet";
+        deliveries.innerHTML = "No Deliveries Yet";
+      } else {
         counter.innerHTML = "Rs." + money;
         deliveries.innerHTML = "0";
-      } else if (money >= 10 && money < 20) {
-        counter.innerHTML = "Rs." + money;
       }
     }
 
@@ -143,7 +147,14 @@
        step2.classed("is-active", function(d, i) {
            return i === response.index;
        });
-
+       let value = response.element.attributes['data-step'].value
+       console.log(value);
+       if(value == 2) {
+       button = document.getElementById("starter");
+       console.log(button);
+       button.classList.remove("disappear");
+       button.classList.add("appear");
+       }
        if (value2 >= 2) {
            header.innerHTML = "Benefits For Gig Workers";
        } else {
@@ -203,7 +214,7 @@
       
       scroller3
            .setup({
-                step: "#side-text",
+                step: "#start",
                 debug: true,
                 progress: true,
                 offset: 0.90,
@@ -223,3 +234,57 @@
 
 
    /// Sticky Side
+
+
+
+   // This function returns an object containing the long distances travelled as well as the short distances travelled
+const GetTotallyRealTotalTrips = (distancesOptions = {
+  maxLongDistancesWhenDay: 9,
+  minLongDistancesWhenDay: 6,
+  maxShortDistancesWhenDay: 14,
+  minShortDistancesWhenDay: 8,
+  maxLongDistancesWhenNight: 7,
+  minLongDistancesWhenNight: 4,
+  maxShortDistancesWhenNight: 14,
+  minShortDistancesWhenNight: 10,
+}) => {
+  let shortDistances = 0;
+  let longDistances = 0;
+  const isDay = Math.random() > 0.5;
+
+  if (isDay) {
+    // return a lot of trips, it's daytime
+    longDistances = Math.ceil(Math.random() * (distancesOptions.maxLongDistancesWhenDay - distancesOptions.minLongDistancesWhenDay)) + distancesOptions.minLongDistancesWhenDay;
+    shortDistances = Math.ceil(Math.random() * (distancesOptions.maxShortDistancesWhenDay - distancesOptions.minShortDistancesWhenDay)) + distancesOptions.minShortDistancesWhenDay;
+  } else {
+    // too late, return a few trips
+    longDistances = Math.ceil(Math.random() * (distancesOptions.maxLongDistancesWhenNight - distancesOptions.minLongDistancesWhenNight)) + distancesOptions.minLongDistancesWhenNight;
+    shortDistances = Math.ceil(Math.random() * (distancesOptions.maxShortDistancesWhenNight - distancesOptions.minShortDistancesWhenNight)) + distancesOptions.minShortDistancesWhenNight;
+  }
+
+  return {
+    shortDistances,
+    longDistances,
+    isDay,
+  };
+}
+ 
+let trips = 0;
+// if you want to actually configure this function, you'd do something like
+// GetTotallyRealTotalTrips({ maxLongDistancesWhenNight 7, maxShortDistancesWhenDay: 23 })
+// which will override the default settings
+function getTrips() {
+  button = document.getElementById("starter");
+  trips = GetTotallyRealTotalTrips();
+  console.log(trips);
+  let start = document.getElementById("start");
+  start.classList.remove("hidden");
+  button.classList.add("disappear");
+}
+// When page loads, run GetTotallyRealTotalTrips()
+
+function redo() {
+  button = document.getElementById("starter");
+  button.classList.remove("disappear");
+  button.classList.add("appear");
+}

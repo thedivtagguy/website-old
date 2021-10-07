@@ -197,21 +197,37 @@ fonts:
        <div class="step2" data-step="2">
          <p>STEP 2</p>
        </div>
+       <div id="start" class= "hidden" >
        <div class="step2" data-step="3">
          <p>STEP 3</p>
        </div>
        <div class="step2" data-step="4">
          <p>STEP 4</p>
        </div>
+       </div>  
      </div>
 
      <div id="charts" >
        <div class="game-heading">
-            <h4 id ="heading-text" class="py-4 text-4xl font-bold text-center font-blacker">Let's Get Started</h4>
-            <div id="counter" class="absolute py-8 text-3xl font-bold text-green-700 right-8 bottom-8">
-               </div>  
-               <div id="trips" class="absolute py-8 text-3xl font-bold text-red-700 left-8 bottom-8">
-               </div> 
+                      <h4 id ="heading-text" class="py-4 text-4xl font-bold text-center font-blacker">Let's Get Started</h4>
+
+         <div id="phone">
+            <div class="phone-big">
+                  <div class="flex items-center justify-items-center">
+                     <div class="absolute top-24 right-36">
+                        <button id="starter" onclick="getTrips();" class="px-6 py-4 font-bold text-white bg-blue-500 border-2 border-blue-900 rounded-lg shadow-lg disappear">Start Accepting Orders
+                     </div>
+                     <div class="mx-auto">
+                        hi
+                     </div>
+                     <div id="counter" class="absolute px-12 py-8 text-3xl font-bold text-green-700 right-8 bottom-8">
+                     </div>  
+                     <div id="trips" class="absolute px-12 py-8 text-3xl font-bold text-red-700 left-8 bottom-8">
+                     </div> 
+                  </div>
+            </div>
+         </div>
+            
          </div>
      </div>
    </section>
