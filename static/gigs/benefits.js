@@ -42,7 +42,6 @@
            [...nons].forEach(n => n.classList.remove('no-benefits'));
            head.innerHTML = "Benefits For Standard Workers";
        }
-       console.log(response);
        // response = { element, direction, index }
        // add color to current step only
        step.classed("is-active", function(d, i) {
@@ -84,9 +83,10 @@
    var step2 = side.selectAll(".step2");
    var header = document.getElementById('heading-text');
    var counter = document.getElementById('counter');
+   var deliveries = document.getElementById('trips');
    // initialize the scrollama
    var scroller2 = scrollama();
-
+   var scroller3 = scrollama();
    // generic window resize listener event
    function handleResize2() {
        // 1. update height of step2 elements
@@ -102,6 +102,37 @@
        // 3. tell scrollama to update new element dimensions
        scroller2.resize();
    }
+
+     // scrollama event handlers
+     function handleStepEnter3(response) {
+      // response = { element, direction, index }
+      console.log("enter", response);
+      // add to color to current step
+      response.element.classList.add("is-active");
+    }
+
+    function handleStepExit3(response) {
+      // response = { element, direction, index }
+      console.log("exit", response);
+      // remove color from current step
+      response.element.classList.remove("is-active");
+    }
+
+    function handleStepProgress3(response) {
+      console.log(response.progress);
+      var money = Math.round(response.progress*100);
+      calculateEarnings(money);
+    }
+
+    function calculateEarnings(money) {
+      // If money is greater than 20 and less than 50, output hello
+      if (money >= 0 && money < 10) {
+        counter.innerHTML = "Rs." + money;
+        deliveries.innerHTML = "0";
+      } else if (money >= 10 && money < 20) {
+        counter.innerHTML = "Rs." + money;
+      }
+    }
 
    // scrollama event handlers
    function handleStepEnter2(response) {
@@ -123,19 +154,14 @@
        // update graphic based on step2
        figure2.select("#id").text(response.index + 1);
    }
-   function handleStepProgress(response) {
-    console.log(response.progress);
-    d3.select(response.element)
-      .select("p")
-      .text(d3.format(".1%")(response.progress));
-  }
+   
    function setupStickyfill() {
        d3.selectAll(".sticky").each(function() {
            Stickyfill.add(this);
        });
    }
 
-
+   
 ////////////////////////////////////////////////////
 //// END SIDE STICKY ////
 ////////////////////////////////////////////////////
@@ -173,9 +199,18 @@
                offset: 0.33,
                debug: true
            })
-           .onStepEnter(handleStepEnter2)
-           .onStepProgress(handleStepProgress);
-
+           .onStepEnter(handleStepEnter2);
+      
+      scroller3
+           .setup({
+                step: "#side-text",
+                debug: true,
+                progress: true,
+                offset: 0.90,
+           })
+           .onStepEnter(handleStepEnter3)
+           .onStepExit(handleStepExit3)
+           .onStepProgress(handleStepProgress3);
 
        // setup resize event
        window.addEventListener("resize", handleResize2);
