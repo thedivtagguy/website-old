@@ -13,7 +13,7 @@
    function handleResize() {
      // 1. update height of step elements
      var figureHeight = window.innerHeight / 2;
-     var figureMarginTop = (window .innerHeight - figureHeight) / 50;
+     var figureMarginTop = (window .innerHeight - figureHeight) / 10;
 
      figure
        .style("top", figureMarginTop + "px");
@@ -80,3 +80,9 @@
 
    // kick things off
    init();
+
+
+// Language: javascript
+// Path: static\gigs\gig.js
+    // using d3 for convenience
+    

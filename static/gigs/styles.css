@@ -1,48 +1,4 @@
-#scroll {
-    display: flex;
-    min-height: 100vh;
-     }
 
-   
-.step {
-    padding: 3rem 2rem 3rem 2rem;
-    position: relative;
-}
-
-.step img {
-    width: 100%;
-    height: auto;
-}
-
-.scroll__graphic {
-    position: -webkit-sticky !important;
-    position: sticky !important; 
-    top: 0;
-    align-self: flex-start;
-    right: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
-
-.scroll__text {
-    position: relative;
-    padding: 0 1rem;
-    max-width: 30rem;
-    width: 33%;
-}
-
-.overlay {
-    background: rgba(255,255
-    ,255, .75);
-}
-
-#map {
-    z-index: -5;
-    height: 800px;
-    position: sticky !important;
-
-}
 
 /* CSS FOR BENEFITS */
 
@@ -90,13 +46,14 @@
 
   .no-benefits {
     filter: opacity(0.3);
-    transition: filter 0.5s;
+    transition: 0.5s;
     background-color:rgba(134, 24, 24, 0.267);
     border-color: rgba(205, 92, 92, 0.267);
   }
 
   .no-benefits p {
       color:rgb(87, 30, 30);
+     
   }
 
   
@@ -127,3 +84,5 @@
   inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
   inset 0 1px 1px rgba(255,255,255,0.8); /*top internal highlight*/
   }
+
+ 
