@@ -178,8 +178,6 @@ fonts:
    </p>
 
 
-
-   </div>
 </section>
 
 
@@ -197,11 +195,21 @@ fonts:
        <div class="step2" data-step="2">
          <p>STEP 2</p>
        </div>
-       <div id="start" class= "hidden" >
        <div class="step2" data-step="3">
          <p>STEP 3</p>
        </div>
+       <div id="start" >
+
        <div class="step2" data-step="4">
+         <p>STEP 4</p>
+       </div>
+       <div class="step2" data-step="5">
+         <p>STEP 4</p>
+       </div>
+       <div class="step2" data-step="6">
+         <p>STEP 4</p>
+       </div>
+       <div class="step2" data-step="7">
          <p>STEP 4</p>
        </div>
        </div>  
@@ -209,31 +217,46 @@ fonts:
 
      <div id="charts" >
        <div class="game-heading">
-                      <h4 id ="heading-text" class="py-4 text-4xl font-bold text-center font-blacker">Let's Get Started</h4>
+                      <h4 id ="heading-text" class="py-4 text-4xl font-bold text-center font-blacker">How much can you earn?</h4>
 
          <div id="phone">
             <div class="phone-big">
-                  <div class="flex items-center justify-items-center">
-                     <div class="absolute top-24 right-36">
-                        <button id="starter" onclick="getTrips();" class="px-6 py-4 font-bold text-white bg-blue-500 border-2 border-blue-900 rounded-lg shadow-lg disappear">Start Accepting Orders
+                  <div class="flex flex-col items-center justify-items-center">
+                     <div id="starter" class="disappear">
+                        <button  onclick="getTrips();" class="px-6 py-4 mx-auto font-bold text-white bg-blue-500 border-2 border-blue-900 rounded-lg shadow-lg">Click to Start New Day</button>
                      </div>
-                     <div class="mx-auto">
-                        hi
+                     <div>
+                        <img id="gif" src="https://c.tenor.com/D-0qeZG5l5YAAAAC/easyeats-rider-easyeats.gif" class="absolute hidden w-2/5 transition-all duration-300 top-12 right-36 rounded-xl">
                      </div>
-                     <div id="counter" class="absolute px-12 py-8 text-3xl font-bold text-green-700 right-8 bottom-8">
+                     <h5 class="w-4/5 px-8 py-4 mx-auto text-4xl font-bold text-center capitalize border-black border-dashed" id="timer"><span id ="timer-text" class="w-full text-sm text-gray-200 disappear">Click Button to Start Working</span></h5>
+                     <div id="counter" class="absolute px-12 py-8 text-2xl font-bold text-green-700 bg-green-100 disappear rounded-2xl right-8 bottom-8">
+                        Rs. 0
                      </div>  
-                     <div id="trips" class="absolute px-12 py-8 text-3xl font-bold text-red-700 left-8 bottom-8">
+                     <div id="trips" class="absolute flex flex-grow-0 px-8 py-8 text-2xl font-bold text-red-700 bg-red-100 disappear rounded-2xl left-8 bottom-8">
+                        0 deliveries
                      </div> 
                   </div>
             </div>
          </div>
+
             
          </div>
+         <button  button id="reset" onclick="resetTrips();smoothScroll({toElement:document.getElementById('game'), duration: 2000});" class="absolute px-2 py-2 mx-auto text-xs font-medium text-white uppercase bg-gray-900 border-2 border-gray-600 rounded-lg shadow-lg disappear bottom-12 right-96">Start Another Day</button>
+
      </div>
    </section>
+</section>
 
-   <section id="outro"></section>
+ 
+</section>
+
  </section>
+ <section id="month" data-step="10" class="w-full max-w-6xl px-12 py-16 mx-auto my-20 border-8 border-dashed h-h-screen-half ">
+   
+  <h4 class="text-6xl font-black text-center uppercase leading-royal ">You managed to earn <span id="totalEarning" class="block font-bold text-green-700 ">Rs. 0</span> in <span id="days" class="font-bold text-green-700 ">0</span> days</h4>
+ <p class="py-12 mx-auto text-xl text-center lg:w-2/5 ">How much of that will you save?</p>
+</section>
+
 <style>
    .css-3d-text {
       font-size: 4.3rem;

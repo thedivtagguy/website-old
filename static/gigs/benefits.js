@@ -1,4 +1,178 @@
-   /////////////////////////////////////////////////////
+var tripInfo;
+let earning = 0;
+let shouldProgress;
+function time_convert(num) {
+  var hours = Math.floor(num / 60);
+  var minutes = num % 60;
+  return hours + " hours, " + minutes + " minutes";
+}
+// This function returns an object containing the long distances travelled as well as the short distances travelled
+const GetTotallyRealTotalTrips = (x, distancesOptions = {
+  maxLongDistancesWhenDay: 10,
+  minLongDistancesWhenDay: 6,
+  maxShortDistancesWhenDay: 13,
+  minShortDistancesWhenDay: 8,
+  maxLongDistancesWhenNight: 7,
+  minLongDistancesWhenNight: 4,
+  maxShortDistancesWhenNight: 14,
+  minShortDistancesWhenNight: 10,
+  longDistanceTime: 35,
+  shortDistanceTime: 15,
+}) => {
+let long = [7, 8, 9, 10, 11, 12, 13]
+let short = [2, 3, 4, 5, 6, 7]
+let perKm = 6
+
+// Format to Time
+function time_convert(num) {
+  var hours = Math.floor(num / 60);
+  var minutes = num % 60;
+  return hours + " hours, " + minutes + " minutes";
+}
+  // Total Short Distances
+  let shortDistances = 0;
+  // Total Long Distances
+  let longDistances = 0;
+  // Total Time Taken
+  let time = 0;
+  // Will You have Long Trips Today? Boolean Value
+  let isLong = 0;
+  // Hours Placeholder
+  let hours = "";
+  // Placeholder for storing the randomly chosen long distance.
+  let lDist = 0;
+  // Placeholder for storing the randomly chosen short distance.
+  let sDist = 0;
+  // Chart Data
+  let data = [{}];
+  let data2 = [{}];
+  // Placeholder for storing time.
+  let t = 0;
+  // Total Pay for Short Distance Deliveries
+  let shortPay = 0;
+  // Total Pay for Long Distance Deliveries
+  let longPay = 0;
+  // Storing Incentives
+  let incentives = 0
+
+
+  // Loop through the number of days entered by the uers
+  for (let i = 0; i < x; i++) {
+    t = 0;
+    // Decide whether more long trips or short trips will be taken today. 
+    isLong = Math.random() > 0.5;
+    if (isLong) {
+      // Store the randomly chosen long distance.
+      lDist = Math.ceil(Math.random() * (distancesOptions.maxLongDistancesWhenDay - distancesOptions.minLongDistancesWhenDay)) + distancesOptions.minLongDistancesWhenDay;
+      longDistances = longDistances + lDist;
+      // Store the randomly chosen short distance.
+      sDist = Math.ceil(Math.random() * (distancesOptions.maxShortDistancesWhenDay - distancesOptions.minShortDistancesWhenDay)) + distancesOptions.minShortDistancesWhenDay;
+      shortDistances = shortDistances + sDist;
+      t = lDist * distancesOptions.longDistanceTime + sDist * distancesOptions.longDistanceTime;
+    } else {
+
+      lDist = Math.ceil(Math.random() * (distancesOptions.maxLongDistancesWhenNight - distancesOptions.minLongDistancesWhenNight)) + distancesOptions.minLongDistancesWhenNight;
+      longDistances = longDistances + lDist;
+      sDist = Math.ceil(Math.random() * (distancesOptions.maxShortDistancesWhenNight - distancesOptions.minShortDistancesWhenNight)) + distancesOptions.minShortDistancesWhenNight;
+
+      shortDistances = shortDistances + sDist;
+      // Calculate time taken today.
+      t = lDist * distancesOptions.longDistanceTime + sDist * distancesOptions.longDistanceTime;
+    }
+    // Build the data array for the chart.
+    data[i] = {
+      day: i + 1,
+      deliveries: lDist + sDist
+    }
+  }
+  // Total Time for All Days
+  time = time + longDistances * distancesOptions.longDistanceTime + shortDistances * distancesOptions.longDistanceTime;
+  hours = time_convert(time);
+  // Transform Data to What Google Charts Needs
+
+  for (let i = 0; i <= shortDistances; i++) {
+    shortPay = shortPay + perKm * short[Math.floor(Math.random() * short.length)];
+    data2[i] = {
+      shortPay: shortPay
+    }
+  }
+
+  for (let i = 0; i <= longDistances; i++) {
+    longPay = longPay + perKm * long[Math.floor(Math.random() * long.length)];
+    
+  }
+  let total = longPay + shortPay;
+  if (total > 600) {
+    incentives = 230;
+  }
+  const keys = Object.keys(data[0]);
+  const perDay = [keys, ...data.map(obj => keys.map(key => obj[key]))];
+
+  let earnings = {
+    shortTripsPay: shortPay,
+    longTripsPay: longPay,
+    totalPay: shortPay + longPay + incentives,
+    longTrips: longDistances,
+    shortTrips: shortDistances,
+    isLong,
+    time,
+    perDay,
+    workingHours: hours,
+  };
+  return earnings;
+
+}
+
+function calcTrips(x){
+    let trips = GetTotallyRealTotalTrips(x)
+    console.log(trips);
+    return trips;
+    
+}
+////////////////////////////////
+
+
+let start = document.getElementById("start");
+let button = document.getElementById("starter");
+let earnings = document.getElementById("totalEarning");
+let timertext = document.getElementById("timer-text");
+let i = 0;
+let days = document.getElementById("days"); 
+// if you want to actually configure this function, you'd do something like
+// GetTotallyRealTotalTrips({ maxLongDistancesWhenNight 7, maxShortDistancesWhenDay: 23 })
+// which will override the default settings
+function getTrips() {
+  i = i + 1;
+  tripInfo =  calcTrips(1);
+  button.classList.add("disappear");
+  timertext.classList.add("disappear");
+  button.classList.remove("appear");
+  // Redo Button 
+  reset = document.getElementById("reset");
+  reset.classList.remove("hidden");
+  buttonCount = buttonCount + 1;
+  earning = tripInfo.totalPay + earning;
+  console.log(earning);
+  earnings.innerText = "₹ " + earning;
+  days.innerText = i;
+}
+// When page loads, run GetTotallyRealTotalTrips()
+
+function redo() {
+  button.classList.remove("disappear");
+  button.classList.add("appear");
+}
+
+// Function to restart sim
+function resetTrips() {
+  if(buttonCount != 0) {
+    redo();
+    buttonCount = buttonCount -1;
+  }
+      
+
+}
+/////////////////////////////////////////////////////
     ////////    ////////    ////////    ////////    //
     /// Overlay Section ////    ////////    ////////    //
     ////////    ////////    ////////    ////////    //
@@ -12,6 +186,7 @@
    var step = article.selectAll(".step1");
    var grid = figure.select("#storyGrid")
    var head = document.getElementById('benefitshead');
+   var month = document.getElementById('month');
    // initialize the scrollama
    var scroller = scrollama();
    // generic window resize listener event
@@ -37,7 +212,7 @@
            var nons = document.querySelectorAll('.non');
            [...nons].forEach(n => n.classList.add('no-benefits'));
            head.innerHTML = "Benefits For Gig Workers";
-       } else {
+       }  else {
            var nons = document.querySelectorAll('.non');
            [...nons].forEach(n => n.classList.remove('no-benefits'));
            head.innerHTML = "Benefits For Standard Workers";
@@ -76,6 +251,7 @@
 
 
    // using d3 for convenience
+   var buttonCount = 0;
    var main2 = d3.select("#game");
    var scrolly2 = main2.select("#scrolly2");
    var figure2 = scrolly2.select("#charts");
@@ -84,6 +260,7 @@
    var header = document.getElementById('heading-text');
    var counter = document.getElementById('counter');
    var deliveries = document.getElementById('trips');
+   var timer = document.getElementById('timer');
    // initialize the scrollama
    var scroller2 = scrollama();
    var scroller3 = scrollama();
@@ -121,22 +298,12 @@
     }
 
     function handleStepProgress3(response) {
-      console.log(response.progress);
-      var money = response.progress;
-      calculateEarnings(money);
+      console.log(response);
+      counter.innerText = "₹ " + roundedToFixed(response.progress*tripInfo.totalPay, 1);
+      deliveries.innerText = roundedToFixed(response.progress*(tripInfo.longTrips + tripInfo.shortTrips), 0) + " deliveries";
+      timer.innerText = time_convert(roundedToFixed(response.progress*tripInfo.time, 0));
     }
 
-    function calculateEarnings(money) {
-      // If money is greater than 20 and less than 50, output hello
-      console.log(money); 
-      if(money >= 1 && money <= 0) {
-        counter.innerHTML = "No Earnings Yet";
-        deliveries.innerHTML = "No Deliveries Yet";
-      } else {
-        counter.innerHTML = "Rs." + money;
-        deliveries.innerHTML = "0";
-      }
-    }
 
    // scrollama event handlers
    function handleStepEnter2(response) {
@@ -148,20 +315,25 @@
            return i === response.index;
        });
        let value = response.element.attributes['data-step'].value
-       console.log(value);
        if(value == 2) {
        button = document.getElementById("starter");
-       console.log(button);
+       if(buttonCount == 0) {
        button.classList.remove("disappear");
+       document.getElementById("timer-text").classList.remove("disappear");
+       document.getElementById("timer-text").classList.remove("appear");
+
+            document.getElementById("trips").classList.remove("disappear");
+       document.getElementById("counter").classList.remove("disappear");
+       buttonCount++;
        button.classList.add("appear");
-       }
-       if (value2 >= 2) {
-           header.innerHTML = "Benefits For Gig Workers";
-       } else {
-           header.innerHTML = "Benefits For Standard ";
-       }
+       }}
       
-       counter.innerHTML = response.progress;
+ if(value == 10){
+    totalE.classList.remove("disappear");
+ }
+
+
+
        // update graphic based on step2
        figure2.select("#id").text(response.index + 1);
    }
@@ -208,14 +380,14 @@
            .setup({
                step: "#scrolly2 #side-text .step2",
                offset: 0.33,
-               debug: true
+               debug: false
            })
            .onStepEnter(handleStepEnter2);
       
       scroller3
            .setup({
                 step: "#start",
-                debug: true,
+                debug: false,
                 progress: true,
                 offset: 0.90,
            })
@@ -236,55 +408,11 @@
    /// Sticky Side
 
 
-
-   // This function returns an object containing the long distances travelled as well as the short distances travelled
-const GetTotallyRealTotalTrips = (distancesOptions = {
-  maxLongDistancesWhenDay: 9,
-  minLongDistancesWhenDay: 6,
-  maxShortDistancesWhenDay: 14,
-  minShortDistancesWhenDay: 8,
-  maxLongDistancesWhenNight: 7,
-  minLongDistancesWhenNight: 4,
-  maxShortDistancesWhenNight: 14,
-  minShortDistancesWhenNight: 10,
-}) => {
-  let shortDistances = 0;
-  let longDistances = 0;
-  const isDay = Math.random() > 0.5;
-
-  if (isDay) {
-    // return a lot of trips, it's daytime
-    longDistances = Math.ceil(Math.random() * (distancesOptions.maxLongDistancesWhenDay - distancesOptions.minLongDistancesWhenDay)) + distancesOptions.minLongDistancesWhenDay;
-    shortDistances = Math.ceil(Math.random() * (distancesOptions.maxShortDistancesWhenDay - distancesOptions.minShortDistancesWhenDay)) + distancesOptions.minShortDistancesWhenDay;
-  } else {
-    // too late, return a few trips
-    longDistances = Math.ceil(Math.random() * (distancesOptions.maxLongDistancesWhenNight - distancesOptions.minLongDistancesWhenNight)) + distancesOptions.minLongDistancesWhenNight;
-    shortDistances = Math.ceil(Math.random() * (distancesOptions.maxShortDistancesWhenNight - distancesOptions.minShortDistancesWhenNight)) + distancesOptions.minShortDistancesWhenNight;
+   ////////////////////////////////////////////////
+   
+   function roundedToFixed(input, digits){
+    var rounded = Math.pow(10, digits);
+    return (Math.round(input * rounded) / rounded).toFixed(digits);
   }
 
-  return {
-    shortDistances,
-    longDistances,
-    isDay,
-  };
-}
- 
-let trips = 0;
-// if you want to actually configure this function, you'd do something like
-// GetTotallyRealTotalTrips({ maxLongDistancesWhenNight 7, maxShortDistancesWhenDay: 23 })
-// which will override the default settings
-function getTrips() {
-  button = document.getElementById("starter");
-  trips = GetTotallyRealTotalTrips();
-  console.log(trips);
-  let start = document.getElementById("start");
-  start.classList.remove("hidden");
-  button.classList.add("disappear");
-}
-// When page loads, run GetTotallyRealTotalTrips()
-
-function redo() {
-  button = document.getElementById("starter");
-  button.classList.remove("disappear");
-  button.classList.add("appear");
-}
+  
