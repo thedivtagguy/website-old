@@ -1,6 +1,7 @@
 var tripInfo;
 let earning = 0;
 let shouldProgress;
+let resetButton = document.getElementById("reset");
 function time_convert(num) {
   var hours = Math.floor(num / 60);
   var minutes = num % 60;
@@ -148,8 +149,7 @@ function getTrips() {
   timertext.classList.add("disappear");
   button.classList.remove("appear");
   // Redo Button 
-  reset = document.getElementById("reset");
-  reset.classList.remove("hidden");
+
   buttonCount = buttonCount + 1;
   earning = tripInfo.totalPay + earning;
   console.log(earning);
@@ -302,6 +302,12 @@ function resetTrips() {
       counter.innerText = "₹ " + roundedToFixed(response.progress*tripInfo.totalPay, 1);
       deliveries.innerText = roundedToFixed(response.progress*(tripInfo.longTrips + tripInfo.shortTrips), 0) + " deliveries";
       timer.innerText = time_convert(roundedToFixed(response.progress*tripInfo.time, 0));
+
+      if(response.progress >= 0.8){
+        resetButton.classList.remove("disappear");
+      }else{
+        resetButton.classList.add("disappear");
+      }
     }
 
 
