@@ -2,6 +2,7 @@ var tripInfo;
 let earning = 0;
 let shouldProgress;
 let resetButton = document.getElementById("reset");
+let gif = document.getElementById("gif");
 function time_convert(num) {
   var hours = Math.floor(num / 60);
   var minutes = num % 60;
@@ -146,10 +147,12 @@ function getTrips() {
   i = i + 1;
   tripInfo =  calcTrips(1);
   button.classList.add("disappear");
-  timertext.classList.add("disappear");
   button.classList.remove("appear");
+  timertext.classList.add("disappear");
   // Redo Button 
-
+  ///wait for 05 seconds
+  gif.classList.remove('hidden');
+  gif.classList.add('appear');
   buttonCount = buttonCount + 1;
   earning = tripInfo.totalPay + earning;
   console.log(earning);
@@ -161,6 +164,8 @@ function getTrips() {
 function redo() {
   button.classList.remove("disappear");
   button.classList.add("appear");
+  gif.classList.remove('appear');
+  gif.classList.add('hidden');
 }
 
 // Function to restart sim
@@ -327,7 +332,7 @@ function resetTrips() {
        button.classList.remove("disappear");
        document.getElementById("timer-text").classList.remove("disappear");
        document.getElementById("timer-text").classList.remove("appear");
-
+     
             document.getElementById("trips").classList.remove("disappear");
        document.getElementById("counter").classList.remove("disappear");
        buttonCount++;
