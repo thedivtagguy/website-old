@@ -3,6 +3,11 @@ let earning = 0;
 let shouldProgress;
 let resetButton = document.getElementById("reset");
 let gif = document.getElementById("gif");
+
+let farPlaces = []
+let nearPlaces = []
+
+
 function time_convert(num) {
   var hours = Math.floor(num / 60);
   var minutes = num % 60;
@@ -10,14 +15,14 @@ function time_convert(num) {
 }
 // This function returns an object containing the long distances travelled as well as the short distances travelled
 const GetTotallyRealTotalTrips = (x, distancesOptions = {
-  maxLongDistancesWhenDay: 10,
+  maxLongDistancesWhenDay: 6,
   minLongDistancesWhenDay: 6,
-  maxShortDistancesWhenDay: 13,
-  minShortDistancesWhenDay: 8,
+  maxShortDistancesWhenDay: 8,
+  minShortDistancesWhenDay: 9,
   maxLongDistancesWhenNight: 7,
-  minLongDistancesWhenNight: 4,
-  maxShortDistancesWhenNight: 14,
-  minShortDistancesWhenNight: 10,
+  minLongDistancesWhenNight: 2,
+  maxShortDistancesWhenNight: 7,
+  minShortDistancesWhenNight: 6,
   longDistanceTime: 35,
   shortDistanceTime: 15,
 }) => {
@@ -66,6 +71,7 @@ function time_convert(num) {
     if (isLong) {
       // Store the randomly chosen long distance.
       lDist = Math.ceil(Math.random() * (distancesOptions.maxLongDistancesWhenDay - distancesOptions.minLongDistancesWhenDay)) + distancesOptions.minLongDistancesWhenDay;
+
       longDistances = longDistances + lDist;
       // Store the randomly chosen short distance.
       sDist = Math.ceil(Math.random() * (distancesOptions.maxShortDistancesWhenDay - distancesOptions.minShortDistancesWhenDay)) + distancesOptions.minShortDistancesWhenDay;
@@ -93,14 +99,16 @@ function time_convert(num) {
   // Transform Data to What Google Charts Needs
 
   for (let i = 0; i <= shortDistances; i++) {
-    shortPay = shortPay + perKm * short[Math.floor(Math.random() * short.length)];
-    data2[i] = {
-      shortPay: shortPay
-    }
+    near = short[Math.floor(Math.random() * short.length)];
+    nearPlaces.push(near);
+    shortPay = shortPay + perKm * near;
+   
   }
 
   for (let i = 0; i <= longDistances; i++) {
-    longPay = longPay + perKm * long[Math.floor(Math.random() * long.length)];
+    far = long[Math.floor(Math.random() * long.length)];
+    farPlaces.push(far);
+    longPay = longPay + perKm * far;
     
   }
   let total = longPay + shortPay;
@@ -109,7 +117,11 @@ function time_convert(num) {
   }
   const keys = Object.keys(data[0]);
   const perDay = [keys, ...data.map(obj => keys.map(key => obj[key]))];
+  let sum = 0;
+  sum = nearPlaces.concat(farPlaces);
+  sum = sum.reduce((a, b) => a + b, 0);
 
+  console.log(sum);
   let earnings = {
     shortTripsPay: shortPay,
     longTripsPay: longPay,
@@ -121,13 +133,14 @@ function time_convert(num) {
     perDay,
     workingHours: hours,
   };
+  // console.log(earnings);
   return earnings;
 
 }
 
 function calcTrips(x){
     let trips = GetTotallyRealTotalTrips(x)
-    console.log(trips);
+    // console.log(trips);
     return trips;
     
 }
@@ -155,7 +168,7 @@ function getTrips() {
   gif.classList.add('appear');
   buttonCount = buttonCount + 1;
   earning = tripInfo.totalPay + earning;
-  console.log(earning);
+  // console.log(earning);
   earnings.innerText = "₹ " + earning;
   days.innerText = i;
 }
@@ -288,7 +301,7 @@ function resetTrips() {
      // scrollama event handlers
      function handleStepEnter3(response) {
       // response = { element, direction, index }
-      console.log("enter", response);
+      // console.log("enter", response);
       // add to color to current step
      
       response.element.classList.add("is-active");
@@ -297,13 +310,13 @@ function resetTrips() {
 
     function handleStepExit3(response) {
       // response = { element, direction, index }
-      console.log("exit", response);
+      // console.log("exit", response);
       // remove color from current step
       response.element.classList.remove("is-active");
     }
 
     function handleStepProgress3(response) {
-      console.log(response);
+      // console.log(response);
       counter.innerText = "₹ " + roundedToFixed(response.progress*tripInfo.totalPay, 1);
       deliveries.innerText = roundedToFixed(response.progress*(tripInfo.longTrips + tripInfo.shortTrips), 0) + " deliveries";
       timer.innerText = time_convert(roundedToFixed(response.progress*tripInfo.time, 0));
