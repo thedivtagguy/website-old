@@ -4,7 +4,7 @@ let shouldProgress;
 let resetButton = document.getElementById("reset");
 let gif = document.getElementById("gif");
 let time1 = 0;
-
+let perDay = []
 let farPlaces = []
 let nearPlaces = []
 
@@ -119,7 +119,7 @@ function time_convert(num) {
     incentives = 230;
   }
   const keys = Object.keys(data[0]);
-  const perDay = [keys, ...data.map(obj => keys.map(key => obj[key]))];
+  perDay = [keys, ...data.map(obj => keys.map(key => obj[key]))];
   let sum = 0;
   sum = nearPlaces.concat(farPlaces);
   sum = sum.reduce((a, b) => a + b, 0);
@@ -450,4 +450,28 @@ function resetTrips() {
     return (Math.round(input * rounded) / rounded).toFixed(digits);
   }
 
-  
+  ////// GOOGLE CHARTS //////
+  function drawChart(x){
+  data = GetTotallyRealTotalTrips(x).perDay;
+
+  google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable(perDay);
+
+        var options = {
+          chart: {
+            title: 'Number of Deliveries',
+            },
+            legend: { position: 'none' },
+
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('chart_div'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    }
+
+drawChart(30);

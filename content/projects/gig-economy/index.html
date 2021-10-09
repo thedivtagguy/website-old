@@ -359,8 +359,26 @@ Now it’s your turn, how about you give food delivery a go? The results of our 
   <h4 class="text-5xl font-black leading-snug text-center uppercase ">You managed to earn <span id="totalEarning" class="block font-bold text-green-700 ">Rs. 0</span> in <span id="days" class="font-bold text-green-700 ">0</span> days <br> by working for<span id="hours" class="block font-bold text-green-700 ">0</span></h4>
  <p class="py-12 mx-auto text-2xl text-center lg:w-2/5 ">How much of that will you save?
 
-You travelled around <span class="font-bold text-green-700" id="distance">0</span> you'll be spending approximately <span id="fuelcost" class="font-bold text-green-700">Rs. 0</span> on fuel during this time.
+You travelled around <span class="font-bold text-green-700" id="distance">0</span> and you'll be spending approximately <span id="fuelcost" class="font-bold text-green-700">Rs. 0</span> on fuel during this time.
 </p>
+</section>
+
+<section  class="max-w-6xl py-12 mx-auto lg:w-2/5">
+  
+   <h4 class="text-4xl font-bold text-center font-blacker">Let's do it more...</h4>
+   <p class="py-8 text-base lg:text-xl">
+      Input a certain number of days and see what your savings will be.
+   </p>
+</section>
+<section  class="flex flex-row items-center justify-between w-4/5 max-w-6xl mx-auto space-x-12 ">
+
+<div class="relative ">
+   <input type="text" id="numberofdays" class="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Enter number of days"/>
+   <button class="px-4 py-2 my-4 font-bold text-white bg-gray-700" onclick="drawChart(document.getElementById('numberofdays').value)">Submit</button>   
+</div>
+   <div class="flex-grow "id ="chart_div">
+      
+   </div>
 </section>
 
 <style>
