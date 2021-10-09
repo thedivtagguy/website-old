@@ -3,6 +3,7 @@ let earning = 0;
 let shouldProgress;
 let resetButton = document.getElementById("reset");
 let gif = document.getElementById("gif");
+let time1 = 0;
 
 let farPlaces = []
 let nearPlaces = []
@@ -37,11 +38,11 @@ function time_convert(num) {
   return hours + " hours, " + minutes + " minutes";
 }
   // Total Short Distances
+  let time = 0;
   let shortDistances = 0;
   // Total Long Distances
   let longDistances = 0;
   // Total Time Taken
-  let time = 0;
   // Will You have Long Trips Today? Boolean Value
   let isLong = 0;
   // Hours Placeholder
@@ -95,6 +96,8 @@ function time_convert(num) {
   }
   // Total Time for All Days
   time = time + longDistances * distancesOptions.longDistanceTime + shortDistances * distancesOptions.longDistanceTime;
+  time1 = time1 + time;
+  console.log(time);
   hours = time_convert(time);
   // Transform Data to What Google Charts Needs
 
@@ -121,7 +124,6 @@ function time_convert(num) {
   sum = nearPlaces.concat(farPlaces);
   sum = sum.reduce((a, b) => a + b, 0);
 
-  console.log(sum);
   let earnings = {
     shortTripsPay: shortPay,
     longTripsPay: longPay,
@@ -130,6 +132,9 @@ function time_convert(num) {
     shortTrips: shortDistances,
     isLong,
     time,
+    time1,
+    hours,
+    sum,
     perDay,
     workingHours: hours,
   };
@@ -150,7 +155,10 @@ function calcTrips(x){
 let start = document.getElementById("start");
 let button = document.getElementById("starter");
 let earnings = document.getElementById("totalEarning");
+let distance = document.getElementById("distance");
+let fuelcost = document.getElementById("fuelcost");
 let timertext = document.getElementById("timer-text");
+let numberOfHours = document.getElementById("hours");
 let i = 0;
 let days = document.getElementById("days"); 
 // if you want to actually configure this function, you'd do something like
@@ -170,6 +178,9 @@ function getTrips() {
   earning = tripInfo.totalPay + earning;
   // console.log(earning);
   earnings.innerText = "₹ " + earning;
+  distance.innerText = tripInfo.sum + " kms";
+  fuelcost.innerText = "₹" + roundedToFixed(((tripInfo.sum/39)*101),0);
+  numberOfHours.innerText = time_convert(tripInfo.time1);
   days.innerText = i;
 }
 // When page loads, run GetTotallyRealTotalTrips()
