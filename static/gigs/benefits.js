@@ -159,6 +159,10 @@ let distance = document.getElementById("distance");
 let fuelcost = document.getElementById("fuelcost");
 let timertext = document.getElementById("timer-text");
 let numberOfHours = document.getElementById("hours");
+let rent = document.getElementById("rent");
+let general = document.getElementById("general");
+let savings = document.getElementById("savings");
+
 let i = 0;
 let days = document.getElementById("days"); 
 // if you want to actually configure this function, you'd do something like
@@ -176,12 +180,16 @@ function getTrips() {
   gif.classList.add('appear');
   buttonCount = buttonCount + 1;
   earning = tripInfo.totalPay + earning;
-  // console.log(earning);
+  console.log(earning);
   earnings.innerText = "₹ " + earning;
   distance.innerText = tripInfo.sum + " kms";
-  fuelcost.innerText = "₹" + roundedToFixed(((tripInfo.sum/39)*101),0);
+  fuelcost.innerText = "₹" + roundedToFixed(((tripInfo.sum/45)*101),0);
   numberOfHours.innerText = time_convert(tripInfo.time1);
   days.innerText = i;
+  rent.innerText = "₹" + roundedToFixed((5000/30)*i,1);
+  general.innerText = "₹" + roundedToFixed((120)*i,1);
+  savings.innerText = "₹" + roundedToFixed((earning - (5000/30)*i - (120)*i),1);
+
 }
 // When page loads, run GetTotallyRealTotalTrips()
 
@@ -449,11 +457,21 @@ function resetTrips() {
     var rounded = Math.pow(10, digits);
     return (Math.round(input * rounded) / rounded).toFixed(digits);
   }
+  
 
+  let varPay = document.getElementById("varPay");
+  let varHours = document.getElementById("varHour");
+  let varDist = document.getElementById("varDist");
+  let varFuel = document.getElementById("varFuel");
   ////// GOOGLE CHARTS //////
   function drawChart(x){
   data = GetTotallyRealTotalTrips(x).perDay;
-
+  dataInfo = GetTotallyRealTotalTrips(x);
+  console.log(dataInfo);
+  varPay.innerText = "₹ " + dataInfo.totalPay;
+  varDist.innerText = dataInfo.sum + " kms";
+  varHours.innerText =  Math.floor(dataInfo.time / 60) + " hours";
+  varFuel.innerText = "₹" + roundedToFixed(((dataInfo.sum/39)*101),0);;
   google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawChart);
 
@@ -474,4 +492,3 @@ function resetTrips() {
       }
     }
 
-drawChart(30);

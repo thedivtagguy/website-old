@@ -1,185 +1,85 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Scrollama: Sticky Side Example</title>
-    <meta name="description" content="Scrollama: Sticky Side Example" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../style.css" />
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-
-    <style>
-      #scrolly2 {
-        position: relative;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        background-color: #f3f3f3;
-        padding: 1rem;
-      }
-
-      #scrolly2 > * {
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-      }
-
-      #side-text {
-        position: relative;
-        padding: 0 1rem;
-        max-width: 20rem;
-      }
-
-      #charts {
-        position: -webkit-sticky;
-        position: sticky;
-        width: 100%;
-        margin: 0;
-        height: 80vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 0;
-      }
-
-    
-
-      .step2 {
-        margin: 0 auto 2rem auto;
-        background-color: #3b3b3b;
-        color: #fff;
-        height: 100vh;
-      }
-
-      .step2:last-child {
-        margin-bottom: 0;
-      }
-
-      .step2.is-active {
-        background-color: goldenrod;
-        color: #3b3b3b;
-      }
-
-     
-    </style>
-  </head>
-
-  <body>
+<section  class="max-w-6xl py-12 mx-auto lg:w-2/5">
   
-    <section id="game">
-     
-      <section id="intro">
-        <h1 class="intro__hed">Sticky Side Example</h1>
-        <p class="intro__dek">
-          Start scrolling to see how it works.
-        </p>
-      </section>
+  <h4 class="text-4xl font-bold text-center font-blacker">Let's do it more...</h4>
+  <p class="py-8 text-base lg:text-xl">
+     Input a certain number of days and see what your savings will be.
+  </p>
+</section>
+<section  class="grid items-center justify-between w-4/5 max-w-6xl grid-cols-5 mx-auto space-x-12 ">
 
-      <section id="scrolly2">
-        <div id="side-text">
-          <div class="h-screen step2" data-step="1">
-            <h4 class="text-4xl font-bold text-center font-blacker">Fluctuating Pay</h4>
-            <p class="py-8 text-sm">
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla purus non vestibulum ullamcorper. 
-            </p>          </div>
-          <div class="step2" data-step="2">
-            <p>STEP 2</p>
-          </div>
-          <div class="step2" data-step="3">
-            <p>STEP 3</p>
-          </div>
-          <div class="step2" data-step="4">
-            <p>STEP 4</p>
+<div class="relative col-span-1 ">
+  <input type="text" id="numberofdays" class="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 shadow-sm appearance-none focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Enter number of days"/>
+  <button class="px-4 py-2 my-4 font-bold text-white bg-gray-700" onclick="drawChart(document.getElementById('numberofdays').value)">Submit</button>   
+</div>
+  <div class="col-span-4 "id ="chart_div">
+  </div>
+  <div class="col-span-1">&nbsp;</div>
+   <div class="flex flex-col col-span-4 py-12 -ml-12">
+        <div class="-my-2 sm:-mx-6">
+          <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+            <div class="border-b border-gray-200 shadow sm:rounded-lg">
+              <table class="min-w-full align-middle divide-y divide-gray-200">
+                <tbody class="bg-white divide-y divide-gray-200">
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="flex items-center">                       
+                        <div >
+                          <div class="text-sm font-medium text-gray-900">
+                            Total Pay
+                          </div>                          
+                        </div>
+                      </div>
+                    </td> 
+                    <td  id="varPay" class="w-1/2 px-6 py-4 text-sm font-bold text-green-700 whitespace-nowrap">
+                       -----
+                    </td>                    
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="flex items-center">                       
+                        <div >
+                          <div class="text-sm font-medium text-gray-900">
+                            Hours Worked
+                          </div>                          
+                        </div>
+                      </div>
+                    </td> 
+                    <td  id="varHour" class="w-1/2 px-6 py-4 text-sm font-bold text-green-700 whitespace-nowrap">
+                       -----
+                    </td>                    
+                  </tr>          
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="flex items-center">                       
+                        <div >
+                          <div class="text-sm font-medium text-gray-900">
+                             Distance Travelled
+                          </div>                          
+                        </div>
+                      </div>
+                    </td> 
+                    <td  id="varDist" class="w-1/2 px-6 py-4 text-sm font-bold text-green-700 whitespace-nowrap">
+                       -----
+                    </td>                    
+                  </tr>   
+                  <tr>
+                    <td class="px-6 py-4 whitespace-nowrap">
+                      <div class="flex items-center">                       
+                        <div >
+                          <div class="text-sm font-medium text-gray-900">
+                            Fuel Cost
+                          </div>                          
+                        </div>
+                      </div>
+                    </td> 
+                    <td  id="varFuel" class="w-1/2 px-6 py-4 text-sm font-bold text-green-700 whitespace-nowrap">
+                       -----
+                    </td>                    
+                  </tr>                         
+                 </tbody>
+              </table>
+            </div>
           </div>
         </div>
-
-        <div id="charts" class="flex items-center justify-items-center">
-          <div>0</div>
-          <div>0</div>
-          <div>0</div>
-
-        </div>
-      </section>
-
-      <section id="outro"></section>
-    </section>
-
-    <!-- <div class='debug'></div> -->
-    <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
-    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
-    <script src="/gigs/stickyfill.min.js"></script>
-    <script src="/gigs/scrollama.min.js"></script>
-    <script>
-      // using d3 for convenience
-      var main2 = d3.select("#game");
-      var scrolly2 = main2.select("#scrolly2");
-      var figure2 = scrolly2.select("#charts");
-      var side = scrolly2.select("#side-text");
-      var step2 = side.selectAll(".step2");
-
-      // initialize the scrollama
-      var scroller2 = scrollama();
-
-      // generic window resize listener event
-      function handleResize2() {
-        // 1. update height of step2 elements
-        var step2H = Math.floor(window.innerHeight * 0.75);
-        step2.style("height", step2H + "px");
-
-        var figure2Height = window.innerHeight / 2;
-        var figure2MarginTop = (window.innerHeight - figure2Height) / 5;
-
-        figure2
-          .style("top", figure2MarginTop + "px");
-
-        // 3. tell scrollama to update new element dimensions
-        scroller2.resize();
-      }
-
-      // scrollama event handlers
-      function handleStepEnter2(response) {
-        console.log(response);
-        // response = { element, direction, index }
-
-        // add color to current step2 only
-        step2.classed("is-active", function(d, i) {
-          return i === response.index;
-        });
-
-        // update graphic based on step2
-        figure2.selectAll("div").text(response.index + 1);
-      }
-
-      function setupStickyfill() {
-        d3.selectAll(".sticky").each(function() {
-          Stickyfill.add(this);
-        });
-      }
-
-      function init() {
-        setupStickyfill();
-
-        // 1. force a resize on load to ensure proper dimensions are sent to scrollama
-        handleResize2();
-
-        // 2. setup the scroller2 passing options
-        // 		this will also initialize trigger observations
-        // 3. bind scrollama event handlers (this can be chained like below)
-        scroller2
-          .setup({
-            step: "#scrolly2 #side-text .step2",
-            offset: 0.33,
-            debug: true
-          })
-          .onStepEnter(handleStepEnter2);
-
-        // setup resize event
-        window.addEventListener("resize", handleResize2);
-      }
-
-      // kick things off
-      init();
-    </script>
-  </body>
-</html>
+      </div>
+</section>
