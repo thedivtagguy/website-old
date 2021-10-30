@@ -121,3 +121,25 @@ function calcTrips(x){
     console.log(trips);
     return trips;
 }
+
+
+// Google Charts
+google.charts.load('current', {
+    'packages': ['bar']
+  });
+  google.charts.setOnLoadCallback(drawChart);
+  
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable(chartsData);
+  
+    var options = {
+      chart: {
+        title: 'Company Performance',
+        subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+      }
+    };
+  
+    var chart = new google.charts.Bar(document.getElementById('chart_div'));
+  
+    chart.draw(data, google.charts.Bar.convertOptions(options));
+  }

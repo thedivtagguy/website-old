@@ -3,7 +3,11 @@
 {{ partial "head.html" . }}
 
 <body>
-    {{ if not ( in (print .URL) "project") }} {{- partial "header.html" . -}} {{ end }}
+    {{ if not ( in (print .URL) "project") }}
+    {{ if not ( in (print .URL) "cv") }}
+     {{- partial "header.html" . -}} 
+     {{ end }}     {{ end }}
+
     <div>
         {{- block "main" . }} {{- end }}  {{ if not ( in (print .URL) "project") }} {{- partial "footer.html" . -}} {{ end }}
 
