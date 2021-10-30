@@ -9,7 +9,7 @@
      {{ end }}     {{ end }}
 
     <div>
-        {{- block "main" . }} {{- end }}  {{ if not ( in (print .URL) "project") }} {{- partial "footer.html" . -}} {{ end }}
+        {{- block "main" . }} {{- end }}  {{ if not ( in (print .URL) "project") }} {{ if not ( in (print .URL) "cv") }} {{- partial "footer.html" . -}} {{ end }}{{ end }}
 
     </div>
 </body>
