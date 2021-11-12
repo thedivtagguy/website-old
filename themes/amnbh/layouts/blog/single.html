@@ -3,10 +3,25 @@
 <div class="overflow-hidden" style="background-color: white;">
 
    <!---Blog Content--->
-    <div class="lg:w-7/12 mx-auto px-8 max-w-7xl">
-        <h1 class="lg:text-8xl font-cocogoose">{{ .Title }}</h1>
+    <div class="w-1/2 px-8 py-8 mx-auto max-w-7xl">
+       <div class ="flex flex-row-reverse items-end py-2 justify-items-end">
+          <p>
+            {{ .Date.Format "Jan 2, 2006" }}
+
+          </p>
+       </div>
+        <h1 class="lg:text-7xl font-cocogoose">{{ .Title }}</h1>
+
+        {{ if .Params.case_study }}
+            <div class="flex flex-wrap">
+               
+                <div class="w-full py-4">
+                    <p class="text-lg leading-relaxed">{{ .Params.summary }}</p>
+                </div>
+            </div>
+        {{ end }}
     </div>
-   <article class="lg:w-6/12 mx-auto px-8 max-w-7xl markdown">
+   <article class="px-8 mx-auto lg:w-6/12 max-w-7xl markdown">
 
       {{ .Content }}
 
