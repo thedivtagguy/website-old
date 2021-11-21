@@ -21,5 +21,5 @@ link: https://srishtiarchive.com
 ---
 
 # Introduction
-It was the end of my first class at Srishti and I was talking to my facilitator Arvind and I asked him, "What happens to our final projects after this class is over?". It was a serious question. Like many others, I had put a lot of effort into this final project because it was my very first class and I wanted to make something that I would remember. Arvind replied, "Well, nothing really.". 
+It was the end of my first class at Srishti and I was talking to my facilitator Arvind and I asked him, "What happens to our final projects after this class is over?". It was a serious question. Like many others, I had put a lot of effort into this final project because it was my very first class and I wanted to make something that I would remember. Arvind replied, "Well, nothing really. There is no way to keep a record outside of Blackboard". Blackboard was the proprietary software Srishti uses to coll 
 
