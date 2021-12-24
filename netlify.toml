@@ -36,6 +36,6 @@
 
 [[redirects]]
   from = "/testing"
-  to = "https://srishtiarchivev2.netlify.app/"
+  to = "https://thedivtagguy2.netlify.app"
   status = 200
   force = true
