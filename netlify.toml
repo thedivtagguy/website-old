@@ -36,6 +36,6 @@
 
 [[redirects]]
   from = "/testing"
-  to = "https://thedivtagguy2.netlify.app"
+  to = "https://nostalgic-leavitt-f26626.netlify.app"
   status = 200
   force = true
