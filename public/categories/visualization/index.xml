@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visualization on Aman Bhargava</title>
+    <link>https://thedivtagguy.com/categories/visualization/</link>
+    <description>Recent content in Visualization on Aman Bhargava</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Apr 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://thedivtagguy.com/categories/visualization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Srishti &#39;23, Unwrapped</title>
+      <link>https://thedivtagguy.com/projects/whatsapp/</link>
+      <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedivtagguy.com/projects/whatsapp/</guid>
+      <description>A data analysis of 20,000+ messages in the Srishti &amp;lsquo;23 Whatsapp group, visualized.</description>
+    </item>
+    
+  </channel>
+</rss>

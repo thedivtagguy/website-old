@@ -1,0 +1,4 @@
+﻿Country	Value
+republic	210300
+ndtv	156200
+cnnnews18	97286

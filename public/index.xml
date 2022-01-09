@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aman Bhargava</title>
+    <link>https://thedivtagguy.com/</link>
+    <description>Recent content on Aman Bhargava</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://thedivtagguy.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Srishti Archive</title>
+      <link>https://thedivtagguy.com/blog/archive/</link>
+      <pubDate>Thu, 11 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedivtagguy.com/blog/archive/</guid>
+      <description>How I designed and developed a no-maintenance, low-cost solution for storing student projects at Srishti</description>
+    </item>
+    
+    <item>
+      <title>The People in The Food Apps</title>
+      <link>https://thedivtagguy.com/projects/food-apps/</link>
+      <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedivtagguy.com/projects/food-apps/</guid>
+      <description>Examining food delivery platforms &amp;amp; why you should care about them.</description>
+    </item>
+    
+    <item>
+      <title>This Studio Looks at Bellybuttons...</title>
+      <link>https://thedivtagguy.com/projects/bellybutton/</link>
+      <pubDate>Sat, 14 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedivtagguy.com/projects/bellybutton/</guid>
+      <description>Generating design school courses for anything with GPT-3</description>
+    </item>
+    
+    <item>
+      <title>A Critical News Consumer&#39;s Starter Manifesto</title>
+      <link>https://thedivtagguy.com/projects/manifesto/</link>
+      <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedivtagguy.com/projects/manifesto/</guid>
+      <description>4.5 Lakh tweets by three major Indian news channels, analysed.</description>
+    </item>
+    
+    <item>
+      <title>Srishti &#39;23, Unwrapped</title>
+      <link>https://thedivtagguy.com/projects/whatsapp/</link>
+      <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedivtagguy.com/projects/whatsapp/</guid>
+      <description>A data analysis of 20,000+ messages in the Srishti &amp;lsquo;23 Whatsapp group, visualized.</description>
+    </item>
+    
+  </channel>
+</rss>

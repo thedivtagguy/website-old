@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>News on Aman Bhargava</title>
+    <link>https://thedivtagguy.com/categories/news/</link>
+    <description>Recent content in News on Aman Bhargava</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Apr 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://thedivtagguy.com/categories/news/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Critical News Consumer&#39;s Starter Manifesto</title>
+      <link>https://thedivtagguy.com/projects/manifesto/</link>
+      <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://thedivtagguy.com/projects/manifesto/</guid>
+      <description>4.5 Lakh tweets by three major Indian news channels, analysed.</description>
+    </item>
+    
+  </channel>
+</rss>

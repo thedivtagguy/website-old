@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/jpg" href="/logo.ico" />
+
+    <title>The People in The Food Apps - Aman Bhargava</title>
+    <meta itemprop="image" content="https://thedivtagguy.com/gigs/thumbnail.png" />
+    <meta property="og:image" content="https://thedivtagguy.com/gigs/thumbnail.png" />
+    <meta name="twitter:image" content="https://thedivtagguy.com/gigs/thumbnail.png" />
+    <meta name="twitter:image:src" content="https://thedivtagguy.com/gigs/thumbnail.png" />
+    
+    <meta name="description" content="Examining food delivery platforms &amp; why you should care about them." />
+    <meta property="og:title" content="The People in The Food Apps" />
+    <meta property="og:description" content="Examining food delivery platforms &amp; why you should care about them." />
+    <meta property="og:type" content="article" />
+
+    <meta itemprop="description" content="Examining food delivery platforms &amp; why you should care about them." />
+    <meta property="og:description" content="Examining food delivery platforms &amp; why you should care about them." />
+    <meta name="twitter:description" content="Examining food delivery platforms &amp; why you should care about them." />
+    <meta name="generator" content="Hugo 0.78.1" />
+   
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script><link rel="stylesheet" href="./css/styles.min.c6fb154aa84c205fc7ace316d9d1b24190fbaade267ea4538c4a29bb3a8400b1.css" integrity="sha256-xvsVSqhMIF/HrOMW2dGyQZD7qt4mfqRTjEopuzqEALE="> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="/js/smoothscroll.js" defer></script>
+       
+    </head>
+
+<body>
+    
+
+    <div>
+
+
+
+
+
+
+<div  style="background-color:#FDFFFC;">
+
+
+    
+    <div>
+    <section style="color:#2C302E;">
+        
+
+<!---Project Header-->
+
+
+
+
+
+
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<link href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.12.2/d3.min.js"></script>
+<script src='https://unpkg.com/intersection-observer'></script>
+<script src="https://cdn.jsdelivr.net/gh/LieutenantPeacock/SmoothScroll@1.2.0/src/smoothscroll.min.js" integrity="sha384-UdJHYJK9eDBy7vML0TvJGlCpvrJhCuOPGTc7tHbA+jHEgCgjWpPbmMvmd/2bzdXU" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src='https://unpkg.com/scrollama'></script>
+<script src='./gigs/benefits.js' defer></script>
+
+<link href="./gigs/styles.css" rel="stylesheet">
+<style>
+    h1, h2, h3, h4, h5, h6 {
+        color: #2C302E ;
+    }
+    h4 {
+        @apply text-2xl font-bold font-blacker;
+    }
+    p {
+        white-space: pre-line;
+    }
+
+    #title {
+        background-image: url("/gigs/headerimage.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;    }
+    
+</style>
+
+
+<div id="title" class="flex items-center justify-center mx-auto ">
+    <div class="mx-auto lg:w-2/4">
+        <div class="flex items-center justify-center py-8">
+            <a href="/" class="inline-block py-4 md:py-0">
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="w-10 lg:w-16" viewBox="0 0 5580 6980" preserveAspectRatio="xMidYMid meet">
+                <g id="layer101" fill=""  stroke="none">
+                 <path fill="#fed06c" d="M2796 6803 c-38 -32 -78 -65 -91 -73 -12 -8 -29 -22 -37 -30 -28 -27 -82 -74 -168 -145 -109 -90 -134 -111 -190 -160 -25 -23 -70 -61 -100 -85 -120 -97 -210 -181 -210 -195 0 -7 21 -30 46 -51 25 -22 88 -75 138 -119 51 -44 119 -102 151 -130 32 -27 94 -81 138 -120 44 -38 96 -83 116 -100 20 -16 50 -42 66 -57 17 -16 36 -28 43 -28 13 0 57 35 191 154 36 32 100 86 141 120 41 33 77 63 80 67 3 3 34 30 70 60 35 29 72 60 80 69 9 8 54 47 100 85 116 97 194 166 202 180 4 7 -12 30 -40 56 -51 48 -274 246 -333 294 -134 112 -214 180 -217 187 -4 8 -97 78 -104 78 -2 0 -35 -26 -72 -57z"></path>
+                 <path fill="#fed06c" d="M3690 5755 c0 -223 3 -405 8 -405 4 0 25 -17 47 -37 22 -20 65 -57 95 -81 30 -25 60 -50 65 -56 6 -6 35 -31 65 -56 30 -25 57 -48 60 -52 3 -3 22 -20 43 -36 20 -17 63 -52 95 -80 31 -27 113 -98 182 -157 69 -59 145 -125 169 -146 25 -21 46 -37 48 -35 2 2 4 185 4 406 l0 402 -26 24 c-15 14 -95 81 -178 150 -84 69 -165 138 -182 153 -16 15 -52 44 -80 66 -27 22 -73 60 -101 85 -28 25 -86 74 -129 110 -44 36 -100 84 -126 108 -25 23 -49 42 -53 42 -3 0 -6 -182 -6 -405z"></path>
+                 <path fill="#fed06c" d="M1839 5997 c-15 -12 -37 -31 -50 -42 -13 -11 -49 -40 -80 -65 -56 -45 -217 -179 -274 -227 -16 -15 -66 -56 -110 -92 -44 -36 -82 -69 -85 -72 -3 -4 -52 -44 -110 -91 -58 -46 -115 -92 -127 -103 l-23 -19 0 -1497 c0 -1436 -1 -1497 -18 -1512 -17 -15 -57 -17 -369 -17 -346 0 -351 0 -346 -20 3 -11 9 -20 14 -20 8 0 205 -154 224 -176 6 -6 42 -36 80 -66 39 -31 80 -64 91 -74 12 -11 41 -35 65 -54 42 -35 163 -135 186 -155 7 -5 18 -15 25 -20 66 -52 189 -156 214 -182 17 -18 35 -33 40 -33 5 0 29 -19 54 -41 25 -22 65 -57 90 -77 25 -20 50 -41 55 -47 6 -6 46 -40 90 -75 44 -36 100 -83 126 -105 25 -22 65 -56 89 -75 24 -19 68 -56 98 -83 30 -26 59 -47 64 -47 4 0 8 118 8 263 0 191 3 266 12 275 9 9 117 12 425 12 l412 0 21 22 21 23 -48 45 c-26 25 -77 70 -112 100 -35 30 -72 62 -81 70 -8 8 -38 33 -65 55 -28 22 -73 60 -101 85 -84 75 -116 103 -179 154 -33 27 -72 62 -87 77 -14 15 -33 31 -41 36 -18 10 -120 98 -153 132 l-24 24 0 1244 c0 794 4 1251 10 1263 5 10 47 49 92 86 45 38 90 76 99 84 33 31 134 116 188 161 31 25 74 61 95 80 22 18 67 58 100 88 34 29 78 65 99 79 40 27 49 58 19 70 -10 4 -52 37 -93 73 -77 70 -161 143 -220 193 -40 34 -176 154 -199 176 -24 22 -129 112 -148 127 -23 17 -33 16 -63 -10z"></path>
+                 <path fill="#fed06c" d="M3048 5637 c-25 -23 -58 -51 -72 -62 -15 -11 -43 -36 -64 -55 -20 -19 -52 -48 -72 -63 -38 -31 -88 -74 -239 -207 -54 -47 -121 -105 -151 -130 -29 -25 -72 -61 -94 -81 -114 -101 -157 -138 -212 -184 -32 -27 -76 -66 -96 -86 l-38 -37 0 -1165 c0 -641 -3 -1172 -6 -1180 -6 -16 44 -71 140 -152 33 -27 71 -61 85 -74 14 -13 55 -49 90 -80 36 -31 72 -63 81 -71 8 -8 40 -35 70 -60 30 -25 66 -55 80 -68 14 -13 67 -60 119 -105 51 -45 119 -106 150 -134 101 -94 91 -236 91 1271 l0 1324 72 64 c39 34 99 88 132 118 34 30 102 89 151 130 48 41 112 95 140 120 28 25 77 68 110 95 32 28 68 59 79 71 31 31 66 48 78 36 13 -13 12 98 10 -1374 l-2 -1307 -36 -33 c-19 -18 -59 -55 -87 -82 -29 -26 -71 -62 -94 -79 -24 -17 -43 -34 -43 -37 0 -4 -20 -23 -45 -42 -24 -19 -69 -57 -98 -84 -30 -27 -114 -101 -187 -164 -73 -63 -158 -140 -189 -170 -31 -30 -85 -80 -121 -110 -35 -30 -87 -75 -116 -100 -28 -25 -69 -60 -90 -79 -22 -18 -87 -75 -146 -127 -59 -52 -109 -94 -111 -94 -3 0 -22 -17 -44 -38 -21 -20 -70 -64 -108 -97 -89 -77 -105 -93 -105 -104 0 -5 43 -45 96 -88 53 -43 128 -104 167 -136 78 -63 127 -104 190 -158 103 -87 286 -229 295 -229 6 0 19 8 29 18 10 10 72 65 138 123 65 57 127 111 136 119 9 8 31 28 50 44 19 16 72 63 119 105 47 42 103 92 125 110 22 18 69 59 104 90 103 91 183 162 252 222 35 32 91 81 124 110 34 30 87 77 119 104 33 28 69 59 81 70 13 11 36 32 53 46 16 15 54 49 84 75 30 27 94 83 142 124 49 41 115 100 147 131 l59 55 0 1364 0 1363 -44 41 c-24 23 -84 76 -133 118 -99 86 -106 92 -193 168 -192 167 -253 220 -311 270 -35 30 -93 82 -130 115 -36 33 -92 83 -124 110 -105 90 -139 120 -160 140 -12 11 -45 40 -75 65 -30 25 -62 52 -70 60 -87 81 -208 180 -221 180 -8 0 -35 -20 -61 -43z"></path>
+                 </g>
+            </svg>
+            </a>
+                    </div>
+        <div class="flex justify-center ">
+            <h1 class="text-3xl font-bold text-center uppercase break-normal font-blacker  lg:text-8xl" style="color: #fed06c;">
+                The People in The Food Apps
+            </h1>
+        </div>
+        <div class="px-8 m-auto lg:w-2/3">
+            <h2 style="color:#fed06c;" class="pt-8 text-sm font-bold text-center uppercase lg:text-base md:text-base font-causten">
+                Examining food delivery platforms &amp; why you should care about them.
+            </h2>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+<div id="intro" class="max-w-6xl px-8 pt-12 mx-auto text-justify lg:w-2/5">
+   <p class="text-base lg:text-xl">
+      A friend of mine uses my phone nearly twice a day to place an order on Swiggy because mine is the only one on our floor which has a ‘Swiggy Binge’ plan, which offers free delivery. After the order is placed, Swiggy reminds me of the progress periodically and lets me know that the order is being prepared, the delivery partner is at the restaurant, that he has left and he’s nearly arrived. 
+      
+      The process seemed new and exciting to me two years ago, when I would watch the bright, purposeful icon on a nicely coloured, empty map zoom around my city. It almost felt like a game, where I had to scour the app for the highest rated restaurants, find the discounted items, try to club them with the best coupons and with a few taps I could summon this little man on the map to bring me food. 
+            
+      Swiggy is one of the many digital labour platforms in India who are increasingly coming under fire from labour organizations in India and abroad for their unfair labour practices and working conditions.
+
+      Around <mark>8 million</mark> people are currently engaged as gig workers in India as of 2021, and it is not surprising that the number of gig workers in India is growing at a rapid pace. This is no longer a section of the workforce that we can ignore. But first, what are digital labour platforms?
+
+         </p>
+</div>   
+ 
+<div  class="max-w-6xl px-8 mx-auto text-justify lg:w-2/5">
+   <hr class="w-1/6 h-0 mx-auto my-8 border-t-2 border-gray-700 border-solid">
+   <p class="text-base lg:text-xl">
+      Digital labour platforms are markets where transactions are facilitated using digital and technological tools such as apps or websites. This was general seen as a big boon, because work was geographically bounded with labour being one of the most important factors of production. However over the past few decades there have been two major trends, the intersection of which has encouraged the rise of digital labour.
+   
+      As utopian as this may seem, with claims of flexible hours and seemingly unlimited pay, the reality is very different. In this project we'll be looking at two such platforms, <mark>Zomato</mark> and <mark>Swiggy</mark> and seeing how they differ, if at all, in terms of the way they handle labour.
+         </p>
+   </p>
+</div>  
+
+<section  class="max-w-6xl py-12 mx-auto lg:w-2/5">
+   <div class="w-1/3 pb-8 mx-auto">
+      <img src="/gigs/language.png">
+   </div>
+   <hr class="w-1/6 h-0 pt-4 mx-auto mb-8 border-t-2 border-gray-700 border-solid">
+   <h4 class="text-4xl font-bold text-center font-blacker">Employees vs. Partners</h4>
+   <p class="py-8 text-base lg:text-xl">
+     Swiggy and Zomato, and if you're familiar with the apps and their delivery screens, calls their delivery fleet 'partners' or 'executives'. While these may seem like seemingly harmless terms, by not classifying them as <mark>employees</mark>, these platforms are able to avoid taking a whole slew of responsibilities.
+   </p>
+ </div>
+</section>
+ <main>
+     
+   <section id="intro">
+   
+    
+   </section>
+
+   <section id="scrolly" class="w-full mx-auto max-w-7xl">
+         <div id="story" class="">
+            <h5 id="benefitshead" class="py-4 text-2xl font-bold text-center font-blacker">Benefits For Standard Employees</h5>
+             <div id="storyGrid" class="grid grid-cols-5 mx-auto">
+               <div class="flex flex-col p-8 text-xl font-bold bg-green-200 border-2 border-green-300 non">
+                  <h4 class="text-center text-green-700">Overtime Compensation</h4>
+                  <p class="pt-4 text-sm font-medium text-green-600">Workers working beyond the stipulated hours, that is, 9 hours a day and 48 hours a week are guaranteed an overtime compensation of 200% of their normal wages.</p>
+               </div>
+                  <div class="flex flex-col p-8 text-xl font-bold bg-green-200 border-2 border-green-300">
+                     <h4 class="text-center text-green-700">Employment Contract</h4>
+                     <p class="pt-4 text-sm font-medium text-green-600">An employment contract may contain details about the term of the contract, pay and so on. This assures the services of the worker to the employer and cements the terms of the job to the worker.</p>
+                  </div>     
+                  
+                  <div class="flex flex-col p-8 text-xl font-bold bg-green-200 border-2 border-green-300 non">
+                     <h4 class="text-center text-green-700 ">Notice Requirement</h4>
+                     <p class="pt-4 text-sm font-medium text-green-600">The employer is required to give the worker a notice of termination and severence pay before terminating their contract and firing them.</p>
+                  </div>     
+                  <div class="flex flex-col p-8 text-xl font-bold bg-green-200 border-2 border-green-300">
+                     <h4 class="text-center text-green-700">Work Injury Benefits</h4>
+                     <p class="pt-4 text-sm font-medium text-green-600">The worker is covered under a health and accident insurance that covers expenses for accidents that may occur during work.</p>
+                  </div>   
+                  <div class="flex flex-col p-8 text-xl font-bold bg-green-200 border-2 border-green-300 non">
+                     <h4 class="text-center text-green-700 text-green-7">Paid Leaves</h4>
+                     <p class="pt-4 text-sm font-medium text-green-600">The worker is allowed to take a certain number leaves that are earned after working for a certain number of days. They do not suffer a loss of pay on such days.</p>
+                  </div>   
+                  <div class="flex flex-col p-8 text-xl font-bold bg-green-200 border-2 border-green-300 non">
+                     <h4 class="text-center text-green-700 text-green-7">Sick Leaves</h4>
+                     <p class="pt-4 text-sm font-medium text-green-600">The worker is allowed to take leaves on days that they are sick. They do not suffer a loss of pay on such days.</p>
+                  </div> 
+                  <div class="flex flex-col p-8 text-xl font-bold bg-green-200 border-2 border-green-300 non">
+                     <h4 class="text-center text-green-700">Minimum Guaranteed Pay</h4>
+                     <p class="pt-4 text-sm font-medium text-green-600">The worker is guaranteed a minimum compensation in accordance with the legislation in their state.</p>
+                  </div> 
+                  <div class="flex flex-col p-8 text-xl font-bold bg-green-200 border-2 border-green-300 non">
+                     <h4 class="text-center text-green-700">Dependents’ & Survivors’ Benefit</h4>
+                     <p class="pt-4 text-sm font-medium text-green-600">Families or dependents of the worker are assured some benefits should the worker get permanently disabled or die during the course of employement.</p>
+                  </div> 
+                  <div class="flex flex-col p-8 text-xl font-bold bg-green-200 border-2 border-green-300 non">
+                     <h4 class="text-center text-green-700">Employment Status</h4>
+                     <p class="pt-4 text-sm font-medium text-green-600">The central or state governments  recognizes the worker as an employee and hence grant them all rights as are applicable to other workers.legislation.</p>
+                  </div> 
+                  <div class="flex flex-col p-8 text-xl font-bold bg-green-200 border-2 border-green-300 non">
+                     <h4 class="text-center text-green-700">Health and Safety</h4>
+                     <p class="pt-4 text-sm font-medium text-green-600">The employer has to ensure the health, safety and welfare of all the workers while they are at work.</p>
+                  </div> 
+             </div>
+             <aside class="px-8 py-2 text-xs text-gray-300 ">Data: Paycheck.in</aside>
+         </div>
+         
+     </figure>
+
+     <article>
+       <div class="step1" data-step="1">
+         <p>Labour laws are an important part of any employee-employer relationship. The laws exist to ensure that the employees are treated and compensated appropriately, and their rights are protected. Laws in India, though they may vary slightly by state, ensure some minimum benefits to standard workers (workers who are recognized as employees).</p>
+
+       </div>
+       <div class="step1" data-step="2">
+         <p >Because Swiggy and Zomato do not classify their delivery crew as employees, but as <mark>delivery partners</mark>&nbsp;, they are legally excused from providing most of the benefits and protection that they would have had to otherwise ensure.</p>
+       </div>
+       <div class="step1" data-step="3">
+         <p>Aside from being deprived of these rights, workers for such platforms face a host of other problems. Let us have a deeper look at them.</p>
+       </div>
+     
+     </article>
+   </section>
+   <section  class="max-w-6xl py-12 mx-auto lg:w-2/5">
+   
+    <p class="py-8 text-base lg:text-xl">
+      Aside from the legal rights that are not provided to the workers, there are other important structural problems in the platforms themselves. 
+    </p>
+   </p>
+    </div>
+   </section>
+   <section id="problem1" class="max-w-6xl py-12 mx-auto lg:w-2/5">
+      <div class="w-2/5 mx-auto">
+         <img src="/gigs/manphone.png">
+      </div>
+      <hr class="w-1/6 h-0 mx-auto mb-8 border-t-2 border-gray-700 border-solid">
+      <h4 class="text-4xl font-bold text-center font-blacker">Complaints & Appeal</h4>
+      <p class="py-8 text-base lg:text-xl">
+         Before the pandemic, both platforms had so-called ‘Hub Managers’ that handled certain zones and would overlook the functioning of delivery partners and register any complaints or problems they may have. That has since been replaced by a ticketing system on their apps. Any problems they might have, such as falling sick, meeting with an accident or getting held up by thieves at night, are routed through this system. While this achieves cuts in staff that the platforms want, there is a trade-off in the efficiency and quality of redressal. 
+         
+         By asking partners to only report incidents through the app, there is already a divide between those who can read and write and those who can’t, as well as those who know how to use this system and those who don’t. This does not always guarantee a reasonable solution to their problem, which may be more varied than what a few options that a chatbot might present.
+  
+      </p>
+      <div class="flex justify-end pt-2 pl-10"> <span class="flex items-end justify-end h-auto px-4 py-4 text-xl font-normal text-white bg-gray-500 rounded-lg" >I have had an accident</span> </div>
+      <div class="flex items-center pr-10"> <img src="https://www.kindpng.com/picc/m/22-223863_no-avatar-png-circle-transparent-png.png" class="rounded-full shadow-xl" width="50" height="50"> <span class="flex items-end w-3/4 h-auto p-4 my-4 ml-1 text-lg font-normal text-gray-200 bg-gray-900 rounded-lg" >Dear Partner, we have received your request. Our team is working on your concern. We'll get back to you within 24 hrs with a resolution. Thank you.</span> </div>
+     </div>
+   </section>
+
+
+   <section id="problem2" class="max-w-6xl py-8 mx-auto lg:w-2/5">
+      <div class="w-2/5 mx-auto">
+         <img src="/gigs/mancal.png">
+      </div>
+      <hr class="w-1/6 h-0 mx-auto mb-8 border-t-2 border-gray-700 border-solid">
+      <h4 class="text-4xl font-bold text-center font-blacker">Fluctuating Pay</h4>
+      <p class="py-8 text-base lg:text-xl">
+         Swiggy and Zomato advertisements claim that a delivery partner can earn between Rs. 20,000 to Rs. 40,000 a month because no limit on the number of deliveries present the potential to earn an amount that is competitive with entry level jobs in the formal sector. These figures are not a general average and don’t take into account the fuel, maintenance and personal costs that partners bear while on duty. There is no set minimum base pay for a single day, which means any leave can lose you a significant portion of earnings. 
+
+         Orders may also not necessarily be assigned equitably; In our survey, partners recounted how they seemed relatively free as compared to the other delivery executives in the same area. A partner may be logged into the platform for 8-10 hours but only get 5-10 deliveries during that time. 
+      </p>
+      </div>
+   </section>
+   <section id="problem4" class="max-w-6xl py-12 mx-auto lg:w-2/5">
+      <div class="w-2/5 mx-auto">
+         <img src="/gigs/manbloc.png">
+      </div>
+      <hr class="w-1/6 h-0 mx-auto mb-8 border-t-2 border-gray-700 border-solid">
+      <h4 class="text-4xl font-bold text-center font-blacker">Arbitrary Penalties</h4>
+      <p class="py-8 text-base lg:text-xl">
+         Workers are at the mercy of the algorithm when it comes to facing penalties. There are no fixed guidelines to decide exactly when the worker is accountable and for what. For instance when any damage or spillage occurs due to poor packaging, the worker informs the customer care executive who in turn informs the customer about the matter and cancels the order. However, Swiggy penalises the worker for not delivering the order and not the restaurant for their mishandling. Another worker we interacted with recounted how his account was suspended from a platform because he took a sick leave for four days. A series of bad customer reviews can lead to an account suspension and wipe out earnings for days or even weeks. Such incidents leave many workers unaware about the reason behind the consequences that they might face and the circumstances under which they will face it. Since there is no way to contest a decision, the person is forced to move to a different platform. 
+    </p>
+    <div class="w-2/5 mx-auto">
+      <img src="/gigs/cycle.png">
+   </div>
+   <p class="py-8 text-base lg:text-xl">
+
+         Both platforms also have certain ‘levels’ that they assign each delivery partner depending on whether they drive a motorcycle or a bicycle, which gives them access to farther or nearer orders (therefore affecting earnings). As penalties, they may be downgraded to a different level as well, even if they’re still working the same distances.          
+      </p>
+      </div>
+   </section>
+   <section id="problem3" class="max-w-6xl py-12 mx-auto lg:w-2/5">
+      <div class="w-2/5 mx-auto">
+         <img src="/gigs/manscoot.png">
+      </div>
+      <hr class="w-1/6 h-0 mx-auto mb-8 border-t-2 border-gray-700 border-solid">
+      <h4 class="text-4xl font-bold text-center font-blacker">Myth of Flexible Hours</h4>
+      <p class="py-8 text-base lg:text-xl">
+         One of the biggest selling points of any digital labour platform is the flexibility of the hours. They  advertise that fact everywhere:
+      </p>  
+
+      <div class="flex flex-col -ml-12">
+         <div class="-my-2 sm:-mx-6">
+           <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+             <div class="border-b border-gray-200 shadow sm:rounded-lg">
+               <table class="min-w-full align-middle divide-y divide-gray-200">
+                 <thead class="bg-gray-50">
+                   <tr>
+                     <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
+                       Platform 
+                     </th>
+                     <th scope="col" class="px-6 py-3 text-xs font-medium tracking-wider text-left text-gray-500 uppercase">
+                       Advertisement Copy
+                     </th>
+                   </tr>
+                 </thead>
+                 <tbody class="bg-white divide-y divide-gray-200">
+                   <tr>
+                     <td class="px-6 py-4 whitespace-nowrap">
+                       <div class="flex items-center">                       
+                         <div >
+                           <div class="text-sm font-medium text-gray-900">
+                             Swiggy
+                           </div>                          
+                         </div>
+                       </div>
+                     </td> 
+                     <td class="w-1/2 px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
+                        No fixed earnings, effort-based pay so that you're not stuck <br> with a fixed earning. 
+                     </td>                    
+                   </tr>       
+                   <tr>
+                     <td class="px-6 py-4 whitespace-nowrap">
+                       <div class="flex items-center">                       
+                         <div >
+                           <div class="text-sm font-medium text-gray-900">
+                             Zomato
+                           </div>                         
+                         </div>
+                       </div>
+                     </td>
+                     <td class="px-6 py-4 text-sm text-gray-500 whitespace-nowrap">
+                        Choose your delivery work hours according to your convenience. 
+                     </td>
+                   </tr>   
+                                            
+                  </tbody>
+               </table>
+             </div>
+           </div>
+         </div>
+       </div>
+      <p class="py-4 text-base lg:text-xl">
+The problem lies in the fact that flexible working hours come with the opportunity cost of not earning enough money. Since the pay is variable and dependent on the number of hours they work for and the number of orders they complete in a day, the workers often end up pushing themselves to work for more hours than they desire to in order to earn enough money for their survival. There is no guaranteed minimum pay offered to them.  
+
+We collected data on delivery workers from different platforms to look at how many deliveries they do and what they earn. Let's see what that looks like.
+      </p>
+      </div>
+   </section>
+
+   
+ </main>
+ <section id="banner" class="flex items-center w-1/2 mx-auto h-h-screen-half justify-items-center">
+    <h3 class="max-w-3xl text-center css-3d-text">What Does An Average Day of Work Look Like?</h3>
+ </section>
+ 
+ <section id="month" class="max-w-6xl py-8 mx-auto lg:w-2/5">
+   
+   <p class="py-8 text-base lg:text-xl">
+We surveyed 50 delivery workers from Swiggy and Zomato and asked them what their daily earnings, number of deliveries, average pay and time spent on each order was. This data was analysed and we trained a model by using these parameters to see if we could ‘generate’ our own deliveries for any number of days and see how much we could earn during that time. 
+
+Now it’s your turn, how about you give food delivery a go? The results of our analysis has been turned into a short interactive experience which will allow you to see how much you can earn doing deliveries. Give it a go and see how you do!
+   </p>
+
+
+</section>
+
+
+
+<section id="game">
+   
+
+   <section id="scrolly2">
+     <div id="side-text">
+       <div class="pt-12 step2" data-step="1">
+         <h4 class="px-12 text-4xl font-bold font-blacker">Start Your Day</h4>
+         <p class="px-12 text-base lg:text-2xl">
+            Congratulations, you're a delivery partner now! 
+            
+            You've gone through the onboarding process, you've bought your bag and uniform and you're ready to log on to the <mark>SuperEats</mark> app to start your day.  
+         
+            Scroll further to turn on the app.
+         </p>          </div>
+
+       <div class="pt-12 step2 " data-step="2">
+         <h4 class="px-12 text-4xl font-bold font-blacker">Begin Accepting Orders</h4>
+         <p class="px-12 text-base lg:text-2xl">
+            <mark>Click on the blue button</mark> to start your day.
+
+            For your convenience, we're going to accept all orders that come within your zone. We want to maximize our productivity, right?
+
+            Begin scrolling to deliver your orders. Don't waste time, you'll be rewarded for every order you deliver.
+         </p>         </div>
+       <div id="start" >
+
+       <div class="pt-12 step2" data-step="3">
+         <h4 class="px-12 text-4xl font-bold font-blacker">Long and Short</h4>
+         <p class="px-12 text-base lg:text-2xl">
+            On any given day, your orders can be both near and far away, you really don't know what you'll get.
+            
+            While longer distances earn you more money per order, you'll be able to complete fewer deliveries unless you're willing to put in more time.  
+
+            Keep scrolling, keep scrolling. There's still a way to go. 
+
+             </p>      
+          </div>
+
+       <div class="pt-12 step2" data-step="4">
+         <h4 class="px-12 text-4xl font-bold font-blacker">Incentives! More Money!</h4>
+         <p class="px-12 text-base lg:text-2xl">
+            Remember that you have a daily target that you have to reach in order to earn more money. 
+
+            Every time you reach Rs.600 in a day, you'll get a bonus of Rs.230. While this may seem easy to reach, it all depends on whether you're able to complete enough orders during the day.
+
+            Scroll scroll.
+             </p>
+       </div>
+       <div class="pt-12 step2" data-step="5">
+         <h4 class="px-12 text-4xl font-bold font-blacker">Almost there...</h4>
+         <p class="px-12 text-base lg:text-2xl">
+            You've reached your daily target, but you feel you can still put in a little more time. 
+         
+         Night orders are high earners, let's do this.
+
+         We're almost there.
+      
+      </p>
+       </div>
+       <div class="pt-12 step2" data-step="6">
+         <h4 class="px-12 text-4xl font-bold font-blacker">Okay, enough for the day</h4>
+         <p class="px-12 text-base lg:text-2xl">
+            Okay that was hectic, but not bad for a day's work. You head back home to catch some sleep.
+
+            But this was just one day, why not try some more? Click on the <mark>black button</mark> to start again. Scroll faster this time, lets see how many days you can put in before you get tired.
+             </p>
+       </div>
+       </div>  
+     </div>
+
+     <div id="charts" >
+       <div class="game-heading">
+                      <h4 id ="heading-text" class="py-4 text-4xl font-bold text-center font-blacker">How much can you earn?</h4>
+
+         <div id="phone">
+            <div class="phone-big">
+                  <div class="flex flex-col items-center justify-items-center">
+                     <div id="starter" class="disappear">
+                        <button  onclick="getTrips();" class="px-6 py-4 mx-auto font-bold text-white bg-blue-500 border-2 border-blue-900 rounded-lg shadow-lg">Click to Start New Day</button>
+                     </div>
+                     <div>
+                        <img id="gif" src="https://c.tenor.com/D-0qeZG5l5YAAAAC/easyeats-rider-easyeats.gif" class="absolute hidden w-2/5 transition-all duration-300 top-12 right-36 rounded-xl">
+                     </div>
+                     <h5 id = "timer-heading" class="px-8 pt-12 mx-auto text-sm font-bold text-center text-gray-500 capitalize border-black border-dashed disappear ">You have worked for</h5>
+                     <h5 class="w-4/5 px-8 py-4 mx-auto text-4xl font-bold text-center capitalize border-black border-dashed" id="timer"><span id ="timer-text" class="w-full text-sm leading-tight text-gray-200 disappear">Click Button to Start Working</span></h5>
+                     <div id="counter" class="absolute px-12 py-8 text-2xl font-bold text-green-700 bg-green-100 disappear rounded-2xl right-8 bottom-8">
+                        Rs. 0
+                     </div>  
+                     <div id="trips" class="absolute flex flex-grow-0 px-8 py-8 text-2xl font-bold text-red-700 bg-red-100 disappear rounded-2xl left-8 bottom-8">
+                        0 deliveries
+                     </div> 
+                  </div>
+            </div>
+         </div>
+
+            
+         </div>
+         <button  button id="reset" onclick="resetTrips();smoothScroll({toElement:document.getElementById('game'), duration: 2000});" class="absolute px-2 py-2 mx-auto text-xs font-medium text-white uppercase bg-gray-900 border-2 border-gray-600 rounded-lg shadow-lg disappear bottom-12 right-96">Start Another Day</button>
+
+     </div>
+   </section>
+</section>
+
+ 
+</section>
+
+ </section>
+ <section id="month" data-step="10" class="w-full max-w-6xl px-12 py-16 mx-auto my-20 border-8 border-dashed shadow-xl ">
+   
+  <h4 class="text-5xl font-black leading-snug text-center uppercase ">You managed to earn <span id="totalEarning" class="block font-bold text-green-700 ">Rs. 0</span> in <span id="days" class="font-bold text-green-700 ">0</span> days <br> by working for<span id="hours" class="block font-bold text-green-700 ">0</span></h4>
+ <p class="py-12 mx-auto text-2xl text-center lg:w-2/5 ">How much of that will you save?
+
+You travelled around <span class="font-bold text-green-700" id="distance">0</span> and you'll be spending approximately <span id="fuelcost" class="font-bold text-green-700">Rs. 0</span> on fuel, <span class="font-bold text-green-700" id="rent">Rs. 0</span> on rent and <span id="general" class="font-bold text-green-700">Rs. 0</span> on general expenses.
+
+You might be able to save <span id="savings" class="font-bold text-green-700">Rs. 0</span>.
+</p>
+</section>
+
+<section  class="max-w-6xl py-8 mx-auto lg:w-2/5">
+   <div class="w-2/5 mx-auto">
+      <img src="/gigs/mancal.png">
+   </div>
+   <h4 class="text-4xl font-bold text-center font-blacker">What is the way forward?</h4>
+   <p class="py-8 text-base lg:text-xl">
+    Even with such a short experiment, it begins to become clear that the money that such people make is just enough to cover expenses and not more. By not being able to earn enough to save, this section of the workforce is at high risk of going into debt and generating a negative cash flow. Platforms tug at your hearstrings by providing you short snippets of your delivery person's lives and ambitions ("Tariq has studied up till class 10. He dreams of owning a restaurant some day", Zomato tells us when we ordered something from them), in an effort to make you tip them. That is not the solution to the problem. Tipping can only go so far and it is the platforms that must take responsibility to make sure that their delivery fleet, essentially the people that make the platform run, are being properly compensated. 
+    
+    There is some hope of change and governments around the world are re-evaluating how they deal with these companies. In California, lawmakers passed legislation requiring ride-hailing platforms to categorize drivers as employees and not self-employed partners. In the UK, courts ruled that drivers for Uber should be treated as employees. Meanwhile in China, the government recently issued guidelines to delivery giants on how to treat part-time and contract workers. 
+    
+    It remains to be whether the government in India will follow suit.
+
+    As for us, we can do our part by recognizing the problem for what it is. The person in the map is more than just a colourful icon and deserves a lot better.
+   </p>
+   </div>
+</section>
+<div class="max-w-4xl px-8 py-2 mx-auto text-justify lg:w-6/12">
+   <div class="w-3/5 max-w-6xl px-8 mx-auto my-4 text-justify border-b-2 border-gray-300"></div>
+   <h5 class="py-6 font-bold text-center">A Project by Aman Bhargava,
+       Ananya Shenoy and Sahana Kallur</h5>
+
+   <h5 class="py-6 font-bold text-left">Methodology</h5>
+   <p class="text-sm">
+   For our data, we collected information from 50 delivery personnel, equally from Swiggy and Zomato, on various aspects of their daily earnings and deliveries. This data was processed in R to calculate mean and median earnings based on distances, incentive rates, time per and between orders. We took these summaries and wrote a small script to generate deliveries and earnings based on the real distribution. 
+
+   Data on fuel costs, rent and general spending (this does not take into account personnel with families, since our interviews were only with people who lived alone) was collected through verbal interviews with delivery personnel in the Yelahanka area. This may differ based on the area but was consistent enough for a good understanding of spending for the purposes of this project
+   
+   Website and code by Aman Bhargava.
+   <img src="/abstracts/ender.png" class="h-56 pt-8 mx-auto" />
+   <h5 class="py-4 text-2xl text-center font-arsenica">If you liked this project, <br> consider sharing it :)</h5>
+</div>
+<style>
+   .css-3d-text {
+      font-size: 4.3rem;
+      font-weight: 900;
+      font-family: "Blacker";
+      color: #fed06c;
+       text-transform: uppercase;
+       /* Width and color values */
+  
+   }
+  
+  #banner {
+    background-image: url("/gigs/banner1.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    }
+    
+</style>
+    </section>  
+    </div>
+    <div class="px-6 " style="background-color:#FDFFFC;">
+       
+        <div class="flex items-center justify-center max-w-xl pb-4 mx-auto">
+
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fthedivtagguy.com%2fprojects%2ffood-apps%2f" target="_blank" rel="noopener" aria-label="">
+    <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+      </div>
+    </div>
+  </a>
+  
+  
+  <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Examining%20food%20delivery%20platforms%20%26%20why%20you%20should%20care%20about%20them.&amp;url=https%3a%2f%2fthedivtagguy.com%2fprojects%2ffood-apps%2f" target="_blank" rel="noopener" aria-label="">
+    <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"/></svg>
+      </div>
+    </div>
+  </a>
+  
+  
+  <a class="resp-sharing-button__link" href="whatsapp://send?text=Examining%20food%20delivery%20platforms%20%26%20why%20you%20should%20care%20about%20them. https%3a%2f%2fthedivtagguy.com%2fprojects%2ffood-apps%2f" target="_blank" rel="noopener" aria-label="">
+    <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
+      </div>
+    </div>
+  </a>
+  
+        </div><div class="max-w-4xl px-2 py-1 mx-auto text-xs font-bold text-white uppercase bg-purple-600 border-2 border-orange-900 lg:text-sm">
+    🚧 &nbsp; Like What you see? Here's more
+</div>
+
+
+<div class="justify-between max-w-4xl gap-8 py-4 mx-auto bg-transparent lg:flex">
+  
+    
+
+
+    <div class="cursor-pointer h-90">
+        <a href="https://thedivtagguy.com/projects/bellybutton/" class="-full">
+            <img alt="post photo" src="/abstract.png" class="object-cover w-full max-w-80" />
+            <div class="w-full bg-transparent">
+                <p class="py-2 mb-2 text-base font-extrabold uppercase font-cocogoose lg:text-lg" id="related">
+                    This Studio Looks at Bellybuttons... 
+                </p>
+
+            </div>
+        </a>
+    </div>
+    
+
+
+    <div class="cursor-pointer h-90">
+        <a href="https://thedivtagguy.com/projects/whatsapp/" class="-full">
+            <img alt="post photo" src="/whatsapp.png" class="object-cover w-full max-w-80" />
+            <div class="w-full bg-transparent">
+                <p class="py-2 mb-2 text-base font-extrabold uppercase font-cocogoose lg:text-lg" id="related">
+                    Srishti &#39;23, Unwrapped 
+                </p>
+
+            </div>
+        </a>
+    </div>
+    
+
+
+    <div class="cursor-pointer h-90">
+        <a href="https://thedivtagguy.com/projects/manifesto/" class="-full">
+            <img alt="post photo" src="/manifesto/manifesto.jpg" class="object-cover w-full max-w-80" />
+            <div class="w-full bg-transparent">
+                <p class="py-2 mb-2 text-base font-extrabold uppercase font-cocogoose lg:text-lg" id="related">
+                    A Critical News Consumer&#39;s Starter Manifesto 
+                </p>
+
+            </div>
+        </a>
+    </div>
+    
+</div>
+<style>
+    .resp-sharing-button__icon,.resp-sharing-button__link{display:inline-block}.resp-sharing-button__link{text-decoration:none;color:#fff;margin:.5em}.resp-sharing-button{border-radius:5px;transition:25ms ease-out;padding:.5em .75em;font-family:Helvetica Neue,Helvetica,Arial,sans-serif}.resp-sharing-button__icon svg{width:1em;height:1em;margin-right:.4em;vertical-align:top}.resp-sharing-button--small svg{margin:0;vertical-align:middle}.resp-sharing-button__icon{stroke:#fff;fill:none}.resp-sharing-button__icon--solid,.resp-sharing-button__icon--solidcircle{fill:#fff;stroke:none}.resp-sharing-button--twitter{background-color:#55acee}.resp-sharing-button--twitter:hover{background-color:#2795e9}.resp-sharing-button--pinterest{background-color:#bd081c}.resp-sharing-button--pinterest:hover{background-color:#8c0615}.resp-sharing-button--facebook{background-color:#3b5998}.resp-sharing-button--facebook:hover{background-color:#2d4373}.resp-sharing-button--email{background-color:#777}.resp-sharing-button--email:hover{background-color:#5e5e5e}.resp-sharing-button--whatsapp{background-color:#25d366}.resp-sharing-button--whatsapp:hover{background-color:#1da851}.resp-sharing-button--facebook{background-color:#3b5998;border-color:#3b5998}.resp-sharing-button--facebook:active,.resp-sharing-button--facebook:hover{background-color:#2d4373;border-color:#2d4373}.resp-sharing-button--twitter{background-color:#55acee;border-color:#55acee}.resp-sharing-button--twitter:active,.resp-sharing-button--twitter:hover{background-color:#2795e9;border-color:#2795e9}.resp-sharing-button--whatsapp{background-color:#25d366;border-color:#25d366}.resp-sharing-button--whatsapp:active,.resp-sharing-button--whatsapp:hover{background-color:#1da851;border-color:#1da851}
+#related {
+    color: #2C302E;
+}
+</style></div>
+
+
+</div>
+
+<section  style="background-color: #FDFFFC;">
+    <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+
+        <div class="flex justify-center mt-8 space-x-6">
+            <a href="https://instagram.com/thedivtagguy" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">Instagram</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+            <a href="https://twitter.com/thedivtagguy" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">Twitter</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                </svg>
+            </a>
+            <a href="https://github.com/thedivtagguy" class="text-gray-400 hover:text-gray-500">
+                <span class="sr-only">GitHub</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+
+        </div>
+        <p class="mt-4 text-sm italic text-center text-gray-400 capitalize capital">
+            And now! At Last! <br> Another website almost but not completely different from <br>some of the other websites which aren't quite the same as this one is.
+            <br>
+            <br><span class="p-2 text-xs font-semibold bg-gray-200 rounded-sm cursor-pointer hover:bg-gray-900 hover:text-white">Designed and Made with Hugo & Tailwind by Aman Bhargava</span>
+        </p>
+    </div>
+</section>
+
+<style>
+    p {
+        color: #2C302E;
+    }
+    
+</style>
+
+  
+
+    </div>
+</body>
+
+</html>
