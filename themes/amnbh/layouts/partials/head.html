@@ -35,7 +35,7 @@
 
     {{- $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") -}} {{- if .Site.IsServer }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}"> {{ else }} {{- $styles := $styles| minify | fingerprint | resources.PostProcess -}}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}  crossorigin="anonymous"> {{ end -}}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}"  crossorigin="anonymous"> {{ end -}}
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <script src="https://d3js.org/d3.v4.js"></script>
