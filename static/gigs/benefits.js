@@ -177,8 +177,8 @@ function getTrips() {
 	days.innerText = i;
 	rent.innerText = "₹" + roundedToFixed( ( 5000 / 30 ) * i, 1 );
 	general.innerText = "₹" + roundedToFixed( ( 120 ) * i, 1 );
-	savings.innerText = "₹" + roundedToFixed( ( earning - ( 5000 / 30 ) * i - (
-		120 ) * i ), 1 );
+	savings.innerText = "₹" + roundedToFixed( ( (earning - ( 5000 / 30 ) * i) - (
+		120  * i) - ( ( tripInfo.sum / 45 ) * 101 ) ), 1 );
 }
 // When page loads, run GetTotallyRealTotalTrips()
 function redo() {
